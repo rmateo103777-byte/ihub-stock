@@ -586,8 +586,8 @@ const DATA_URL = (() => {
   return `https://raw.githubusercontent.com/${user}/${repo}/main/docs/data/catalogo.json`;
 })();
 // Supabase: la app lee de aquí primero. La clave publishable es pública (solo permite LEER el stock).
-const SUPABASE_URL = "https://rtifsifehgsejfgeetdq.supabase.co";
-const SUPABASE_KEY = "sb_publishable_i6BdqdDxBOdGRFvjLAe4-g_Fh1cE9iX";
+const SUPABASE_URL = "https://qqxseabhnzrzzbmemjjg.supabase.co";
+const SUPABASE_KEY = "sb_publishable_ITWl2tblQAiOlHGelV4oTw_yNLVjm-r";
 async function leerSupabase() {
   const h = { apikey: SUPABASE_KEY };
   if (SUPABASE_KEY.startsWith("eyJ")) h.Authorization = "Bearer " + SUPABASE_KEY;
