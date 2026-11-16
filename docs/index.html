@@ -8,12 +8,12 @@
 <link rel="icon" href="icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="icon-512.png">
 <!--ARTIFACT-START-->
-<title>iHub Stock</title>
+<title>IHUB Stock</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@500&display=swap">
 <style>
-/* Layout: iHub-blue brand band with the B-pattern strip, a dark showcase banner for the flagship iPhone, sticky filters, model cards, then warranty & terms accordions. */
+/* Layout: IHUB-blue brand band with the B-pattern strip, a dark showcase banner for the flagship iPhone, sticky filters, model cards, then warranty & terms accordions. */
 :root {
   --bg: #F3F6FB;
   --surface: #FFFFFF;
@@ -201,6 +201,19 @@ details[open] summary::after { content: "–"; }
 .new-tag { font: 800 10px var(--display); letter-spacing: .08em; text-transform: uppercase; color: #fff; background: #FF3B3B; padding: 2px 6px; border-radius: 5px; }
 @media (min-width: 760px) { .news { padding: 18px 24px 0; } }
 
+/* Modo mayorista: paleta oscura con lima para distinguirlo de la venta al público */
+:root.modo-mayorista {
+  --bg: #0B0D13; --surface: #151821; --ink: #F2F4F8; --muted: #9AA3B5; --line: #262B38;
+  --brand: #D7F74A; --brand-2: #E6FB8A; --brand-ink: #0A1B33; --band: #12141C;
+  color-scheme: dark;
+}
+.modo-mayorista .top { background: linear-gradient(135deg, #1E222E, #12141C 55%, #07080C); }
+.modo-mayorista .top::after { filter: grayscale(1) brightness(.6); }
+.modo-mayorista footer { background: linear-gradient(135deg, #12141C, #07080C); }
+.modo-mayorista .price, .modo-mayorista .from b { color: var(--brand); }
+.modo-mayorista .badge.new { color: #0A1B33; }
+.modo-mayorista .modo-mayor { box-shadow: inset 0 -1px 0 rgba(0,0,0,.25); }
+
 /* Mayoristas */
 .acc-btn { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.45); background: transparent; color: #fff; font: 700 13px var(--display); cursor: pointer; }
 .acc-btn:hover { background: rgba(255,255,255,.12); }
@@ -283,7 +296,7 @@ footer a { color: #fff; font-weight: 600; }
 
   <form class="acc-form" id="form-ingresar" novalidate>
     <label>Celular<input id="in-cel" type="tel" inputmode="tel" autocomplete="username" placeholder="09XXXXXXXX" required></label>
-    <label>Clave que te dio iHub<input id="in-clave" type="password" autocomplete="current-password" required></label>
+    <label>Clave que te dio IHUB<input id="in-clave" type="password" autocomplete="current-password" required></label>
     <div class="acc-msg" id="in-msg" hidden></div>
     <button class="submit" type="submit">Ver precios por mayor</button>
     <button class="linkish" type="button" id="ir-correo" hidden>Prefiero recibir un código en mi correo</button>
@@ -382,7 +395,7 @@ footer a { color: #fff; font-weight: 600; }
     <details>
       <summary>Producto grado A</summary>
       <div class="dbody">
-        <p>Los equipos Open Box que vende iHub son <b>grado A</b>: se revisan antes de la venta, están homologados para funcionar en Ecuador y se entregan en excelente estado estético y de funcionamiento.</p>
+        <p>Los equipos Open Box que vende IHUB son <b>grado A</b>: se revisan antes de la venta, están homologados para funcionar en Ecuador y se entregan en excelente estado estético y de funcionamiento.</p>
         <p>En cada equipo Open Box se indica la salud de batería real. Los equipos marcados como <b>Nuevo sellado</b> se entregan en su caja cerrada de fábrica.</p>
         <p>El comprador puede revisar el equipo al momento de la entrega y lo acepta en el estado indicado en el contrato.</p>
       </div>
@@ -391,11 +404,11 @@ footer a { color: #fff; font-weight: 600; }
     <details>
       <summary>Garantía que se entrega</summary>
       <div class="dbody">
-        <p>iHub otorga garantía por <b>defectos de fábrica y/o de homologación</b>. El plazo depende del costo y del tiempo de fabricación del equipo, hasta <b>1 año</b>, y consta por escrito en el contrato de compraventa.</p>
+        <p>IHUB otorga garantía por <b>defectos de fábrica y/o de homologación</b>. El plazo depende del costo y del tiempo de fabricación del equipo, hasta <b>1 año</b>, y consta por escrito en el contrato de compraventa.</p>
         <ul>
           <li>La garantía es personal e intransferible. Si el equipo se vende a otra persona, la garantía no aplica para el nuevo dueño.</li>
           <li>Para hacerla válida presenta tu contrato de compraventa y el equipo con el IMEI registrado.</li>
-          <li>El servicio técnico lo realiza iHub y su equipo autorizado.</li>
+          <li>El servicio técnico lo realiza IHUB y su equipo autorizado.</li>
         </ul>
         <p><b>La garantía no cubre daños ocasionados por el comprador</b>, por ejemplo:</p>
         <ul>
@@ -406,7 +419,7 @@ footer a { color: #fff; font-weight: 600; }
           <li>Display en mal funcionamiento.</li>
           <li>Pin de carga y/o auriculares dañados por mala manipulación.</li>
           <li>Instalación de software no autorizado ni requerido por el sistema operativo.</li>
-          <li>Manipulación o alteración por personas ajenas al servicio técnico de iHub.</li>
+          <li>Manipulación o alteración por personas ajenas al servicio técnico de IHUB.</li>
         </ul>
       </div>
     </details>
@@ -418,7 +431,7 @@ footer a { color: #fff; font-weight: 600; }
           <li><b>Precios:</b> en dólares de los Estados Unidos de América, sujetos a disponibilidad y a cambio sin previo aviso. El stock se actualiza automáticamente durante el día; la disponibilidad final se confirma por WhatsApp antes de cerrar la venta.</li>
           <li><b>Contrato:</b> toda compra se formaliza con un contrato de compraventa que identifica al vendedor, al comprador, el equipo (marca, modelo, capacidad, color, IMEI y estado), el precio, la forma de pago, los accesorios entregados y la garantía.</li>
           <li><b>Origen de fondos:</b> el comprador declara que el dinero entregado no proviene de actividades ilícitas.</li>
-          <li><b>Responsabilidad del vendedor:</b> iHub responde porque el equipo no tiene gravamen ni embargo, no ha sido obtenido de forma ilícita, y atiende reclamos de terceros sobre su dominio o procedencia.</li>
+          <li><b>Responsabilidad del vendedor:</b> IHUB responde porque el equipo no tiene gravamen ni embargo, no ha sido obtenido de forma ilícita, y atiende reclamos de terceros sobre su dominio o procedencia.</li>
           <li><b>Datos personales:</b> los datos del comprador se usan solo para celebrar y ejecutar la compraventa, con confidencialidad y conforme a la Ley Orgánica de Protección de Datos Personales.</li>
           <li><b>Jurisdicción:</b> las partes se someten a las leyes y a los jueces competentes del Ecuador.</li>
           <li><b>Envíos:</b> desde nuestra bodega en Quito a todo el Ecuador. Costo y tiempo de entrega se coordinan por WhatsApp según la ciudad.</li>
@@ -487,7 +500,7 @@ function renderHero() {
     const items = star.filter(p => p.modelo === m);
     const nombre = m.replace("IPHONE", "iPhone").replace("PRO MAX", "Pro Max").replace(/PRO$/, "Pro");
     if (!items.length) return `<div class="hm"><div class="hm-name">${nombre}<small style="color:#9DB3CF;font:500 12px var(--body)">Pregunta por disponibilidad</small></div>
-      <a class="btn wa" style="height:36px;padding:0 12px" target="_blank" rel="noopener" href="${waLink(`Hola iHub, ¿tienen disponible el ${nombre}?`)}">${waIcon}Consultar</a></div>`;
+      <a class="btn wa" style="height:36px;padding:0 12px" target="_blank" rel="noopener" href="${waLink(`Hola IHUB, ¿tienen disponible el ${nombre}?`)}">${waIcon}Consultar</a></div>`;
     const min = Math.min(...items.map(p => p.precio));
     const caps = [...new Set(items.map(p => p.capacidad))].join(" · ");
     const dots = [...new Set(items.map(p => p.color))].map(c => `<i style="background:${swatch(c)}" title="${esc(c)}"></i>`).join("");
@@ -495,7 +508,7 @@ function renderHero() {
       <div class="hm-price">Desde<b>${money(min)}</b></div></div>`;
   }).join("");
   $("hero-wa").innerHTML = waIcon + "Reservar el mío";
-  $("hero-wa").href = waLink("Hola iHub, quiero reservar un iPhone 18 Pro / 18 Pro Max. ¿Qué colores y capacidades tienen?");
+  $("hero-wa").href = waLink("Hola IHUB, quiero reservar un iPhone 18 Pro / 18 Pro Max. ¿Qué colores y capacidades tienen?");
 }
 $("hero-ver").addEventListener("click", () => {
   state.q = "18 PRO"; $("q").value = "18 PRO"; state.lista = "todo"; state.cat = "todo"; render();
@@ -569,7 +582,7 @@ function row(g, p) {
       <span class="color"><span class="sw" style="background:${swatch(p.color)}"></span>${esc(p.color || "Único")}${p._nuevo ? ' <span class="new-tag">Nuevo</span>' : ""}</span>
       <span class="specs">${specs.join("")}</span></div>
     <span class="price">${money(p.precio)}</span>
-    <a class="wa-sq" href="${waLink(MAYOR ? `Hola iHub, soy mayorista (${MAYOR.nombre} ${MAYOR.apellido}, ${MAYOR.celular}). Me interesa: ${desc} (${extra}) – ${money(p.precio)} por mayor. ¿Está disponible?` : `Hola iHub, me interesa: ${desc} (${extra}) – ${money(p.precio)}. ¿Está disponible?`)}" target="_blank" rel="noopener" aria-label="Pedir ${esc(desc)} por WhatsApp">${waIcon}</a></li>`;
+    <a class="wa-sq" href="${waLink(MAYOR ? `Hola IHUB, soy mayorista (${MAYOR.nombre} ${MAYOR.apellido}, ${MAYOR.celular}). Me interesa: ${desc} (${extra}) – ${money(p.precio)} por mayor. ¿Está disponible?` : `Hola IHUB, me interesa: ${desc} (${extra}) – ${money(p.precio)}. ¿Está disponible?`)}" target="_blank" rel="noopener" aria-label="Pedir ${esc(desc)} por WhatsApp">${waIcon}</a></li>`;
 }
 
 $("q").addEventListener("input", e => { state.q = e.target.value; render(); });
@@ -628,7 +641,7 @@ function renderNoticias(n, productos) {
       return `<li>${esc(modelo)}${resto.map(r => `<span>${esc(r)}</span>`).join("")}</li>`;
     }).join("");
     $("news-wa").innerHTML = waIcon + "Consultar disponibilidad";
-    $("news-wa").href = waLink(`Hola iHub, vi en noticias: ${[n.titulo, ...items].filter(Boolean).join(" · ")}. ¿Me das más información?`);
+    $("news-wa").href = waLink(`Hola IHUB, vi en noticias: ${[n.titulo, ...items].filter(Boolean).join(" · ")}. ¿Me das más información?`);
   }
   const nuevos = productos.filter(p => p._nuevo);
   $("news-ver").hidden = !nuevos.length;
@@ -650,7 +663,7 @@ function verRecienLlegados() {
 $("bell").addEventListener("click", verRecienLlegados);
 $("news-ver").addEventListener("click", verRecienLlegados);
 
-/* ---------- Mayoristas: solicitud, aprobación de iHub y clave ---------- */
+/* ---------- Mayoristas: solicitud, aprobación de IHUB y clave ---------- */
 const CODIGO_CORREO = false;   // true cuando Supabase tenga configurado el envío de correos (SMTP)
 const CLAVE_SESION = "ihub-mayorista-v2";
 let TOKEN = null, MAYOR = null;
@@ -696,6 +709,7 @@ async function leerMayorista() {
 }
 function pintarModo() {
   $("modo-mayor").hidden = !MAYOR;
+  document.documentElement.classList.toggle("modo-mayorista", !!MAYOR);
   $("acc-btn").classList.toggle("on", !!MAYOR);
   $("acc-btn").textContent = MAYOR ? `Mayorista · ${MAYOR.nombre || "mi cuenta"}` : "Mayoristas";
   if (MAYOR) $("mayor-hola").textContent = `Hola, ${MAYOR.nombre} ${MAYOR.apellido}. Estás viendo el stock con precio por mayor.`;
@@ -773,8 +787,8 @@ $("form-registro").addEventListener("submit", e => {
                                                  p_correo: d.correo, p_negocio: d.negocio, p_ciudad: d.ciudad });
     if (r !== "pendiente") throw falla(MENSAJES[r] || sinConexion);
     const cel10 = "0" + d.cel.slice(3);
-    $("re-avisar").innerHTML = waIcon + "Avisar a iHub por WhatsApp";
-    $("re-avisar").href = waLink(`Hola iHub, envié mi solicitud de acceso mayorista: ${d.nombre} ${d.apellido}, celular ${cel10}` +
+    $("re-avisar").innerHTML = waIcon + "Avisar a IHUB por WhatsApp";
+    $("re-avisar").href = waLink(`Hola IHUB, envié mi solicitud de acceso mayorista: ${d.nombre} ${d.apellido}, celular ${cel10}` +
       `${d.correo ? ", " + d.correo : ""}${d.negocio ? ", negocio " + d.negocio : ""}${d.ciudad ? ", " + d.ciudad : ""}. ¿Me ayudan con mi clave?`);
     $("in-cel").value = cel10;
     e.target.reset();
