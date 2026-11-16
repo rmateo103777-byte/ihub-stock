@@ -1,7 +1,7 @@
 {
-  "name": "iHub Stock",
-  "short_name": "iHub",
-  "description": "Stock de celulares, Mac y gadgets de iHub Ecuador",
+  "name": "IHUB Stock",
+  "short_name": "IHUB",
+  "description": "Stock de celulares, Mac y gadgets de IHUB Ecuador",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
