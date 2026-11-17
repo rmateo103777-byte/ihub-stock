@@ -136,7 +136,7 @@
    "categoria": "iphone",
    "color": "BLACK",
    "capacidad": "128GB",
-   "bateria": 93,
+   "bateria": 95,
    "sim": "eSIM",
    "precio": 769.99
   },
@@ -519,16 +519,6 @@
    "bateria": 100,
    "sim": "eSIM",
    "precio": 1575.0
-  },
-  {
-   "lista": "nuevos",
-   "modelo": "IPHONE 18 PRO MAX",
-   "categoria": "iphone",
-   "color": "BLACK",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1799.99
   },
   {
    "lista": "nuevos",
@@ -951,8 +941,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-17T19:51:08+00:00",
- "revisado": "2026-11-17T19:51:08+00:00",
+ "actualizado": "2026-11-17T20:47:33+00:00",
+ "revisado": "2026-11-17T20:47:33+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1054,10 +1044,6 @@
   {
    "clave": "nuevos|IPHONE 18 PRO MAX|GLACIER|256GB",
    "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 18 PRO MAX|BLACK|512GB",
-   "desde": "2026-11-17T19:51:08+00:00"
   },
   {
    "clave": "nuevos|IPHONE 18 PRO MAX|GLACIER|512GB",
