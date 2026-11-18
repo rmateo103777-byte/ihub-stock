@@ -36,7 +36,7 @@
    "categoria": "iphone",
    "color": "SPACE BLACK",
    "capacidad": "128GB",
-   "bateria": 82,
+   "bateria": 83,
    "sim": "eSIM",
    "precio": 579.99
   },
@@ -642,237 +642,237 @@
   },
   {
    "lista": "gadgets",
-   "modelo": "IPHONE 16",
-   "categoria": "iphone",
-   "color": "BLACK",
-   "capacidad": "128GB",
-   "bateria": 100,
-   "sim": "Chip físico",
-   "precio": 879.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE 16",
-   "categoria": "iphone",
-   "color": "ULTRAMARINE",
-   "capacidad": "128GB",
-   "bateria": 100,
-   "sim": "Chip físico",
-   "precio": 879.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE 16",
-   "categoria": "iphone",
-   "color": "WHITE",
-   "capacidad": "128GB",
-   "bateria": 100,
-   "sim": "Chip físico",
-   "precio": 879.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE 17 PRO",
-   "categoria": "iphone",
-   "color": "COSMIC ORANGE",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1289.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE 18 PRO",
-   "categoria": "iphone",
-   "color": "BLACK",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1415.0
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE 18 PRO MAX",
-   "categoria": "iphone",
-   "color": "BLACK",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1575.0
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE 18 PRO MAX",
-   "categoria": "iphone",
-   "color": "BURGUNDY",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1575.0
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE 18 PRO MAX",
-   "categoria": "iphone",
-   "color": "GLACIER",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1565.0
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE DUO",
-   "categoria": "iphone",
-   "color": "STAR WHITE",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 2589.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE DUO",
-   "categoria": "iphone",
-   "color": "NIGHT SKY",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 2789.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPHONE DUO",
-   "categoria": "iphone",
-   "color": "STAR WHITE",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 2789.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "XIAOMI 17T 12RAM",
-   "categoria": "android",
-   "color": "BLACK",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 559.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "XIAOMI 17T 12RAM",
-   "categoria": "android",
-   "color": "OPAL WHITE",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 559.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "XIAOMI 17T 12RAM",
-   "categoria": "android",
-   "color": "VIOLET",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 559.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "XIAOMI 17T PRO 12RAM",
-   "categoria": "android",
-   "color": "DEEP BLUE",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 705.0
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "XIAOMI 17T PRO 12RAM",
-   "categoria": "android",
-   "color": "DEEP VIOLET",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 705.0
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "XIAOMI REDMI 15C",
-   "categoria": "android",
-   "color": "NEGRO OCASO",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 185.0
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "XIAOMI REDMI NOTE 17 PRO 8GB RAM",
-   "categoria": "android",
-   "color": "BLACK",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 400.0
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "XIAOMI REDMI NOTE 17 PRO 8GB RAM",
-   "categoria": "android",
+   "modelo": "AFTERGLOW WAVE WIRELESS NINTENDO",
+   "categoria": "otros",
    "color": "PURPLE",
-   "capacidad": "512GB",
+   "capacidad": "",
    "bateria": 100,
    "sim": "",
-   "precio": 400.0
+   "precio": 65.0
   },
   {
    "lista": "gadgets",
-   "modelo": "XIAOMI REDMI NOTE 17 PRO 8GB RAM",
-   "categoria": "android",
+   "modelo": "AIRPODS 5 GEN (WCC)",
+   "categoria": "otros",
+   "color": "WHITE",
+   "capacidad": "",
+   "bateria": 100,
+   "sim": "",
+   "precio": 169.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "AIRPODS PRO 3 GEN",
+   "categoria": "otros",
+   "color": "WHITE",
+   "capacidad": "",
+   "bateria": 100,
+   "sim": "",
+   "precio": 255.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "APPLE PENCIL PRO",
+   "categoria": "otros",
+   "color": "WHITE",
+   "capacidad": "",
+   "bateria": 100,
+   "sim": "",
+   "precio": 130.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "APPLE WATCH S12 46MM",
+   "categoria": "otros",
+   "color": "SPACE GRAY",
+   "capacidad": "32GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 495.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "APPLE WATCH SE 3 40MM",
+   "categoria": "otros",
+   "color": "MIDNIGHT",
+   "capacidad": "32GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 279.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "APPLE WATCH SE 3 40MM",
+   "categoria": "otros",
+   "color": "STARLIGHT",
+   "capacidad": "32GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 279.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "APPLE WATCH SE 3 44MM",
+   "categoria": "otros",
+   "color": "MIDNIGHT",
+   "capacidad": "32GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 305.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "IPAD A16 11VA GEN 11\"",
+   "categoria": "ipad",
+   "color": "BLUE",
+   "capacidad": "128GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 579.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "IPAD A16 11VA GEN 11\"",
+   "categoria": "ipad",
+   "color": "PINK",
+   "capacidad": "128GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 579.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "IPAD A16 11VA GEN 11\"",
+   "categoria": "ipad",
+   "color": "SILVER",
+   "capacidad": "128GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 579.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "IPAD AIR M4 11\"",
+   "categoria": "ipad",
+   "color": "BLUE",
+   "capacidad": "128GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 859.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "IPAD AIR M4 11\"",
+   "categoria": "ipad",
+   "color": "PURPLE",
+   "capacidad": "128GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 859.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "IPAD AIR M4 11\"",
+   "categoria": "ipad",
+   "color": "STARLIGHT",
+   "capacidad": "128GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 859.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "IPAD PRO M5 13\"",
+   "categoria": "ipad",
+   "color": "SPACE BLACK",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 1539.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "MACBOOK AIR M5 13\"",
+   "categoria": "macbook",
+   "color": "SILVER",
+   "capacidad": "512GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 1519.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "MACBOOK AIR M5 13\"",
+   "categoria": "macbook",
    "color": "SKY BLUE",
    "capacidad": "512GB",
    "bateria": 100,
    "sim": "",
-   "precio": 400.0
+   "precio": 1519.99
   },
   {
    "lista": "gadgets",
-   "modelo": "XIAOMI REDMI NOTE 17 PRO MAX 8GB RAM",
-   "categoria": "android",
-   "color": "BLACK",
+   "modelo": "MACBOOK NEO",
+   "categoria": "macbook",
+   "color": "SILVER",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 909.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "MACBOOK NEO",
+   "categoria": "macbook",
+   "color": "BLUSH",
    "capacidad": "512GB",
    "bateria": 100,
    "sim": "",
-   "precio": 479.99
+   "precio": 1009.99
   },
   {
    "lista": "gadgets",
-   "modelo": "ZTE NUVIA V80 MAX",
-   "categoria": "android",
-   "color": "DORADO",
-   "capacidad": "256GB",
+   "modelo": "MACBOOK NEO",
+   "categoria": "macbook",
+   "color": "INDIGO",
+   "capacidad": "512GB",
    "bateria": 100,
    "sim": "",
-   "precio": 175.0
+   "precio": 1009.99
   },
   {
    "lista": "gadgets",
-   "modelo": "ZTE NUVIA V80 MAX",
+   "modelo": "ORIGINAL 20W USB-C POWER ADAPTER",
+   "categoria": "cubos",
+   "color": "WHITE",
+   "capacidad": "",
+   "bateria": null,
+   "sim": "",
+   "precio": 35.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "REDMI PAD 2 8GB RAM",
    "categoria": "android",
-   "color": "NEGRO",
+   "color": "GRAPHITE GRAY",
    "capacidad": "256GB",
    "bateria": 100,
    "sim": "",
-   "precio": 175.0
+   "precio": 265.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "REDMI PAD 2 8GB RAM",
+   "categoria": "android",
+   "color": "LAVENDER PURPLE",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 265.0
   }
  ],
- "actualizado": "2026-11-18T18:28:04+00:00",
- "revisado": "2026-11-18T18:28:04+00:00",
+ "actualizado": "2026-11-18T19:39:52+00:00",
+ "revisado": "2026-11-18T19:39:52+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1012,96 +1012,96 @@
    "desde": "2026-11-16T06:01:29+00:00"
   },
   {
-   "clave": "gadgets|IPHONE 16|BLACK|128GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|AFTERGLOW WAVE WIRELESS NINTENDO|PURPLE|",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE 16|ULTRAMARINE|128GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|AIRPODS 5 GEN (WCC)|WHITE|",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE 16|WHITE|128GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|AIRPODS PRO 3 GEN|WHITE|",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE 17 PRO|COSMIC ORANGE|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|APPLE PENCIL PRO|WHITE|",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE 18 PRO|BLACK|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|APPLE WATCH S12 46MM|SPACE GRAY|32GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE 18 PRO MAX|BLACK|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|APPLE WATCH SE 3 40MM|MIDNIGHT|32GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE 18 PRO MAX|BURGUNDY|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|APPLE WATCH SE 3 40MM|STARLIGHT|32GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE 18 PRO MAX|GLACIER|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|APPLE WATCH SE 3 44MM|MIDNIGHT|32GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE DUO|STAR WHITE|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|IPAD A16 11VA GEN 11\"|BLUE|128GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE DUO|NIGHT SKY|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|IPAD A16 11VA GEN 11\"|PINK|128GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|IPHONE DUO|STAR WHITE|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|IPAD A16 11VA GEN 11\"|SILVER|128GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI 17T 12RAM|BLACK|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|IPAD AIR M4 11\"|BLUE|128GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI 17T 12RAM|OPAL WHITE|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|IPAD AIR M4 11\"|PURPLE|128GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI 17T 12RAM|VIOLET|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|IPAD AIR M4 11\"|STARLIGHT|128GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI 17T PRO 12RAM|DEEP BLUE|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|IPAD PRO M5 13\"|SPACE BLACK|256GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI 17T PRO 12RAM|DEEP VIOLET|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|MACBOOK AIR M5 13\"|SILVER|512GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI REDMI 15C|NEGRO OCASO|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|MACBOOK AIR M5 13\"|SKY BLUE|512GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI REDMI NOTE 17 PRO 8GB RAM|BLACK|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|MACBOOK NEO|SILVER|256GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI REDMI NOTE 17 PRO 8GB RAM|PURPLE|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|MACBOOK NEO|BLUSH|512GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI REDMI NOTE 17 PRO 8GB RAM|SKY BLUE|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|MACBOOK NEO|INDIGO|512GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|XIAOMI REDMI NOTE 17 PRO MAX 8GB RAM|BLACK|512GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|ORIGINAL 20W USB-C POWER ADAPTER|WHITE|",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|ZTE NUVIA V80 MAX|DORADO|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|REDMI PAD 2 8GB RAM|GRAPHITE GRAY|256GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   },
   {
-   "clave": "gadgets|ZTE NUVIA V80 MAX|NEGRO|256GB",
-   "desde": "2026-11-18T18:28:04+00:00"
+   "clave": "gadgets|REDMI PAD 2 8GB RAM|LAVENDER PURPLE|256GB",
+   "desde": "2026-11-18T19:39:52+00:00"
   }
  ]
 }
