@@ -6,7 +6,7 @@
    "categoria": "iphone",
    "color": "MIDNIGHT",
    "capacidad": "128GB",
-   "bateria": 89,
+   "bateria": 91,
    "sim": "eSIM",
    "precio": 459.99
   },
@@ -346,7 +346,7 @@
    "categoria": "android",
    "color": "GREEN",
    "capacidad": "512GB",
-   "bateria": 97,
+   "bateria": 99,
    "sim": "",
    "precio": 529.99
   },
@@ -861,8 +861,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-18T22:29:23+00:00",
- "revisado": "2026-11-18T22:29:23+00:00",
+ "actualizado": "2026-11-18T23:28:30+00:00",
+ "revisado": "2026-11-18T23:28:30+00:00",
  "noticias": null,
  "ingresos": [
   {
