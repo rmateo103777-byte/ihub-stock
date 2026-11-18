@@ -498,7 +498,7 @@
    "capacidad": "256GB",
    "bateria": 100,
    "sim": "eSIM",
-   "precio": 1575.0
+   "precio": 1565.0
   },
   {
    "lista": "nuevos",
@@ -742,16 +742,6 @@
   },
   {
    "lista": "gadgets",
-   "modelo": "APPLE WATCH ULTRA 4 49MM",
-   "categoria": "otros",
-   "color": "NATURAL TITANIUM",
-   "capacidad": "64GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 849.0
-  },
-  {
-   "lista": "gadgets",
    "modelo": "IPAD A16 11VA GEN 11\"",
    "categoria": "ipad",
    "color": "BLUE",
@@ -901,8 +891,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-17T23:43:39+00:00",
- "revisado": "2026-11-18T15:17:48+00:00",
+ "actualizado": "2026-11-18T16:22:38+00:00",
+ "revisado": "2026-11-18T16:22:38+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1071,10 +1061,6 @@
   },
   {
    "clave": "gadgets|APPLE WATCH SE 3 44MM|MIDNIGHT|32GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|NATURAL TITANIUM|64GB",
    "desde": "2026-11-16T06:01:29+00:00"
   },
   {
