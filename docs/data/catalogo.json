@@ -224,16 +224,6 @@
    "lista": "openbox",
    "modelo": "IPHONE 16 PRO",
    "categoria": "iphone",
-   "color": "WHITE TITANIUM",
-   "capacidad": "256GB",
-   "bateria": 90,
-   "sim": "eSIM",
-   "precio": 869.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 16 PRO",
-   "categoria": "iphone",
    "color": "BLACK TITANIUM",
    "capacidad": "512GB",
    "bateria": 85,
@@ -356,7 +346,7 @@
    "categoria": "android",
    "color": "GREEN",
    "capacidad": "512GB",
-   "bateria": 95,
+   "bateria": 97,
    "sim": "",
    "precio": 529.99
   },
@@ -891,8 +881,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-18T16:22:38+00:00",
- "revisado": "2026-11-18T16:22:38+00:00",
+ "actualizado": "2026-11-18T17:35:36+00:00",
+ "revisado": "2026-11-18T17:35:36+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -929,10 +919,6 @@
   },
   {
    "clave": "openbox|IPHONE 16 PRO|BLACK TITANIUM|256GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 16 PRO|WHITE TITANIUM|256GB",
    "desde": "2026-11-16T06:01:29+00:00"
   },
   {
