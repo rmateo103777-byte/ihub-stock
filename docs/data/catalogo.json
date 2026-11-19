@@ -452,6 +452,46 @@
   },
   {
    "lista": "nuevos",
+   "modelo": "IPHONE 18 PRO",
+   "categoria": "iphone",
+   "color": "BURGUNDY",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "eSIM",
+   "precio": 1415.0
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "IPHONE 18 PRO",
+   "categoria": "iphone",
+   "color": "SILVER",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "eSIM",
+   "precio": 1415.0
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "IPHONE 18 PRO MAX",
+   "categoria": "iphone",
+   "color": "BLACK",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "eSIM",
+   "precio": 1575.0
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "IPHONE 18 PRO MAX",
+   "categoria": "iphone",
+   "color": "BURGUNDY",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "eSIM",
+   "precio": 1575.0
+  },
+  {
+   "lista": "nuevos",
    "modelo": "IPHONE 18 PRO MAX",
    "categoria": "iphone",
    "color": "GLACIER",
@@ -459,6 +499,16 @@
    "bateria": 100,
    "sim": "eSIM",
    "precio": 1565.0
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "IPHONE 18 PRO MAX",
+   "categoria": "iphone",
+   "color": "BURGUNDY",
+   "capacidad": "512GB",
+   "bateria": 100,
+   "sim": "eSIM",
+   "precio": 1819.0
   },
   {
    "lista": "nuevos",
@@ -489,6 +539,36 @@
    "bateria": 100,
    "sim": "",
    "precio": 2789.99
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "SAMSUNG GALAXY S25 ULTRA",
+   "categoria": "android",
+   "color": "TITANIUM BLACK",
+   "capacidad": "512GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 899.99
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "SAMSUNG GALAXY S25 ULTRA",
+   "categoria": "android",
+   "color": "TITANIUM GRAY",
+   "capacidad": "512GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 899.99
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "SAMSUNG GALAXY S25 ULTRA",
+   "categoria": "android",
+   "color": "TITANIUM WHITESILVER",
+   "capacidad": "512GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 899.99
   },
   {
    "lista": "nuevos",
@@ -692,6 +772,66 @@
   },
   {
    "lista": "gadgets",
+   "modelo": "APPLE WATCH ULTRA 4 49MM",
+   "categoria": "otros",
+   "color": "BLACK TITANIUM",
+   "capacidad": "64GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 849.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "APPLE WATCH ULTRA 4 49MM",
+   "categoria": "otros",
+   "color": "NATURAL TITANIUM",
+   "capacidad": "64GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 849.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "DUALSENSE PS5 BLACK V2",
+   "categoria": "palancas",
+   "color": "",
+   "capacidad": "",
+   "bateria": null,
+   "sim": "",
+   "precio": 79.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "DUALSENSE PS5 CAMUFLAJE",
+   "categoria": "palancas",
+   "color": "",
+   "capacidad": "",
+   "bateria": null,
+   "sim": "",
+   "precio": 79.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "DUALSENSE PS5 GALACTIC PURPLE V2",
+   "categoria": "palancas",
+   "color": "",
+   "capacidad": "",
+   "bateria": null,
+   "sim": "",
+   "precio": 79.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "DUALSENSE PS5 WHITE",
+   "categoria": "palancas",
+   "color": "",
+   "capacidad": "",
+   "bateria": null,
+   "sim": "",
+   "precio": 79.99
+  },
+  {
+   "lista": "gadgets",
    "modelo": "IPAD A16 11VA GEN 11\"",
    "categoria": "ipad",
    "color": "BLUE",
@@ -759,6 +899,16 @@
    "bateria": 100,
    "sim": "",
    "precio": 1539.99
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "MACBOOK AIR M5 13\"",
+   "categoria": "macbook",
+   "color": "MIDNIGHT",
+   "capacidad": "512GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 1519.99
   },
   {
    "lista": "gadgets",
@@ -841,8 +991,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-19T19:57:54+00:00",
- "revisado": "2026-11-19T20:51:05+00:00",
+ "actualizado": "2026-11-19T21:43:59+00:00",
+ "revisado": "2026-11-19T21:43:59+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -918,8 +1068,28 @@
    "desde": "2026-11-16T06:01:29+00:00"
   },
   {
+   "clave": "nuevos|IPHONE 18 PRO|BURGUNDY|256GB",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "nuevos|IPHONE 18 PRO|SILVER|256GB",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "nuevos|IPHONE 18 PRO MAX|BLACK|256GB",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "nuevos|IPHONE 18 PRO MAX|BURGUNDY|256GB",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
    "clave": "nuevos|IPHONE 18 PRO MAX|GLACIER|256GB",
    "desde": "2026-11-16T06:01:29+00:00"
+  },
+  {
+   "clave": "nuevos|IPHONE 18 PRO MAX|BURGUNDY|512GB",
+   "desde": "2026-11-19T21:43:59+00:00"
   },
   {
    "clave": "nuevos|IPHONE DUO|STAR WHITE|256GB",
@@ -932,6 +1102,18 @@
   {
    "clave": "nuevos|IPHONE DUO|STAR WHITE|512GB",
    "desde": "2026-11-16T17:03:39+00:00"
+  },
+  {
+   "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM BLACK|512GB",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM GRAY|512GB",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM WHITESILVER|512GB",
+   "desde": "2026-11-19T21:43:59+00:00"
   },
   {
    "clave": "nuevos|XIAOMI 17T 12RAM|BLACK|512GB",
@@ -1002,6 +1184,30 @@
    "desde": "2026-11-18T19:39:52+00:00"
   },
   {
+   "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|BLACK TITANIUM|64GB",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|NATURAL TITANIUM|64GB",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "gadgets|DUALSENSE PS5 BLACK V2||",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "gadgets|DUALSENSE PS5 CAMUFLAJE||",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "gadgets|DUALSENSE PS5 GALACTIC PURPLE V2||",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
+   "clave": "gadgets|DUALSENSE PS5 WHITE||",
+   "desde": "2026-11-19T21:43:59+00:00"
+  },
+  {
    "clave": "gadgets|IPAD A16 11VA GEN 11\"|BLUE|128GB",
    "desde": "2026-11-18T19:39:52+00:00"
   },
@@ -1028,6 +1234,10 @@
   {
    "clave": "gadgets|IPAD PRO M5 13\"|SPACE BLACK|256GB",
    "desde": "2026-11-18T19:39:52+00:00"
+  },
+  {
+   "clave": "gadgets|MACBOOK AIR M5 13\"|MIDNIGHT|512GB",
+   "desde": "2026-11-19T21:43:59+00:00"
   },
   {
    "clave": "gadgets|MACBOOK AIR M5 13\"|SILVER|512GB",
