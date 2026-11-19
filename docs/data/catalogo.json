@@ -176,7 +176,7 @@
    "categoria": "iphone",
    "color": "PINK",
    "capacidad": "128GB",
-   "bateria": 94,
+   "bateria": 100,
    "sim": "eSIM",
    "precio": 755.0
   },
@@ -841,8 +841,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-19T18:52:23+00:00",
- "revisado": "2026-11-19T18:52:23+00:00",
+ "actualizado": "2026-11-19T19:57:54+00:00",
+ "revisado": "2026-11-19T19:57:54+00:00",
  "noticias": null,
  "ingresos": [
   {
