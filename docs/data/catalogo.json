@@ -346,7 +346,7 @@
    "categoria": "iphone",
    "color": "ULTRAMARINE",
    "capacidad": "256GB",
-   "bateria": 86,
+   "bateria": 89,
    "sim": "eSIM",
    "precio": 809.99
   },
@@ -534,16 +534,6 @@
    "lista": "openbox",
    "modelo": "IPHONE 17 PRO MAX",
    "categoria": "iphone",
-   "color": "COSMIC ORANGE",
-   "capacidad": "256GB",
-   "bateria": 95,
-   "sim": "eSIM",
-   "precio": 1219.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 17 PRO MAX",
-   "categoria": "iphone",
    "color": "DEEP BLUE",
    "capacidad": "256GB",
    "bateria": 99,
@@ -596,7 +586,7 @@
    "categoria": "android",
    "color": "COBALT VIOLET",
    "capacidad": "256GB",
-   "bateria": 96,
+   "bateria": 98,
    "sim": "",
    "precio": 459.99
   },
@@ -1191,8 +1181,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-20T16:17:35+00:00",
- "revisado": "2026-11-20T16:17:35+00:00",
+ "actualizado": "2026-11-20T17:18:39+00:00",
+ "revisado": "2026-11-20T17:18:39+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1342,10 +1332,6 @@
   {
    "clave": "openbox|IPHONE 17 PRO|SILVER|256GB",
    "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 17 PRO MAX|COSMIC ORANGE|256GB",
-   "desde": "2026-11-19T23:38:28+00:00"
   },
   {
    "clave": "openbox|IPHONE 17 PRO MAX|DEEP BLUE|256GB",
