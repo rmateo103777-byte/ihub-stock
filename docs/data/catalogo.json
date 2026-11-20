@@ -1042,16 +1042,6 @@
   },
   {
    "lista": "gadgets",
-   "modelo": "IPAD A16 11VA GEN 11\"",
-   "categoria": "ipad",
-   "color": "SILVER",
-   "capacidad": "128GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 579.99
-  },
-  {
-   "lista": "gadgets",
    "modelo": "IPAD AIR M4 11\"",
    "categoria": "ipad",
    "color": "BLUE",
@@ -1181,8 +1171,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-20T17:18:39+00:00",
- "revisado": "2026-11-20T17:18:39+00:00",
+ "actualizado": "2026-11-20T18:17:25+00:00",
+ "revisado": "2026-11-20T18:17:25+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1487,10 +1477,6 @@
   },
   {
    "clave": "gadgets|IPAD A16 11VA GEN 11\"|PINK|128GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|IPAD A16 11VA GEN 11\"|SILVER|128GB",
    "desde": "2026-11-18T19:39:52+00:00"
   },
   {
