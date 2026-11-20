@@ -516,7 +516,7 @@
    "categoria": "iphone",
    "color": "SAGE",
    "capacidad": "256GB",
-   "bateria": 97,
+   "bateria": 100,
    "sim": "eSIM",
    "precio": 885.0
   },
@@ -536,7 +536,7 @@
    "categoria": "iphone",
    "color": "SILVER",
    "capacidad": "256GB",
-   "bateria": 93,
+   "bateria": 99,
    "sim": "eSIM",
    "precio": 1159.99
   },
@@ -556,7 +556,7 @@
    "categoria": "iphone",
    "color": "COSMIC ORANGE",
    "capacidad": "256GB",
-   "bateria": 93,
+   "bateria": 95,
    "sim": "eSIM",
    "precio": 1219.99
   },
@@ -566,7 +566,7 @@
    "categoria": "iphone",
    "color": "DEEP BLUE",
    "capacidad": "256GB",
-   "bateria": 92,
+   "bateria": 99,
    "sim": "eSIM",
    "precio": 1219.99
   },
@@ -1231,8 +1231,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-19T23:38:28+00:00",
- "revisado": "2026-11-19T23:38:28+00:00",
+ "actualizado": "2026-11-20T00:28:10+00:00",
+ "revisado": "2026-11-20T00:28:10+00:00",
  "noticias": null,
  "ingresos": [
   {
