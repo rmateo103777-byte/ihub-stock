@@ -56,7 +56,7 @@
    "categoria": "iphone",
    "color": "GOLD",
    "capacidad": "256GB",
-   "bateria": 70,
+   "bateria": 76,
    "sim": "eSIM",
    "precio": 599.99
   },
@@ -512,16 +512,6 @@
   },
   {
    "lista": "openbox",
-   "modelo": "IPHONE 17",
-   "categoria": "iphone",
-   "color": "SAGE",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 885.0
-  },
-  {
-   "lista": "openbox",
    "modelo": "IPHONE 17 PRO",
    "categoria": "iphone",
    "color": "SILVER",
@@ -529,16 +519,6 @@
    "bateria": 90,
    "sim": "eSIM",
    "precio": 1119.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 17 PRO",
-   "categoria": "iphone",
-   "color": "SILVER",
-   "capacidad": "256GB",
-   "bateria": 99,
-   "sim": "eSIM",
-   "precio": 1159.99
   },
   {
    "lista": "openbox",
@@ -1211,8 +1191,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-20T15:17:06+00:00",
- "revisado": "2026-11-20T15:17:06+00:00",
+ "actualizado": "2026-11-20T16:17:35+00:00",
+ "revisado": "2026-11-20T16:17:35+00:00",
  "noticias": null,
  "ingresos": [
   {
