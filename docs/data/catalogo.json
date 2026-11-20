@@ -692,26 +692,6 @@
   },
   {
    "lista": "nuevos",
-   "modelo": "IPHONE 18 PRO",
-   "categoria": "iphone",
-   "color": "BURGUNDY",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1415.0
-  },
-  {
-   "lista": "nuevos",
-   "modelo": "IPHONE 18 PRO",
-   "categoria": "iphone",
-   "color": "SILVER",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1415.0
-  },
-  {
-   "lista": "nuevos",
    "modelo": "IPHONE 18 PRO MAX",
    "categoria": "iphone",
    "color": "BLACK",
@@ -1231,8 +1211,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-20T00:28:10+00:00",
- "revisado": "2026-11-20T14:15:06+00:00",
+ "actualizado": "2026-11-20T15:17:06+00:00",
+ "revisado": "2026-11-20T15:17:06+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1402,14 +1382,6 @@
   {
    "clave": "nuevos|IPHONE 16|WHITE|128GB",
    "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 18 PRO|BURGUNDY|256GB",
-   "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 18 PRO|SILVER|256GB",
-   "desde": "2026-11-19T21:43:59+00:00"
   },
   {
    "clave": "nuevos|IPHONE 18 PRO MAX|BLACK|256GB",
