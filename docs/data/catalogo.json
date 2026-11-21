@@ -502,16 +502,6 @@
   },
   {
    "lista": "openbox",
-   "modelo": "IPHONE 17 PRO",
-   "categoria": "iphone",
-   "color": "SILVER",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1249.99
-  },
-  {
-   "lista": "openbox",
    "modelo": "IPHONE 17 PRO MAX",
    "categoria": "iphone",
    "color": "DEEP BLUE",
@@ -739,16 +729,6 @@
    "bateria": 100,
    "sim": "",
    "precio": 899.99
-  },
-  {
-   "lista": "nuevos",
-   "modelo": "XIAOMI 17T 12RAM",
-   "categoria": "android",
-   "color": "BLACK",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 559.99
   },
   {
    "lista": "nuevos",
@@ -1141,8 +1121,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-20T20:29:57+00:00",
- "revisado": "2026-11-21T15:25:05+00:00",
+ "actualizado": "2026-11-21T16:24:28+00:00",
+ "revisado": "2026-11-21T16:24:28+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1340,10 +1320,6 @@
   {
    "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM WHITESILVER|512GB",
    "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI 17T 12RAM|BLACK|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
   },
   {
    "clave": "nuevos|XIAOMI 17T 12RAM|OPAL WHITE|512GB",
