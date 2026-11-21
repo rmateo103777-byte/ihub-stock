@@ -226,7 +226,7 @@
    "categoria": "iphone",
    "color": "NATURAL TITANIUM",
    "capacidad": "1TB",
-   "bateria": 76,
+   "bateria": 86,
    "sim": "eSIM",
    "precio": 819.99
   },
@@ -366,19 +366,9 @@
    "categoria": "iphone",
    "color": "BLACK TITANIUM",
    "capacidad": "256GB",
-   "bateria": 89,
+   "bateria": 90,
    "sim": "eSIM",
    "precio": 869.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 16 PRO",
-   "categoria": "iphone",
-   "color": "WHITE TITANIUM",
-   "capacidad": "512GB",
-   "bateria": 87,
-   "sim": "eSIM",
-   "precio": 889.99
   },
   {
    "lista": "openbox",
@@ -386,17 +376,7 @@
    "categoria": "iphone",
    "color": "BLACK TITANIUM",
    "capacidad": "256GB",
-   "bateria": 92,
-   "sim": "eSIM",
-   "precio": 919.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 16 PRO MAX",
-   "categoria": "iphone",
-   "color": "DESERT TITANIUM",
-   "capacidad": "256GB",
-   "bateria": 95,
+   "bateria": 93,
    "sim": "eSIM",
    "precio": 919.99
   },
@@ -446,7 +426,7 @@
    "categoria": "iphone",
    "color": "BLACK",
    "capacidad": "256GB",
-   "bateria": 95,
+   "bateria": 97,
    "sim": "eSIM",
    "precio": 885.0
   },
@@ -1061,8 +1041,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-21T17:24:21+00:00",
- "revisado": "2026-11-21T17:24:21+00:00",
+ "actualizado": "2026-11-21T18:18:18+00:00",
+ "revisado": "2026-11-21T18:18:18+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1158,15 +1138,7 @@
    "desde": "2026-11-16T06:01:29+00:00"
   },
   {
-   "clave": "openbox|IPHONE 16 PRO|WHITE TITANIUM|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
    "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|256GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 16 PRO MAX|DESERT TITANIUM|256GB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
