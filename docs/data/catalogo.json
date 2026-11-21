@@ -44,26 +44,6 @@
    "lista": "openbox",
    "modelo": "IPHONE 14 PRO",
    "categoria": "iphone",
-   "color": "GOLD",
-   "capacidad": "256GB",
-   "bateria": 83,
-   "sim": "eSIM",
-   "precio": 599.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 14 PRO",
-   "categoria": "iphone",
-   "color": "SILVER",
-   "capacidad": "256GB",
-   "bateria": 72,
-   "sim": "eSIM",
-   "precio": 599.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 14 PRO",
-   "categoria": "iphone",
    "color": "SPACE BLACK",
    "capacidad": "256GB",
    "bateria": 73,
@@ -219,16 +199,6 @@
    "bateria": 78,
    "sim": "eSIM",
    "precio": 789.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 15 PRO MAX",
-   "categoria": "iphone",
-   "color": "NATURAL TITANIUM",
-   "capacidad": "1TB",
-   "bateria": 86,
-   "sim": "eSIM",
-   "precio": 819.99
   },
   {
    "lista": "openbox",
@@ -1041,8 +1011,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-21T18:18:18+00:00",
- "revisado": "2026-11-21T19:14:05+00:00",
+ "actualizado": "2026-11-21T20:01:10+00:00",
+ "revisado": "2026-11-21T20:01:10+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1056,14 +1026,6 @@
   {
    "clave": "openbox|IPHONE 14 PRO|DEEP PURPLE|256GB",
    "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 14 PRO|GOLD|256GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 14 PRO|SILVER|256GB",
-   "desde": "2026-11-19T23:38:28+00:00"
   },
   {
    "clave": "openbox|IPHONE 14 PRO|SPACE BLACK|256GB",
@@ -1107,10 +1069,6 @@
   },
   {
    "clave": "openbox|IPHONE 15 PRO MAX|BLUE TITANIUM|512GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 15 PRO MAX|NATURAL TITANIUM|1TB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
