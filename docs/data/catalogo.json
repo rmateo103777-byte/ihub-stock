@@ -154,16 +154,6 @@
    "lista": "openbox",
    "modelo": "IPHONE 15 PRO MAX",
    "categoria": "iphone",
-   "color": "BLACK TITANIUM",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 759.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 15 PRO MAX",
-   "categoria": "iphone",
    "color": "BLUE TITANIUM",
    "capacidad": "256GB",
    "bateria": 84,
@@ -519,16 +509,6 @@
    "bateria": 100,
    "sim": "eSIM",
    "precio": 1289.99
-  },
-  {
-   "lista": "nuevos",
-   "modelo": "IPHONE 18 PRO MAX",
-   "categoria": "iphone",
-   "color": "BLACK",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1575.0
   },
   {
    "lista": "nuevos",
@@ -1001,8 +981,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-21T21:00:03+00:00",
- "revisado": "2026-11-22T15:25:58+00:00",
+ "actualizado": "2026-11-22T16:25:36+00:00",
+ "revisado": "2026-11-22T16:25:36+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1043,10 +1023,6 @@
   },
   {
    "clave": "openbox|IPHONE 15 PLUS|PINK|256GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 15 PRO MAX|BLACK TITANIUM|256GB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
@@ -1120,10 +1096,6 @@
   {
    "clave": "nuevos|IPHONE 16|ULTRAMARINE|128GB",
    "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 18 PRO MAX|BLACK|256GB",
-   "desde": "2026-11-19T21:43:59+00:00"
   },
   {
    "clave": "nuevos|IPHONE 18 PRO MAX|BURGUNDY|256GB",
