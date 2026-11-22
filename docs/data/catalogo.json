@@ -452,16 +452,6 @@
   },
   {
    "lista": "openbox",
-   "modelo": "SAMSUNG GALAXY S24 ULTRA",
-   "categoria": "android",
-   "color": "TITANIUM VIOLET",
-   "capacidad": "512GB",
-   "bateria": 94,
-   "sim": "",
-   "precio": 679.99
-  },
-  {
-   "lista": "openbox",
    "modelo": "SAMSUNG GALAXY S25 FE",
    "categoria": "android",
    "color": "NAVY",
@@ -981,8 +971,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-22T16:25:36+00:00",
- "revisado": "2026-11-22T17:24:20+00:00",
+ "actualizado": "2026-11-22T18:19:29+00:00",
+ "revisado": "2026-11-22T18:19:29+00:00",
  "noticias": null,
  "ingresos": [
   {
