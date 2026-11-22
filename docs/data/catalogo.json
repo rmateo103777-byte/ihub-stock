@@ -376,7 +376,7 @@
    "categoria": "iphone",
    "color": "BLACK",
    "capacidad": "256GB",
-   "bateria": 97,
+   "bateria": 100,
    "sim": "eSIM",
    "precio": 885.0
   },
@@ -386,7 +386,7 @@
    "categoria": "iphone",
    "color": "LAVENDER",
    "capacidad": "256GB",
-   "bateria": 91,
+   "bateria": 92,
    "sim": "eSIM",
    "precio": 885.0
   },
@@ -535,16 +535,6 @@
    "modelo": "IPHONE DUO",
    "categoria": "iphone",
    "color": "NIGHT SKY",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 2789.99
-  },
-  {
-   "lista": "nuevos",
-   "modelo": "IPHONE DUO",
-   "categoria": "iphone",
-   "color": "STAR WHITE",
    "capacidad": "512GB",
    "bateria": 100,
    "sim": "",
@@ -971,8 +961,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-22T18:19:29+00:00",
- "revisado": "2026-11-22T20:05:43+00:00",
+ "actualizado": "2026-11-22T21:02:13+00:00",
+ "revisado": "2026-11-22T21:02:13+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1102,10 +1092,6 @@
   {
    "clave": "nuevos|IPHONE DUO|NIGHT SKY|512GB",
    "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE DUO|STAR WHITE|512GB",
-   "desde": "2026-11-16T17:03:39+00:00"
   },
   {
    "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM BLACK|512GB",
