@@ -1,0 +1,25 @@
+{
+  "_ayuda": "Configuración de marketing de la tienda. Edita y guarda: la web lo toma al instante. Los nombres de modelo van como en el stock (en MAYÚSCULAS).",
+  "destacado": "IPHONE 18 PRO MAX",
+  "frase_destacado": "El más nuevo. Sellado, con garantía IHUB.",
+  "siempre": [
+    "IPHONE 18 PRO MAX",
+    "IPHONE 18 PRO",
+    "IPHONE DUO",
+    "IPHONE 17 PRO MAX",
+    "IPHONE 17 PRO",
+    "IPHONE 17 AIR",
+    "IPHONE 17",
+    "IPHONE 17E",
+    "IPHONE 16"
+  ],
+  "ofertas": [],
+  "_ofertas_ejemplo": [
+    {
+      "modelo": "IPHONE 16",
+      "lista": "nuevos",
+      "descuento": 30,
+      "texto": "Precio especial esta semana"
+    }
+  ]
+}
