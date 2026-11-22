@@ -176,6 +176,73 @@ footer .fine { grid-column: 1 / -1; border-top: 1px solid #1E3150; padding-top: 
 .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 12px 18px; border-radius: 12px; z-index: 60; font-weight: 500; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
 .loading { padding: 80px 0; text-align: center; color: var(--muted); }
 details.credits { margin-top: 8px; } details.credits summary { cursor: pointer; }
+
+/* ---------- Efectos ---------- */
+.hero { position: relative; isolation: isolate; }
+.hero .wrap { position: relative; z-index: 2; }
+#particles { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+.orb { position: absolute; border-radius: 50%; filter: blur(60px); z-index: 0; opacity: .55; animation: flotar 14s ease-in-out infinite alternate; pointer-events: none; }
+.orb.o1 { width: 420px; height: 420px; background: #1B6DFF; top: -140px; right: 8%; }
+.orb.o2 { width: 300px; height: 300px; background: #0E7CFF; bottom: -160px; left: -60px; opacity: .35; animation-duration: 18s; }
+@keyframes flotar { to { transform: translate(-40px, 30px) scale(1.12); } }
+.grad-text { background: linear-gradient(100deg, #fff 30%, #8EC5FF 60%, #fff 90%); background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: brillo 6s linear infinite; }
+@keyframes brillo { to { background-position: -220% 0; } }
+.hero-img { min-height: 380px; }
+.frame { position: relative; transition: transform .25s ease-out; transform-style: preserve-3d; animation: levitar 6s ease-in-out infinite; }
+.frame img { display: block; width: min(300px, 70vw); height: auto; filter: drop-shadow(0 30px 40px rgba(0,0,0,.5)); }
+.frame.photo { border-radius: 28px; overflow: hidden; box-shadow: 0 40px 80px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.12), 0 0 60px rgba(27,109,255,.35); }
+.frame.photo img { width: min(400px, 78vw); aspect-ratio: 4 / 3; object-fit: cover; filter: none; }
+.shine { position: absolute; inset: 0; background: radial-gradient(circle at var(--sx, 30%) var(--sy, 20%), rgba(255,255,255,.28), transparent 45%); pointer-events: none; mix-blend-mode: overlay; }
+@keyframes levitar { 50% { translate: 0 -10px; } }
+.float-chip { position: absolute; z-index: 3; display: inline-flex; align-items: center; gap: 6px; font: 600 13px var(--body); color: #fff; padding: 8px 12px; border-radius: 99px;
+  background: rgba(14,27,48,.55); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); animation: levitar 5s ease-in-out infinite; white-space: nowrap; }
+.float-chip svg { width: 16px; height: 16px; color: #8EC5FF; }
+.float-chip.c1 { top: 8%; left: -4%; } .float-chip.c2 { bottom: 12%; right: -2%; animation-delay: -2s; } .float-chip.c3 { bottom: -2%; left: 6%; animation-delay: -3.5s; }
+@media (max-width: 760px) { .hero-img { min-height: 0; } .frame.photo img { width: min(320px, 84vw); } .float-chip { font-size: 11px; padding: 6px 10px; } .float-chip.c1 { left: 0; top: 2%; } .float-chip.c2 { right: 0; } .float-chip.c3 { display: none; } }
+
+.showroom { padding: 64px 0 24px; overflow: hidden; background: linear-gradient(180deg, var(--bg), var(--soft)); }
+.sr-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 26px; }
+.sr-head .eyebrow { color: var(--brand); }
+.sr-head h2 { font-size: clamp(28px, 4.5vw, 44px); font-weight: 800; margin-top: 8px; }
+.stats { display: flex; gap: 28px; }
+.stats b { display: block; font: 800 34px/1 var(--display); color: var(--brand); }
+.stats span { font-size: 13px; color: var(--muted); }
+.marquee { mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.track { display: flex; gap: 16px; width: max-content; animation: desfilar 60s linear infinite; padding: 6px 0 16px; }
+.marquee:hover .track { animation-play-state: paused; }
+@keyframes desfilar { to { transform: translateX(-50%); } }
+.shot { position: relative; width: 240px; height: 300px; border-radius: 22px; overflow: hidden; flex: none; text-decoration: none; box-shadow: 0 18px 40px -20px rgba(10,27,51,.45); }
+.shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.shot:hover img { transform: scale(1.07); }
+.shot span { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 14px 14px; color: #fff; font-size: 13px; background: linear-gradient(transparent, rgba(6,16,31,.85)); }
+.shot b { display: block; font: 700 16px var(--display); }
+
+.card { overflow: hidden; }
+.card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .25s;
+  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 0), rgba(27,109,255,.13), transparent 60%); }
+.card:hover::after { opacity: 1; }
+.card .pic img.real { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; transition: transform .5s; }
+.card:hover .pic img { transform: scale(1.06); }
+.card .pic img { transition: transform .5s; }
+
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+
+.pdp .gallery { display: flex; flex-direction: column; align-items: stretch; gap: 12px; padding: 18px; }
+.gal-main { width: 100%; display: grid; place-items: center; min-height: 380px; }
+.gal-main img { max-width: 72%; max-height: 420px; animation: aparecer .4s ease; }
+.gal-main img.real { max-width: 100%; width: 100%; max-height: 460px; object-fit: cover; border-radius: 20px; filter: none; }
+.thumbs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.thumbs button { width: 64px; height: 64px; border-radius: 12px; border: 2px solid transparent; padding: 0; overflow: hidden; background: var(--surface); cursor: pointer; }
+.thumbs button[aria-pressed="true"] { border-color: var(--brand); }
+.thumbs img { width: 100%; height: 100%; object-fit: cover; }
+@keyframes aparecer { from { opacity: 0; transform: scale(.97); } }
+.spark { position: fixed; width: 7px; height: 7px; border-radius: 50%; z-index: 70; pointer-events: none; animation: chispa .75s ease-out forwards; }
+@keyframes chispa { to { transform: translate(var(--dx), var(--dy)) scale(.2); opacity: 0; } }
+.btn { transition: transform .15s, box-shadow .2s, background .2s; }
+.btn-primary { box-shadow: 0 10px 30px -10px rgba(27,109,255,.8); }
+.btn:hover { transform: translateY(-2px); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
 </style>
 </head>
 <body>
@@ -252,6 +319,21 @@ const IMAGENES = [
 ];
 // Imágenes servidas desde Wikimedia Commons (licencias CC; créditos en el pie de página).
 const FOTOS = {"iphone-16-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/IPhone_16_Pro_Vector.svg/500px-IPhone_16_Pro_Vector.svg.png", "archivo": "IPhone 16 Pro Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_16_Pro_Vector.svg"}, "iphone-16-pro-max.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/IPhone_16_Pro_Max_Vector.svg/500px-IPhone_16_Pro_Max_Vector.svg.png", "archivo": "IPhone 16 Pro Max Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_16_Pro_Max_Vector.svg"}, "iphone-15.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IPhone_15_Vector.svg/500px-IPhone_15_Vector.svg.png", "archivo": "IPhone 15 Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_15_Vector.svg"}, "iphone-15-plus.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/IPhone_15_Plus_Vector.svg/500px-IPhone_15_Plus_Vector.svg.png", "archivo": "IPhone 15 Plus Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_15_Plus_Vector.svg"}, "iphone-15-pro-max.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/IPhone_15_Pro_Max_Vector.svg/500px-IPhone_15_Pro_Max_Vector.svg.png", "archivo": "IPhone 15 Pro Max Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_15_Pro_Max_Vector.svg"}, "iphone-14.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/IPhone_14_vector.svg/500px-IPhone_14_vector.svg.png", "archivo": "IPhone 14 vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_14_vector.svg"}, "iphone-14-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/IPhone_14_Pro_vector.svg/500px-IPhone_14_Pro_vector.svg.png", "archivo": "IPhone 14 Pro vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_14_Pro_vector.svg"}, "galaxy-s23-ultra.jpg": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Samsung_Galaxy_S23_Ultra%2C_512_GB%2C_Lavender_20230416_HOF00318_RAW-Export_cens.png/500px-Samsung_Galaxy_S23_Ultra%2C_512_GB%2C_Lavender_20230416_HOF00318_RAW-Export_cens.png", "archivo": "Samsung Galaxy S23 Ultra, 512 GB, Lavender 20230416 HOF00318 RAW-Export cens.png", "autor": "PantheraLeo1359531", "licencia": "CC BY 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_S23_Ultra,_512_GB,_Lavender_20230416_HOF00318_RAW-Export_cens.png"}, "iphone-17.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/IPhone_17_Vector.svg/500px-IPhone_17_Vector.svg.png", "archivo": "IPhone 17 Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17_Vector.svg"}, "iphone-air.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/IPhone_Air_Vector.svg/500px-IPhone_Air_Vector.svg.png", "archivo": "IPhone Air Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_Air_Vector.svg"}, "iphone-17e.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/IPhone_17e_Vector.svg/500px-IPhone_17e_Vector.svg.png", "archivo": "IPhone 17e Vector.svg", "autor": "Pncke", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17e_Vector.svg"}, "iphone-duo.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Iphone_Duo_Back_Vector.svg/500px-Iphone_Duo_Back_Vector.svg.png", "archivo": "Iphone Duo Back Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Iphone_Duo_Back_Vector.svg"}, "iphone-16.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/IPhone_16_Vector.svg/500px-IPhone_16_Vector.svg.png", "archivo": "IPhone 16 Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_16_Vector.svg"}, "iphone-16-plus.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/IPhone_16_Plus_Vector.svg/500px-IPhone_16_Plus_Vector.svg.png", "archivo": "IPhone 16 Plus Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_16_Plus_Vector.svg"}, "iphone-15-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_15_Pro_Vector.svg/500px-IPhone_15_Pro_Vector.svg.png", "archivo": "IPhone 15 Pro Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_15_Pro_Vector.svg"}, "iphone-18-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/IPhone_18_Pro_Vector.svg/500px-IPhone_18_Pro_Vector.svg.png", "archivo": "IPhone 18 Pro Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_18_Pro_Vector.svg"}, "iphone-17-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_17_Pro_Vector.svg/500px-IPhone_17_Pro_Vector.svg.png", "archivo": "IPhone 17 Pro Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_Vector.svg"}, "iphone-17-pro-max.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/IPhone_17_Pro_Max_Vector.svg/500px-IPhone_17_Pro_Max_Vector.svg.png", "archivo": "IPhone 17 Pro Max Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_Max_Vector.svg"}};
+// Fotos reales de equipos (Wikimedia Commons, licencias CC0 / CC BY / CC BY-SA).
+const REAL = {"i13pro": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Apple_iPhone_13_Pro_and_13_Pro_Max.jpg/500px-Apple_iPhone_13_Pro_and_13_Pro_Max.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Apple_iPhone_13_Pro_and_13_Pro_Max.jpg/960px-Apple_iPhone_13_Pro_and_13_Pro_Max.jpg", "archivo": "Apple iPhone 13 Pro and 13 Pro Max.jpg", "licencia": "CC BY-SA 4.0", "autor": "SimonWaldherr", "pagina": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_13_Pro_and_13_Pro_Max.jpg"}, "i14pro_back": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Back_of_the_iPhone_14_Pro.jpg/500px-Back_of_the_iPhone_14_Pro.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Back_of_the_iPhone_14_Pro.jpg/960px-Back_of_the_iPhone_14_Pro.jpg", "archivo": "Back of the iPhone 14 Pro.jpg", "licencia": "CC BY-SA 4.0", "autor": "Hajoon0102", "pagina": "https://commons.wikimedia.org/wiki/File:Back_of_the_iPhone_14_Pro.jpg", "color": "PURPLE"}, "i14red": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/IPhone_14_Product_Red.jpg/500px-IPhone_14_Product_Red.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/IPhone_14_Product_Red.jpg/960px-IPhone_14_Product_Red.jpg", "archivo": "IPhone 14 Product Red.jpg", "licencia": "CC BY-SA 4.0", "autor": "Hajoon0102", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_14_Product_Red.jpg", "color": "RED"}, "i15pro": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Apple_iPhone_15_Pro.jpg/500px-Apple_iPhone_15_Pro.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Apple_iPhone_15_Pro.jpg/960px-Apple_iPhone_15_Pro.jpg", "archivo": "Apple iPhone 15 Pro.jpg", "licencia": "CC BY-SA 4.0", "autor": "IPHONE 15", "pagina": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_15_Pro.jpg"}, "i16_ultra": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/About_iPhone_16_Ultramarine.jpg/500px-About_iPhone_16_Ultramarine.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/About_iPhone_16_Ultramarine.jpg/960px-About_iPhone_16_Ultramarine.jpg", "archivo": "About iPhone 16 Ultramarine.jpg", "licencia": "CC BY-SA 4.0", "autor": "メイド理世", "pagina": "https://commons.wikimedia.org/wiki/File:About_iPhone_16_Ultramarine.jpg"}, "s25u": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Samsung_Galaxy_S25_Ultra.jpg/500px-Samsung_Galaxy_S25_Ultra.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Samsung_Galaxy_S25_Ultra.jpg/960px-Samsung_Galaxy_S25_Ultra.jpg", "archivo": "Samsung Galaxy S25 Ultra.jpg", "licencia": "CC BY 4.0", "autor": "Jakub CA", "pagina": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_S25_Ultra.jpg"}, "air_black": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Space_Black_iPhone_Air.jpg/500px-Space_Black_iPhone_Air.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Space_Black_iPhone_Air.jpg/960px-Space_Black_iPhone_Air.jpg", "archivo": "Space Black iPhone Air.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Space_Black_iPhone_Air.jpg", "color": "BLACK"}, "air_gold": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Light_Gold_iPhone_Air.jpg/500px-Light_Gold_iPhone_Air.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Light_Gold_iPhone_Air.jpg/960px-Light_Gold_iPhone_Air.jpg", "archivo": "Light Gold iPhone Air.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Light_Gold_iPhone_Air.jpg", "color": "GOLD"}, "a17pm_silver": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Silver_iPhone_17_Pro_Max.jpg/500px-Silver_iPhone_17_Pro_Max.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Silver_iPhone_17_Pro_Max.jpg/960px-Silver_iPhone_17_Pro_Max.jpg", "archivo": "Silver iPhone 17 Pro Max.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Silver_iPhone_17_Pro_Max.jpg", "color": "SILVER"}, "a17pm_orange": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cosmic_Orange_iPhone_17_Pro_Max.jpg/500px-Cosmic_Orange_iPhone_17_Pro_Max.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cosmic_Orange_iPhone_17_Pro_Max.jpg/960px-Cosmic_Orange_iPhone_17_Pro_Max.jpg", "archivo": "Cosmic Orange iPhone 17 Pro Max.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Cosmic_Orange_iPhone_17_Pro_Max.jpg", "color": "ORANGE"}, "air_blue": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sky_Blue_iPhone_Air.jpg/500px-Sky_Blue_iPhone_Air.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sky_Blue_iPhone_Air.jpg/960px-Sky_Blue_iPhone_Air.jpg", "archivo": "Sky Blue iPhone Air.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Sky_Blue_iPhone_Air.jpg", "color": "BLUE"}, "a17line": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg/500px-IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg/960px-IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg", "archivo": "IPhone 17, Air, 17 Pro, and Pro max.jpg", "licencia": "CC BY-SA 4.0", "autor": "Premeditated", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg"}, "a17pro": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/IPhone_17_Pro_%282025-12-28%29.jpg/500px-IPhone_17_Pro_%282025-12-28%29.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/IPhone_17_Pro_%282025-12-28%29.jpg/960px-IPhone_17_Pro_%282025-12-28%29.jpg", "archivo": "IPhone 17 Pro (2025-12-28).jpg", "licencia": "CC0", "autor": "Olgierd Rudak", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_%282025-12-28%29.jpg"}, "i17e_back": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/IPhone_17e_backside.jpg/500px-IPhone_17e_backside.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/IPhone_17e_backside.jpg/960px-IPhone_17e_backside.jpg", "archivo": "IPhone 17e backside.jpg", "licencia": "CC BY-SA 4.0", "autor": "茅野ふたば", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17e_backside.jpg", "color": "PINK"}, "x17tpro": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Xiaomi_17T_Pro.jpg/500px-Xiaomi_17T_Pro.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Xiaomi_17T_Pro.jpg/960px-Xiaomi_17T_Pro.jpg", "archivo": "Xiaomi 17T Pro.jpg", "licencia": "CC BY-SA 4.0", "autor": "茅野ふたば", "pagina": "https://commons.wikimedia.org/wiki/File:Xiaomi_17T_Pro.jpg"}, "duo2": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg/500px-IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg/960px-IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg", "archivo": "IPhone Duo taken using an iPhone Duo 01.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg"}, "duo": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Apple_iPhone_Duo.jpg/500px-Apple_iPhone_Duo.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Apple_iPhone_Duo.jpg/960px-Apple_iPhone_Duo.jpg", "archivo": "Apple iPhone Duo.jpg", "licencia": "CC BY 4.0", "autor": "SimonWaldherr", "pagina": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_Duo.jpg"}, "i18box": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg/500px-Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg/960px-Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg", "archivo": "Apple iPhone 18 Pro box (2026-11-12).jpg", "licencia": "CC BY-SA 4.0", "autor": "Olgierd Rudak", "pagina": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg"}, "i17e": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/IPhone_17e_white.jpg/500px-IPhone_17e_white.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/IPhone_17e_white.jpg/960px-IPhone_17e_white.jpg", "archivo": "IPhone 17e white.jpg", "licencia": "CC BY-SA 4.0", "autor": "茅野ふたば", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17e_white.jpg", "color": "WHITE"}};
+const REALES = [
+  ["IPHONE 18 PRO", ["i18box"]], ["IPHONE DUO", ["duo", "duo2"]], ["IPHONE 17 PRO MAX", ["a17pm_orange", "a17pm_silver"]],
+  ["IPHONE 17 PRO", ["a17pro", "a17line"]], ["IPHONE 17 AIR", ["air_blue", "air_gold", "air_black"]], ["IPHONE AIR", ["air_blue", "air_gold", "air_black"]],
+  ["IPHONE 17E", ["i17e_back", "i17e"]], ["IPHONE 17", ["a17line"]], ["IPHONE 16 PRO", []], ["IPHONE 16", ["i16_ultra"]],
+  ["IPHONE 15 PRO", ["i15pro"]], ["IPHONE 14 PRO", ["i14pro_back"]], ["IPHONE 14", ["i14red"]], ["IPHONE 13 PRO", ["i13pro"]],
+  ["SAMSUNG GALAXY S25 ULTRA", ["s25u"]], ["XIAOMI 17T PRO", ["x17tpro"]],
+];
+// Fotos reales del modelo; si hay una del mismo color, va primero.
+function fotos(m, col) {
+  const ks = [...((REALES.find(([k]) => m.startsWith(k)) || [, []])[1])];
+  if (col) { const i = ks.findIndex(k => REAL[k].color && String(col).toUpperCase().includes(REAL[k].color)); if (i > 0) ks.unshift(ks.splice(i, 1)[0]); }
+  return ks.map(k => REAL[k]);
+}
 const imagen = m => FOTOS[(IMAGENES.find(([k]) => m.startsWith(k)) || [])[1]]?.url;
 
 // Descripción corta por familia.
@@ -347,7 +429,9 @@ function alternativas(modelo, precioRef, n = 4) {
 
 /* ---------- Componentes ---------- */
 const urlModelo = (lista, modelo) => `#/p/${lista}/${slug(modelo)}`;
-function pic(modelo, alt) {
+function pic(modelo, alt, col) {
+  const f = fotos(modelo, col)[0];
+  if (f) return `<img class="real" src="${f.s}" alt="${esc(alt || titulo(modelo))}" loading="lazy">`;
   const img = imagen(modelo);
   if (img) return `<img src="${img}" alt="${esc(alt || titulo(modelo))}" loading="lazy">`;
   const marca = modelo.split(" ")[0];
@@ -357,9 +441,9 @@ function tarjeta(g) {
   const colores = [...new Set(g.items.map(i => i.color))];
   const caps = [...new Set(g.items.map(i => i.capacidad))].join(" · ");
   const bat = g.lista === "openbox" ? (() => { const b = g.items.map(i => i.bateria).filter(Boolean); return b.length ? ` · batería ${Math.min(...b)}–${Math.max(...b)}%` : ""; })() : "";
-  return `<a class="card" href="${urlModelo(g.lista, g.modelo)}">
+  return `<a class="card reveal" href="${urlModelo(g.lista, g.modelo)}">
     <div class="tags">${g.oferta ? `<span class="tag offer">Oferta</span>` : ""}${g.nuevo ? `<span class="tag new">Nuevo ingreso</span>` : ""}</div>
-    <div class="pic">${pic(g.modelo)}</div>
+    <div class="pic">${pic(g.modelo, "", g.items[0].color)}</div>
     <div class="dots">${colores.slice(0, 6).map(c => `<i style="background:${color(c)}" title="${esc(titulo(c))}"></i>`).join("")}</div>
     <h3>${esc(titulo(g.modelo))}</h3>
     <div class="meta">${g.lista === "nuevos" ? "Nuevo sellado" : "Seminuevo grado A"} · ${esc(caps)}${bat}</div>
@@ -367,7 +451,7 @@ function tarjeta(g) {
   </a>`;
 }
 function tarjetaAgotada(modelo) {
-  return `<a class="card out" href="${urlModelo("nuevos", modelo)}">
+  return `<a class="card out reveal" href="${urlModelo("nuevos", modelo)}">
     <div class="tags"><span class="tag out">Agotado</span></div>
     <div class="pic">${pic(modelo)}</div>
     <h3>${esc(titulo(modelo))}</h3>
@@ -381,6 +465,26 @@ const iconos = {
   doc: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>',
   chat: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>',
 };
+
+// Vitrina: fotos reales de los modelos que hay en stock, en movimiento continuo.
+function showroom() {
+  const vistos = new Set(), items = [];
+  for (const g of ordenar([...modelos("nuevos"), ...modelos("openbox")])) {
+    for (const f of fotos(g.modelo, g.items[0].color)) {
+      if (vistos.has(f.s)) continue; vistos.add(f.s);
+      items.push(`<a class="shot" href="${urlModelo(g.lista, g.modelo)}"><img src="${f.s}" alt="${esc(titulo(g.modelo))}" loading="lazy"><span><b>${esc(titulo(g.modelo))}</b>desde ${usd(g.desde)}</span></a>`);
+    }
+  }
+  if (items.length < 3) return "";
+  const total = D.productos.length, modelosN = new Set(D.productos.map(p => p.modelo)).size;
+  return `<section class="showroom">
+    <div class="wrap sr-head reveal">
+      <div><span class="eyebrow">Showroom IHUB</span><h2>Equipos reales, stock real</h2></div>
+      <div class="stats"><div><b data-count="${total}">0</b><span>equipos en bodega</span></div><div><b data-count="${modelosN}">0</b><span>modelos</span></div><div><b data-count="12">0</b><span>meses de garantía</span></div></div>
+    </div>
+    <div class="marquee"><div class="track">${items.join("")}${items.join("")}</div></div>
+  </section>`;
+}
 
 /* ---------- Páginas ---------- */
 function inicio() {
@@ -398,18 +502,21 @@ function inicio() {
   const alt = !gDest ? alternativas(dest, 1500, 3) : [];
 
   return `
-  <section class="hero"><div class="wrap">
+  <section class="hero">
+  <div class="wrap">
     <div>
       <span class="eyebrow">${gDest ? "Nuevo · sellado" : "Muy pronto de vuelta"}</span>
-      <h1>${esc(titulo(dest))}</h1>
+      <h1 class="grad-text">${esc(titulo(dest))}</h1>
       <p class="lead">${esc(cfg.frase_destacado || descripcion(dest))}</p>
       ${gDest ? `<div class="price">Desde ${usd(gDest.desde)}<small>${[...new Set(gDest.items.map(i => i.capacidad))].join(" · ")} · ${coloresDest.map(titulo).join(", ")}</small></div>
         <div class="swatches">${coloresDest.map(c => `<span class="sw" style="background:${color(c)}" title="${esc(titulo(c))}"></span>`).join("")}</div>
         <div class="btns"><a class="btn btn-primary" href="${urlModelo("nuevos", dest)}">Comprar</a><a class="btn btn-light" href="#/c/iphone">Ver todos los iPhone</a></div>`
       : `<p><span class="sold">Agotado</span></p><div class="btns"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa(`Hola IHUB, quiero que me avisen cuando llegue el ${titulo(dest)}.`)}">Avísame cuando llegue</a>${alt[0] ? `<a class="btn btn-light" href="${urlModelo(alt[0].lista, alt[0].modelo)}">Ver ${esc(titulo(alt[0].modelo))}</a>` : ""}</div>`}
     </div>
-    <div class="hero-img">${imagen(dest) ? `<img src="${imagen(dest)}" alt="${esc(titulo(dest))}">` : ""}</div>
-  </div></section>
+    <div class="hero-img" id="tilt">${(() => { const f = fotos(dest)[0]; const src = f ? f.l : imagen(dest);
+      return src ? `<div class="frame${f ? " photo" : ""}"><img src="${src}" alt="${esc(titulo(dest))}"><span class="shine"></span></div>
+      <span class="float-chip c1">${iconos.box} Sellado en caja</span><span class="float-chip c2">${iconos.shield} Garantía 1 año</span><span class="float-chip c3">⚡ Stock en vivo</span>` : ""; })()}</div>
+  </div><canvas id="particles" aria-hidden="true"></canvas><div class="orb o1"></div><div class="orb o2"></div></section>
 
   <div class="trust"><div class="wrap">
     <div>${iconos.box}<span><b>Nuevos sellados</b>Originales, en caja</span></div>
@@ -417,6 +524,8 @@ function inicio() {
     <div>${iconos.doc}<span><b>Contrato de compraventa</b>Con IMEI del equipo</span></div>
     <div>${iconos.chat}<span><b>Bodega en Quito</b>Atención por WhatsApp</span></div>
   </div></div>
+
+  ${showroom()}
 
   <div class="wrap">
     ${ofertas.length ? `<section class="block"><div class="offers"><span class="eyebrow">Ofertas IHUB</span><h2>Precios especiales por tiempo limitado</h2>
@@ -470,7 +579,7 @@ function producto(lista, s) {
   }
   const alt = alternativas(g.modelo, g.desde);
   return `<div class="wrap"><div class="pdp" id="pdp" data-lista="${lista}" data-modelo="${esc(g.modelo)}">
-    <div class="gallery">${pic(g.modelo)}</div>
+    <div class="gallery" id="gal"><div class="gal-main" id="gal-main"></div><div class="thumbs" id="gal-thumbs"></div></div>
     <div>
       <span class="eyebrow" style="color:var(--brand)">${lista === "nuevos" ? "Nuevo sellado" : "Seminuevo grado A"}</span>
       <h1>${esc(titulo(g.modelo))}</h1>
@@ -488,6 +597,15 @@ function producto(lista, s) {
     </div></div>
     ${alt.length ? `<section class="block"><div class="sec-head"><div><h2>También te puede interesar</h2></div></div><div class="grid">${alt.map(tarjeta).join("")}</div></section>` : ""}</div>`;
 }
+function pintarGaleria(modelo, col) {
+  const imgs = [...fotos(modelo, col).map(f => ({ src: f.l, real: true })), ...(imagen(modelo) ? [{ src: imagen(modelo) }] : [])];
+  if (!imgs.length) { $("gal-main").innerHTML = pic(modelo); $("gal-thumbs").innerHTML = ""; return; }
+  const ver = i => { $("gal-main").innerHTML = `<img class="${imgs[i].real ? "real" : ""}" src="${imgs[i].src}" alt="${esc(titulo(modelo))}">`;
+    $("gal-thumbs").querySelectorAll("button").forEach((b, j) => b.setAttribute("aria-pressed", i === j)); };
+  $("gal-thumbs").innerHTML = imgs.length > 1 ? imgs.map((x, i) => `<button aria-label="Imagen ${i + 1}"><img src="${x.src}" alt=""></button>`).join("") : "";
+  $("gal-thumbs").onclick = e => { const b = e.target.closest("button"); if (b) ver([...$("gal-thumbs").children].indexOf(b)); };
+  ver(0);
+}
 function montarProducto() {
   const el = $("pdp"); if (!el) return;
   const g = modelos(el.dataset.lista).find(x => x.modelo === el.dataset.modelo);
@@ -501,6 +619,7 @@ function montarProducto() {
       <div class="opts">${colores.map(c => `<button class="opt" data-c="${esc(c)}" aria-pressed="${c === color0}"><i class="sw" style="background:${color(c)};width:18px;height:18px;border-color:var(--line)"></i>${esc(titulo(c))}</button>`).join("")}</div>
       <div class="opt-label">${g.lista === "openbox" ? "Capacidad y batería" : "Capacidad"}</div>
       <div class="opts">${delColor.map(i => `<button class="opt" data-id="${i.id}" aria-pressed="${i === sel}"><span>${esc(i.capacidad)}${i.bateria ? ` · ${i.bateria}% batería` : ""}<small>${usd(i.precio)}${i.sim ? " · " + esc(i.sim) : ""}</small></span></button>`).join("")}</div>`;
+    pintarGaleria(g.modelo, color0);
     $("pdp-price").innerHTML = usd(sel.precio) + (sel.antes ? `<s>${usd(sel.antes)}</s>` : "");
     $("pdp-note").textContent = (sel.oferta ? sel.oferta + " · " : "") + "Precio en USD. Disponible ahora en bodega.";
     $("buy").href = wa(`Hola IHUB, quiero comprar: ${titulo(sel.modelo)} ${sel.capacidad} ${titulo(sel.color)}${sel.bateria ? ` (batería ${sel.bateria}%)` : ""} · ${sel.lista === "nuevos" ? "nuevo sellado" : "seminuevo grado A"} · ${usd(sel.precio)}`);
@@ -510,7 +629,7 @@ function montarProducto() {
     if (b.dataset.c) color0 = b.dataset.c; else sel = g.items.find(i => i.id === b.dataset.id);
     pintar();
   });
-  $("add").onclick = () => { agregar(sel.id); };
+  $("add").onclick = e => { chispas(e.currentTarget); agregar(sel.id); };
   pintar();
 }
 
@@ -574,6 +693,7 @@ function ruta() {
   else html = inicio();
   $("app").innerHTML = html;
   montarProducto();
+  efectos();
   const chips = $("chips");
   if (chips) chips.onclick = e => { const ch = e.target.closest(".chip"); if (!ch) return;
     chips.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === ch));
@@ -594,8 +714,78 @@ async function cargar(primera) {
     $("app").innerHTML = `<div class="loading">No pudimos cargar el stock. <a href="javascript:location.reload()">Reintentar</a></div>`;
   }
 }
+/* ---------- Efectos: partículas, 3D, aparición al hacer scroll, contadores, chispas ---------- */
+const QUIETO = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let parar = null;
+function particulas(cv) {
+  if (parar) parar();
+  const ctx = cv.getContext("2d"), dpr = Math.min(devicePixelRatio || 1, 2);
+  let W, H, pts = [], raf, mouse = { x: -999, y: -999 };
+  const medir = () => { W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.round(Math.min(90, W * H / 9000));
+    pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: Math.random() * 1.8 + .6 })); };
+  const paso = () => {
+    ctx.clearRect(0, 0, W, H);
+    for (const p of pts) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
+      const dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.hypot(dx, dy);
+      if (d < 120) { p.x += dx / d * 1.2; p.y += dy / d * 1.2; }
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fillStyle = "rgba(142,197,255,.85)"; ctx.fill();
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d < 110) { ctx.strokeStyle = `rgba(27,109,255,${(1 - d / 110) * .45})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+    }
+    raf = requestAnimationFrame(paso);
+  };
+  const mover = e => { const r = cv.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; };
+  medir(); addEventListener("resize", medir); cv.parentElement.addEventListener("pointermove", mover);
+  if (QUIETO) { paso(); cancelAnimationFrame(raf); } else paso();
+  parar = () => { cancelAnimationFrame(raf); removeEventListener("resize", medir); parar = null; };
+}
+function inclinar(el) {
+  if (QUIETO || !el) return;
+  const f = el.querySelector(".frame"); if (!f) return;
+  el.closest(".hero").addEventListener("pointermove", e => {
+    const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    f.style.transform = `perspective(900px) rotateY(${x * 16}deg) rotateX(${-y * 12}deg)`;
+    f.style.setProperty("--sx", `${(x + .5) * 100}%`); f.style.setProperty("--sy", `${(y + .5) * 100}%`);
+  });
+  el.closest(".hero").addEventListener("pointerleave", () => f.style.transform = "");
+}
+function contar(el) {
+  const fin = +el.dataset.count, t0 = performance.now(), dur = 1400;
+  const tick = t => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(fin * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(tick); };
+  QUIETO ? el.textContent = fin : requestAnimationFrame(tick);
+}
+const obs = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(contar); obs.unobserve(e.target);
+}), { rootMargin: "0px 0px -8% 0px" }) : null;
+function efectos() {
+  if (parar && !$("particles")) parar();
+  if ($("particles")) particulas($("particles"));
+  inclinar($("tilt"));
+  document.querySelectorAll(".reveal").forEach((el, i) => { el.style.transitionDelay = `${(i % 4) * 70}ms`; obs ? obs.observe(el) : el.classList.add("in"); });
+  // Luz que sigue al cursor sobre las tarjetas.
+  document.querySelectorAll(".card").forEach(c => c.addEventListener("pointermove", e => {
+    const r = c.getBoundingClientRect(); c.style.setProperty("--mx", `${e.clientX - r.left}px`); c.style.setProperty("--my", `${e.clientY - r.top}px`);
+  }));
+}
+function chispas(btn) {
+  if (QUIETO) return;
+  const r = btn.getBoundingClientRect();
+  for (let i = 0; i < 18; i++) {
+    const s = document.createElement("i"); s.className = "spark";
+    const a = Math.random() * 6.283, d = 40 + Math.random() * 60;
+    s.style.cssText = `left:${r.left + r.width / 2}px;top:${r.top + r.height / 2}px;--dx:${Math.cos(a) * d}px;--dy:${Math.sin(a) * d}px;background:${["#1B6DFF", "#8EC5FF", "#D7F74A", "#fff"][i % 4]}`;
+    document.body.appendChild(s); setTimeout(() => s.remove(), 750);
+  }
+}
+
 function creditos() {
-  $("credits").innerHTML = Object.values(FOTOS).map(v => `<a href="${esc(v.pagina)}" target="_blank" rel="noopener">${esc(v.archivo)} · ${esc(v.autor)} · ${esc(v.licencia)}</a>`).join("") +
+  $("credits").innerHTML = [...Object.values(REAL), ...Object.values(FOTOS)].map(v => `<a href="${esc(v.pagina)}" target="_blank" rel="noopener">${esc(v.archivo)} · ${esc(v.autor)} · ${esc(v.licencia)}</a>`).join("") +
     "<p>Imágenes de Wikimedia Commons bajo licencias Creative Commons. Son ilustrativas; el color y el estado reales se indican en cada equipo. Apple, iPhone, Samsung y Xiaomi son marcas de sus respectivos dueños.</p>";
 }
 $("year").textContent = new Date().getFullYear();
