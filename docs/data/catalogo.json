@@ -472,16 +472,6 @@
   },
   {
    "lista": "nuevos",
-   "modelo": "IPHONE 17 PRO",
-   "categoria": "iphone",
-   "color": "COSMIC ORANGE",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1289.99
-  },
-  {
-   "lista": "nuevos",
    "modelo": "IPHONE 18 PRO MAX",
    "categoria": "iphone",
    "color": "BURGUNDY",
@@ -931,8 +921,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-23T17:53:47+00:00",
- "revisado": "2026-11-23T20:49:55+00:00",
+ "actualizado": "2026-11-23T21:46:08+00:00",
+ "revisado": "2026-11-23T21:46:08+00:00",
  "noticias": null,
  "ingresos": [
   {
