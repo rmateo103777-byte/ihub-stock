@@ -674,16 +674,6 @@
    "lista": "gadgets",
    "modelo": "APPLE WATCH SE 3 40MM",
    "categoria": "otros",
-   "color": "MIDNIGHT",
-   "capacidad": "32GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 279.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "APPLE WATCH SE 3 40MM",
-   "categoria": "otros",
    "color": "STARLIGHT",
    "capacidad": "32GB",
    "bateria": 100,
@@ -901,8 +891,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-23T22:46:40+00:00",
- "revisado": "2026-11-23T22:46:40+00:00",
+ "actualizado": "2026-11-23T23:44:12+00:00",
+ "revisado": "2026-11-23T23:44:12+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -995,10 +985,6 @@
   },
   {
    "clave": "gadgets|APPLE WATCH S12 46MM|SPACE GRAY|32GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|APPLE WATCH SE 3 40MM|MIDNIGHT|32GB",
    "desde": "2026-11-18T19:39:52+00:00"
   },
   {
