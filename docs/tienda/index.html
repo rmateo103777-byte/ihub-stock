@@ -2,306 +2,388 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IHUB Ecuador — iPhone, Mac, iPad y más a precio de bodega</title>
+<meta name="description" content="IHUB: bodega de tecnología en Ecuador. iPhone sellados y Open Box, Mac, iPad, Apple Watch, AirPods y Android con garantía. Stock en vivo y envíos a todo el país.">
 <meta name="theme-color" content="#0477D6">
-<title>IHUB Tienda</title>
-<meta name="description" content="IHUB · iPhone y celulares nuevos sellados y seminuevos grado A con garantía. Bodega en Quito. Stock en vivo.">
-<meta property="og:title" content="IHUB · iPhone sellados y seminuevos grado A">
-<meta property="og:description" content="Stock en vivo, precios actualizados y garantía por escrito. Pide por WhatsApp.">
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/IPhone_18_Pro_Vector.svg/500px-IPhone_18_Pro_Vector.svg.png">
-<link rel="icon" href="../icon-192.png" type="image/png">
-<link rel="apple-touch-icon" href="../icon-512.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap">
+<link rel="icon" href="../icon-192.png">
+<meta property="og:title" content="IHUB Ecuador — Tecnología a precio de bodega">
+<meta property="og:description" content="iPhone sellados y Open Box con garantía. Stock en vivo, envíos a todo Ecuador.">
 <style>
 :root {
-  --bg: #FFFFFF; --soft: #F3F6FB; --surface: #FFFFFF; --ink: #0A1B33; --muted: #5A6A82; --line: #DCE4F0;
-  --brand: #0477D6; --brand-2: #1B6DFF; --brand-deep: #0838A3; --hero-a: #06101F; --hero-b: #0B2C55;
-  --good: #11875B; --warn: #C2410C; --wa: #1DA851; --offer: #E11D48;
-  --display: "Poppins", "Arial Black", system-ui, sans-serif;
-  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bg: #FAFBFC; --surface: #F0F3F7; --card: #FFFFFF; --fg: #0E1726; --muted: #5B6679; --line: #E3E8EF;
+  --brand: #0477D6; --brand-2: #0A5FC2; --brand-soft: #E7F1FC; --good: #128A5B; --offer: #E11D48; --wa: #1DA851;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #060E1C; --soft: #0B1628; --surface: #0E1B30; --ink: #EAF2FF; --muted: #93A4BF; --line: #1E3150;
-    --brand: #3D9BF0; --good: #34D399; --warn: #FB923C; --wa: #25D366; --offer: #FB7185; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #060E1C; --soft: #0B1628; --surface: #0E1B30; --ink: #EAF2FF; --muted: #93A4BF; --line: #1E3150;
-  --brand: #3D9BF0; --good: #34D399; --warn: #FB923C; --wa: #25D366; --offer: #FB7185; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
-button, input, select, textarea { font: inherit; color: inherit; }
-a { color: inherit; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
+button, input, select { font: inherit; color: inherit; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
 :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
-.wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
-h1, h2, h3 { font-family: var(--display); letter-spacing: -.02em; margin: 0; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+@media (max-width: 640px) { .wrap { padding: 0 16px; } }
+h1, h2, h3 { margin: 0; letter-spacing: -.02em; line-height: 1.08; }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--brand); }
+
+/* Barra superior en movimiento */
+.ticker { background: var(--fg); color: #fff; font-size: 12px; overflow: hidden; white-space: nowrap; height: 30px; display: flex; align-items: center; }
+.ticker .run { display: inline-flex; gap: 28px; padding-left: 28px; animation: run 60s linear infinite; }
+.ticker span::after { content: "·"; margin-left: 28px; opacity: .5; }
+@keyframes run { to { transform: translateX(-50%); } }
+.util { background: var(--surface); border-bottom: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.util .wrap { display: flex; align-items: center; gap: 14px; height: 32px; }
+.util .loc { color: var(--brand); font-weight: 600; display: inline-flex; gap: 5px; align-items: center; }
+.util .sep { width: 1px; height: 12px; background: var(--line); }
+.util .r { margin-left: auto; display: flex; gap: 14px; align-items: center; }
+.util a:hover { color: var(--fg); }
+@media (max-width: 640px) { .util .hide-s { display: none; } }
 
 /* Header */
-.nav { position: sticky; top: 0; z-index: 30; background: linear-gradient(135deg, var(--brand-2), #0A4FD6 55%, var(--brand-deep)); color: #fff; }
-.nav .wrap { display: flex; align-items: center; gap: 16px; height: 60px; }
-.nav .logo img { height: 30px; width: auto; display: block; }
-.nav nav { display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
-.nav nav a { text-decoration: none; font-weight: 500; font-size: 14px; padding: 6px 10px; border-radius: 99px; white-space: nowrap; opacity: .92; }
-.nav nav a:hover { background: rgba(255,255,255,.14); opacity: 1; }
-.cart-btn { position: relative; background: rgba(255,255,255,.16); border: 0; color: #fff; width: 40px; height: 40px; border-radius: 12px; cursor: pointer; display: grid; place-items: center; flex: none; }
-.cart-btn b { position: absolute; top: -5px; right: -5px; background: var(--offer); color: #fff; font: 700 11px/18px var(--body); min-width: 18px; height: 18px; border-radius: 9px; padding: 0 4px; }
-@media (max-width: 720px) { .nav nav { display: none; } .nav .cart-btn { margin-left: auto; } }
-.subnav { display: none; background: var(--soft); border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
-.subnav .wrap { display: flex; gap: 6px; padding: 8px 16px; }
-.subnav a { text-decoration: none; font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: 99px; background: var(--surface); border: 1px solid var(--line); white-space: nowrap; }
-@media (max-width: 720px) { .subnav { display: block; } }
+header.top { position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.94); backdrop-filter: saturate(1.6) blur(16px); -webkit-backdrop-filter: saturate(1.6) blur(16px); border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; gap: 20px; height: 64px; }
+.logo img { height: 30px; width: auto; display: block; }
+.menu { display: flex; gap: 2px; margin: 0 auto; }
+.menu a { font-size: 14px; font-weight: 500; padding: 8px 11px; border-radius: 8px; color: #2A3546; white-space: nowrap; }
+.menu a:hover, .menu a.on { color: var(--brand); background: var(--brand-soft); }
+.menu a.hot { color: var(--brand); font-weight: 600; }
+.menu a.green { color: var(--good); font-weight: 600; }
+.icons { display: flex; gap: 6px; margin-left: auto; }
+.ib { width: 40px; height: 40px; border-radius: 50%; border: 0; background: transparent; display: grid; place-items: center; cursor: pointer; position: relative; color: var(--fg); }
+.ib:hover { background: var(--surface); }
+.ib.solid { background: var(--surface); }
+.ib b { position: absolute; top: 0; right: 0; background: var(--brand); color: #fff; font-size: 10px; min-width: 17px; height: 17px; line-height: 17px; border-radius: 9px; padding: 0 4px; }
+.burger { display: none; }
+@media (max-width: 1080px) { .menu { display: none; } .burger { display: grid; } }
+.sheet { position: fixed; inset: 0; z-index: 60; background: rgba(14,23,38,.4); }
+.sheet nav { background: #fff; width: min(340px, 86vw); height: 100%; padding: 18px; display: flex; flex-direction: column; gap: 2px; overflow-y: auto; }
+.sheet nav a { padding: 13px 10px; border-radius: 10px; font-weight: 600; font-size: 17px; }
+.sheet nav a:hover { background: var(--surface); }
+.searchbar { border-top: 1px solid var(--line); background: #fff; }
+.searchbar form { display: flex; gap: 10px; padding: 12px 0; }
+.searchbar input { flex: 1; border: 1px solid var(--line); border-radius: 999px; padding: 11px 18px; background: var(--surface); outline: none; }
+.searchbar input:focus { border-color: var(--brand); background: #fff; }
+
+/* Botones */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 50px; padding: 0 30px; border-radius: 999px; font-weight: 600; font-size: 16px; border: 0; cursor: pointer; transition: transform .15s, background .15s, box-shadow .15s; }
+.btn:active { transform: scale(.98); }
+.btn-p { background: var(--brand); color: #fff; box-shadow: 0 6px 18px -8px rgba(4,119,214,.7); }
+.btn-p:hover { background: var(--brand-2); }
+.btn-o { background: #fff; color: var(--fg); border: 1px solid var(--line); }
+.btn-o:hover { border-color: #C7D0DC; }
+.btn-d { background: var(--fg); color: #fff; }
+.btn-w { background: #fff; color: var(--fg); height: 40px; padding: 0 18px; font-size: 14px; }
+.btn-wa { background: var(--wa); color: #fff; }
+.btn-sm { height: 40px; padding: 0 20px; font-size: 14px; }
+.link { color: var(--brand); font-weight: 600; font-size: 14px; display: inline-flex; gap: 4px; align-items: center; }
+.link:hover { text-decoration: underline; }
 
 /* Hero */
-.hero { background: radial-gradient(120% 90% at 75% 20%, var(--hero-b), var(--hero-a) 70%); color: #fff; overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 24px; padding-top: 48px; padding-bottom: 48px; min-height: 480px; }
-.eyebrow { font: 700 12px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: #8EC5FF; }
-.hero h1 { font-size: clamp(38px, 7vw, 76px); line-height: .98; margin: 14px 0 12px; font-weight: 800; }
-.hero p.lead { font-size: 19px; color: #C9D8EE; margin: 0 0 22px; max-width: 30ch; }
-.hero .price { font: 600 22px/1.2 var(--display); margin-bottom: 22px; }
-.hero .price small { display: block; font: 400 14px var(--body); color: #9FB3D1; margin-top: 4px; }
-.hero-img { position: relative; display: grid; place-items: center; }
-.hero-img::before { content: ""; position: absolute; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(27,109,255,.55), transparent 65%); filter: blur(10px); }
-.hero-img img { position: relative; width: min(300px, 70vw); height: auto; filter: drop-shadow(0 30px 40px rgba(0,0,0,.5)); }
-.swatches { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-.sw { width: 22px; height: 22px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); box-shadow: 0 0 0 1px rgba(0,0,0,.2); }
-.btns { display: flex; gap: 10px; flex-wrap: wrap; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 99px; padding: 12px 22px; font-weight: 700; text-decoration: none; cursor: pointer; font-size: 15px; }
-.btn-primary { background: var(--brand-2); color: #fff; }
-.btn-primary:hover { background: #3B82FF; }
-.btn-light { background: rgba(255,255,255,.12); color: #fff; }
-.btn-wa { background: var(--wa); color: #fff; }
-.btn-ghost { background: var(--soft); color: var(--ink); border: 1px solid var(--line); }
-.btn[disabled] { opacity: .45; cursor: not-allowed; }
-@media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; text-align: center; padding-top: 32px; min-height: 0; } .hero p.lead { margin-inline: auto; } .swatches, .btns { justify-content: center; } .hero-img { order: -1; } .hero-img img { width: min(210px, 56vw); } }
-.sold { display: inline-block; background: var(--offer); color: #fff; font: 700 12px/1 var(--body); letter-spacing: .08em; text-transform: uppercase; padding: 6px 10px; border-radius: 6px; }
+.hero { background: var(--bg); overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 32px; min-height: 500px; padding-top: 40px; padding-bottom: 40px; }
+.hero h1 { font-size: clamp(40px, 5.4vw, 64px); font-weight: 700; letter-spacing: -.035em; }
+.hero p { color: var(--muted); font-size: 18px; max-width: 440px; margin: 18px 0 30px; }
+.hero .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero .art { position: relative; display: grid; place-items: center; }
+.hero .art img { width: min(500px, 100%); aspect-ratio: 1 / 1.05; object-fit: contain; filter: drop-shadow(0 30px 40px rgba(14,23,38,.18)); animation: up .9s cubic-bezier(.2,.8,.2,1) both; position: relative; }
+.hero .art .glow { position: absolute; width: 95%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(4,119,214,.16), transparent 65%); }
+.hero .pill { position: absolute; z-index: 2; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 13px; font-weight: 600; box-shadow: 0 10px 30px -12px rgba(14,23,38,.25); display: flex; gap: 6px; align-items: center; }
+.hero .pill.a { top: 12%; left: 2%; } .hero .pill.b { bottom: 14%; right: 0; }
+.hero .pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 4px rgba(18,138,91,.15); }
+@keyframes up { from { opacity: 0; transform: translateY(24px); } }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; min-height: 0; text-align: left; } .hero .art { order: -1; } .hero .art img { width: 100%; aspect-ratio: 4 / 3.4; } .hero .pill.a { left: 8px; top: 8px; } .hero .pill.b { right: 8px; bottom: 8px; } }
 
-/* Trust strip */
-.trust { background: var(--soft); border-bottom: 1px solid var(--line); }
-.trust .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding-top: 18px; padding-bottom: 18px; }
-.trust div { display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--muted); }
-.trust b { color: var(--ink); display: block; font-size: 15px; }
-.trust svg { flex: none; color: var(--brand); }
-@media (max-width: 760px) { .trust .wrap { grid-template-columns: 1fr 1fr; } }
+/* Franja de confianza */
+.trust { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.trust .wrap { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 36px; padding: 17px 24px; font-size: 14px; }
+.trust span { display: inline-flex; gap: 7px; align-items: center; color: #2A3546; }
+.trust b { font-weight: 700; color: var(--fg); }
+.trust svg { color: var(--brand); }
 
-/* Sections */
-section.block { padding: 56px 0 8px; }
-.sec-head { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 22px; flex-wrap: wrap; }
-.sec-head h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; }
-.sec-head p { margin: 4px 0 0; color: var(--muted); }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: 18px; display: flex; flex-direction: column; text-decoration: none; position: relative; transition: transform .15s, box-shadow .15s; }
-.card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px -18px rgba(10,27,51,.35); }
-.card .pic { height: 200px; display: grid; place-items: center; margin-bottom: 14px; background: var(--soft); border-radius: 16px; overflow: hidden; }
-.card .pic img { max-height: 180px; max-width: 86%; object-fit: contain; }
-.card h3 { font-size: 18px; font-weight: 700; }
-.card .meta { font-size: 13px; color: var(--muted); margin: 4px 0 10px; }
-.card .from { margin-top: auto; font-size: 14px; color: var(--muted); }
-.card .from b { font: 700 20px var(--display); color: var(--ink); }
-.card .from s { margin-left: 6px; }
-.card.out { opacity: .78; }
-.card.out .pic img { filter: grayscale(1); opacity: .6; }
-.tags { position: absolute; top: 14px; left: 14px; display: flex; gap: 6px; z-index: 1; }
-.tag { font: 700 11px/1 var(--body); letter-spacing: .06em; text-transform: uppercase; padding: 5px 8px; border-radius: 6px; background: var(--brand-2); color: #fff; }
-.tag.new { background: var(--good); }
-.tag.offer { background: var(--offer); }
-.tag.out { background: #5A6A82; }
-.dots { display: flex; gap: 5px; margin-bottom: 10px; }
-.dots i { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(0,0,0,.18); }
-.brandtile { width: 100%; height: 100%; display: grid; place-items: center; background: linear-gradient(140deg, #0B2C55, #06101F); color: #fff; font: 800 26px/1.05 var(--display); text-align: center; padding: 18px; letter-spacing: -.02em; }
-.brandtile small { display: block; font: 500 12px var(--body); color: #8EC5FF; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
-.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
-.chip { border: 1px solid var(--line); background: var(--surface); border-radius: 99px; padding: 7px 14px; font-size: 14px; cursor: pointer; }
-.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+/* Banda de promoción */
+.promo { background: linear-gradient(100deg, #0359A6, var(--brand) 45%, #2E93EA); color: #fff; position: relative; overflow: hidden; }
+.promo::after { content: ""; position: absolute; inset: 0; background: radial-gradient(600px 120px at 85% 0%, rgba(255,255,255,.22), transparent 70%); pointer-events: none; }
+.promo .wrap { display: flex; align-items: center; gap: 18px; padding-top: 18px; padding-bottom: 18px; position: relative; z-index: 1; }
+.promo .tag { background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.35); border-radius: 10px; padding: 8px 10px; font-weight: 800; font-size: 13px; letter-spacing: .08em; text-align: center; line-height: 1.1; }
+.promo p { margin: 0; font-weight: 600; font-size: 15px; flex: 1; }
+@media (max-width: 640px) { .promo .wrap { flex-wrap: wrap; } }
 
-/* Offer banner */
-.offers { background: linear-gradient(120deg, #0A4FD6, var(--brand-deep)); color: #fff; border-radius: 26px; padding: 28px; display: grid; gap: 14px; }
-.offers h2 { font-size: 30px; }
-.offer-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
-.offer-row a { background: rgba(255,255,255,.1); border-radius: 16px; padding: 14px; text-decoration: none; display: flex; gap: 12px; align-items: center; }
-.offer-row img { width: 54px; height: 70px; object-fit: contain; }
+/* Secciones */
+.sec { padding: 72px 0; }
+.sec.card-bg { background: var(--card); }
+.sec.surface { background: var(--surface); border-top: 1px solid var(--line); }
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 28px; }
+.sec-head h2 { font-size: clamp(30px, 3.6vw, 44px); font-weight: 700; margin-top: 6px; }
+.sec-head p { color: var(--muted); margin: 8px 0 0; }
+@media (max-width: 640px) { .sec { padding: 48px 0; } .sec-head { flex-direction: column; align-items: flex-start; } }
 
-/* Product page */
-.pdp { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 32px 0 20px; }
-.pdp .gallery { background: var(--soft); border-radius: 28px; display: grid; place-items: center; min-height: 460px; position: sticky; top: 80px; align-self: start; overflow: hidden; }
-.pdp .gallery img { max-width: 70%; max-height: 420px; filter: drop-shadow(0 24px 30px rgba(10,27,51,.25)); }
-.pdp h1 { font-size: clamp(30px, 5vw, 46px); font-weight: 800; line-height: 1.05; margin: 8px 0 10px; }
-.pdp .desc { color: var(--muted); margin: 0 0 22px; }
-.opt-label { font-weight: 700; font-size: 14px; margin: 18px 0 8px; }
-.opts { display: flex; flex-wrap: wrap; gap: 8px; }
-.opt { border: 1.5px solid var(--line); background: var(--surface); border-radius: 14px; padding: 10px 14px; cursor: pointer; text-align: left; font-size: 14px; display: flex; align-items: center; gap: 8px; }
-.opt[aria-pressed="true"] { border-color: var(--brand); box-shadow: 0 0 0 1px var(--brand); }
-.opt small { color: var(--muted); display: block; font-size: 12px; }
-.pdp .total { font: 800 34px var(--display); margin: 24px 0 4px; }
-.pdp .total s { font: 500 18px var(--body); color: var(--muted); margin-left: 8px; }
-.pdp .note { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
-.feats { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 10px; }
-.feats li { display: flex; gap: 10px; font-size: 14px; color: var(--muted); }
-.feats li::before { content: "✓"; color: var(--good); font-weight: 700; }
-.back { display: inline-block; margin-top: 20px; color: var(--muted); text-decoration: none; font-size: 14px; }
-@media (max-width: 820px) { .pdp { grid-template-columns: 1fr; gap: 20px; } .pdp .gallery { position: static; min-height: 300px; } .pdp .gallery img { max-height: 280px; } }
+/* Tarjetas */
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } .badge { font-size: 9px; letter-spacing: .05em; } .card .row { flex-wrap: wrap; gap: 4px; } .card .price { font-size: 16px; } }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 10px 10px 16px; display: flex; flex-direction: column; transition: box-shadow .2s, transform .2s, border-color .2s; position: relative; }
+.card:hover { box-shadow: 0 18px 40px -22px rgba(14,23,38,.35); transform: translateY(-3px); border-color: #D6DEE8; }
+.card .ph { background: #F5F7FA; border-radius: 16px; aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; margin-bottom: 14px; }
+.card .ph img { width: 82%; height: 82%; object-fit: contain; transition: transform .35s; }
+.card .ph img.cover { width: 100%; height: 100%; object-fit: cover; }
+.card:hover .ph img { transform: scale(1.04); }
+.card .badge { align-self: flex-start; margin: 0 6px 8px; }
+.card h3 { font-size: 15px; font-weight: 600; letter-spacing: -.01em; margin: 0 6px; line-height: 1.3; }
+.card .sub { font-size: 12px; color: var(--muted); margin: 3px 6px 0; }
+.card .row { display: flex; justify-content: space-between; align-items: baseline; margin: 10px 6px 0; }
+.card .price { font-weight: 700; font-size: 18px; }
+.card .price s { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 6px; }
+.card .dots { display: flex; gap: 4px; }
+.card .dots i { width: 11px; height: 11px; border-radius: 50%; border: 1px solid rgba(0,0,0,.14); }
+.card.out .ph { opacity: .5; filter: grayscale(.6); }
+.card .corner { position: absolute; top: 18px; left: 18px; display: flex; gap: 6px; flex-wrap: wrap; }
+.badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; background: var(--brand-soft); color: var(--brand); }
+.badge.ob { background: #EEF0FF; color: #4B4FD1; }
+.badge.offer { background: var(--offer); color: #fff; }
+.badge.new { background: #E6F6EF; color: var(--good); }
+.badge.out { background: #F1F2F4; color: #6B7280; }
+.badge.dark { background: var(--fg); color: #fff; }
 
-/* Cart */
-.drawer { position: fixed; inset: 0; z-index: 50; display: flex; justify-content: flex-end; background: rgba(6,16,31,.5); }
-.drawer .panel { width: min(420px, 100%); height: 100%; background: var(--bg); display: flex; flex-direction: column; }
-.drawer header { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; border-bottom: 1px solid var(--line); }
-.drawer header h2 { font-size: 22px; }
-.x { background: var(--soft); border: 0; width: 36px; height: 36px; border-radius: 10px; cursor: pointer; font-size: 18px; }
-.lines { flex: 1; overflow: auto; padding: 8px 20px; }
-.line { display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
-.line img, .line .ph { width: 56px; height: 66px; object-fit: contain; background: var(--soft); border-radius: 10px; }
-.line small { display: block; color: var(--muted); font-size: 13px; }
-.line .rm { background: none; border: 0; color: var(--warn); cursor: pointer; font-size: 13px; padding: 0; margin-top: 4px; }
-.line.gone { opacity: .55; }
-.checkout { padding: 18px 20px 24px; border-top: 1px solid var(--line); display: grid; gap: 10px; }
-.checkout .sum { display: flex; justify-content: space-between; font: 700 20px var(--display); }
-.checkout input { width: 100%; border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: 11px 12px; }
-.empty { text-align: center; color: var(--muted); padding: 50px 10px; }
+/* Sellado u Open Box */
+.versus { text-align: center; max-width: 720px; margin: 0 auto; }
+.versus h2 { font-size: clamp(30px, 3.6vw, 44px); margin-bottom: 18px; }
+.versus p { margin: 6px 0; color: #2A3546; }
+.versus .btn { margin-top: 22px; }
+
+/* Banda oscura */
+.band { background: var(--fg); color: #fff; }
+.band .wrap { display: flex; align-items: center; justify-content: center; gap: 18px; padding-top: 30px; padding-bottom: 30px; flex-wrap: wrap; text-align: center; }
+.band p { margin: 0; font-weight: 600; font-size: 17px; }
+
+/* Bloques de categoría (texto + foto) */
+.split { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); background: var(--card); }
+.split:nth-of-type(even) { background: var(--bg); }
+.split .txt { padding: 72px max(24px, calc((100vw - 1240px) / 2 + 24px)); padding-right: 56px; display: flex; flex-direction: column; justify-content: center; }
+.split h2 { font-size: clamp(32px, 3.8vw, 48px); font-weight: 700; margin: 10px 0 14px; }
+.split .lead { color: var(--muted); max-width: 400px; margin: 0 0 16px; }
+.split .big { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+.split .alt { font-size: 13px; color: var(--muted); margin-bottom: 18px; }
+.split .alt b { color: var(--fg); }
+.mini { display: flex; gap: 14px; align-items: center; border: 1px solid var(--line); background: #fff; border-radius: 16px; padding: 10px 16px 10px 10px; max-width: 400px; margin-bottom: 22px; transition: border-color .2s; }
+.mini:hover { border-color: var(--brand); }
+.mini img, .mini .tile { width: 52px; height: 52px; border-radius: 10px; object-fit: contain; background: var(--surface); flex: none; }
+.mini div { flex: 1; font-size: 13px; line-height: 1.35; }
+.mini small { display: block; color: var(--muted); }
+.mini .arrow { color: var(--brand); flex: none; }
+.split .links { display: flex; gap: 22px; flex-wrap: wrap; }
+.split .pic { position: relative; display: grid; place-items: center; padding: 40px; min-height: 480px; }
+.split .pic img, .split .pic .tile { width: 100%; max-width: 520px; aspect-ratio: 4 / 3.4; object-fit: contain; border-radius: 26px; }
+.split .pic a { display: block; width: 100%; max-width: 520px; }
+.split .pic .tile { font-size: 28px !important; }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split .pic { order: -1; min-height: 0; padding: 24px 16px 0; } .split .txt { padding: 28px 16px 48px; } }
+
+/* Bodega */
+.bodega { background: var(--bg); border-top: 1px solid var(--line); }
+.bodega .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; padding-top: 72px; padding-bottom: 72px; }
+.bodega h2 { font-size: clamp(30px, 3.6vw, 44px); margin: 8px 0 14px; }
+.bodega p { color: var(--muted); margin: 0 0 22px; max-width: 520px; }
+.bodega .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.box3 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.box3 div { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+.box3 b { display: block; font-size: 26px; letter-spacing: -.02em; }
+.box3 span { font-size: 13px; color: var(--muted); }
+@media (max-width: 860px) { .bodega .wrap { grid-template-columns: 1fr; } }
+
+/* Pasos */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.steps div { background: #fff; border: 1px solid var(--line); border-radius: 22px; padding: 26px; }
+.steps i { font-style: normal; display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--brand-soft); color: var(--brand); font-weight: 700; margin-bottom: 14px; }
+.steps h3 { font-size: 18px; margin-bottom: 6px; }
+.steps p { color: var(--muted); margin: 0; font-size: 15px; }
+@media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
+
+/* Por qué IHUB */
+.why { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 40px; margin: 26px 0 20px; max-width: 820px; }
+.why li { list-style: none; display: flex; gap: 10px; color: #2A3546; }
+.why li::before { content: "✓"; color: var(--brand); font-weight: 700; }
+.why-sec ul { padding: 0; }
+@media (max-width: 640px) { .why { grid-template-columns: 1fr; } }
+
+/* Categoría */
+.crumbs { font-size: 13px; color: var(--muted); padding: 18px 0 0; display: flex; gap: 8px; flex-wrap: wrap; }
+.crumbs a:hover { color: var(--fg); }
+.crumbs b { color: var(--fg); font-weight: 600; }
+.cat-head { padding: 22px 0 26px; }
+.cat-head h1 { font-size: clamp(36px, 4.6vw, 56px); font-weight: 700; }
+.cat-head p { color: var(--muted); margin: 10px 0 0; font-size: 17px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.chip { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 500; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--fg); color: #fff; border-color: var(--fg); }
+.empty { padding: 60px 0; text-align: center; color: var(--muted); }
+
+/* Ficha de producto */
+.pdp-head { text-align: center; padding: 20px 0 26px; }
+.pdp-head h1 { font-size: clamp(36px, 4.8vw, 58px); font-weight: 700; margin: 14px 0 10px; }
+.pdp-head p { color: var(--muted); margin: 0; }
+.pdp-head .meta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin-top: 10px; }
+.pdp { display: grid; grid-template-columns: 1.08fr 1fr; gap: 44px; align-items: start; padding-bottom: 60px; }
+.gal { position: sticky; top: 84px; }
+.gal-main { background: #F2F4F7; border-radius: 28px; aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; }
+.gal-main img { width: 86%; height: 86%; object-fit: contain; }
+.gal-main img.fit { width: 80%; height: 80%; object-fit: contain; }
+.thumbs { display: flex; gap: 10px; margin-top: 12px; overflow-x: auto; }
+.thumbs button { width: 74px; height: 74px; border-radius: 14px; border: 2px solid transparent; padding: 0; overflow: hidden; background: #F2F4F7; cursor: pointer; flex: none; }
+.thumbs button[aria-pressed="true"] { border-color: var(--brand); }
+.thumbs img { width: 100%; height: 100%; object-fit: contain; }
+.step { margin-bottom: 30px; }
+.step h3 { font-size: 21px; font-weight: 700; margin-bottom: 14px; display: flex; gap: 8px; align-items: baseline; }
+.step h3 small { color: var(--muted); font-weight: 500; font-size: 14px; }
+.swatches { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.sw { width: 40px; height: 40px; border-radius: 50%; border: 0; cursor: pointer; box-shadow: inset 0 0 0 1px rgba(0,0,0,.15); outline: 2px solid transparent; outline-offset: 3px; }
+.sw[aria-pressed="true"] { outline-color: var(--brand); }
+.swname { font-size: 14px; color: var(--muted); margin-left: 4px; }
+.opt { display: block; width: 100%; text-align: left; background: #fff; border: 1.5px solid var(--line); border-radius: 18px; padding: 16px 18px; margin-bottom: 10px; cursor: pointer; transition: border-color .15s, background .15s; }
+.opt:hover { border-color: #BFCADA; }
+.opt[aria-pressed="true"] { border-color: var(--brand); background: #F5FAFF; }
+.opt .t { display: flex; justify-content: space-between; gap: 10px; font-weight: 700; font-size: 17px; }
+.opt .t span:last-child { font-weight: 600; font-size: 15px; }
+.opt p { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+.opt .bat { display: inline-flex; gap: 6px; align-items: center; font-size: 13px; color: var(--good); font-weight: 600; margin-top: 4px; }
+.summary { background: var(--surface); border-radius: 22px; padding: 22px; margin: 6px 0 16px; }
+.summary .l { font-size: 13px; color: var(--muted); }
+.summary .cfg { font-weight: 600; margin: 2px 0 10px; }
+.summary .p { font-size: 34px; font-weight: 700; letter-spacing: -.02em; }
+.summary .p s { font-size: 17px; color: var(--muted); font-weight: 400; margin-left: 8px; }
+.summary .ok { display: inline-flex; gap: 6px; align-items: center; color: var(--good); font-weight: 600; font-size: 14px; margin-top: 8px; }
+.summary .ok i { width: 8px; height: 8px; border-radius: 50%; background: var(--good); }
+.buy { display: grid; gap: 10px; }
+.buy .btn { width: 100%; }
+.perks { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; font-size: 14px; color: #2A3546; }
+.perks li { display: flex; gap: 10px; align-items: center; }
+.perks svg { color: var(--brand); flex: none; }
+.calm { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.calm div { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 24px; }
+.calm h3 { font-size: 17px; margin-bottom: 6px; }
+.calm p { margin: 0; font-size: 14px; color: var(--muted); }
+@media (max-width: 900px) { .pdp { grid-template-columns: 1fr; gap: 24px; } .gal { position: static; } .calm { grid-template-columns: 1fr; } }
+
+/* Páginas de texto */
+.doc { max-width: 760px; padding: 30px 0 70px; }
+.doc h1 { font-size: clamp(34px, 4.4vw, 50px); margin-bottom: 16px; }
+.doc h3 { margin: 28px 0 8px; font-size: 20px; }
+.doc p { color: #2A3546; }
 
 /* Footer */
-footer { margin-top: 72px; background: var(--hero-a); color: #C9D8EE; padding: 40px 0 28px; font-size: 14px; }
-footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 28px; }
-footer h4 { color: #fff; font: 700 15px var(--display); margin: 0 0 10px; }
-footer a { color: #C9D8EE; text-decoration: none; display: block; margin: 4px 0; }
+footer { background: var(--fg); color: #C9D2DF; font-size: 14px; }
+footer .wrap { padding-top: 60px; padding-bottom: 30px; }
+.fcols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 32px; }
+footer h4 { color: #fff; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 14px; }
+footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
 footer a:hover { color: #fff; }
-footer .logo img { height: 34px; margin-bottom: 10px; }
-footer .fine { grid-column: 1 / -1; border-top: 1px solid #1E3150; padding-top: 16px; color: #7F93B2; font-size: 12px; }
-@media (max-width: 760px) { footer .wrap { grid-template-columns: 1fr; } }
-.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 12px 18px; border-radius: 12px; z-index: 60; font-weight: 500; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-.loading { padding: 80px 0; text-align: center; color: var(--muted); }
-details.credits { margin-top: 8px; } details.credits summary { cursor: pointer; }
+footer .logo img { height: 32px; margin-bottom: 14px; }
+footer .soc { display: grid; gap: 10px; margin-top: 16px; }
+footer .soc a { display: flex; gap: 10px; align-items: center; }
+footer .soc span { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,.08); display: grid; place-items: center; }
+footer .bar { border-top: 1px solid rgba(255,255,255,.1); margin-top: 40px; padding-top: 20px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: #8C98AB; }
+footer details { margin-top: 14px; font-size: 11px; color: #8C98AB; }
+footer details summary { cursor: pointer; }
+#credits { display: grid; gap: 3px; margin-top: 8px; }
+@media (max-width: 860px) { .fcols { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .fcols { grid-template-columns: 1fr; } }
 
-/* ---------- Efectos ---------- */
-.hero { position: relative; isolation: isolate; }
-.hero .wrap { position: relative; z-index: 2; }
-#particles { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
-.orb { position: absolute; border-radius: 50%; filter: blur(60px); z-index: 0; opacity: .55; animation: flotar 14s ease-in-out infinite alternate; pointer-events: none; }
-.orb.o1 { width: 420px; height: 420px; background: #1B6DFF; top: -140px; right: 8%; }
-.orb.o2 { width: 300px; height: 300px; background: #0E7CFF; bottom: -160px; left: -60px; opacity: .35; animation-duration: 18s; }
-@keyframes flotar { to { transform: translate(-40px, 30px) scale(1.12); } }
-.grad-text { background: linear-gradient(100deg, #fff 30%, #8EC5FF 60%, #fff 90%); background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: brillo 6s linear infinite; }
-@keyframes brillo { to { background-position: -220% 0; } }
-.hero-img { min-height: 380px; }
-.frame { position: relative; transition: transform .25s ease-out; transform-style: preserve-3d; animation: levitar 6s ease-in-out infinite; }
-.frame img { display: block; width: min(300px, 70vw); height: auto; filter: drop-shadow(0 30px 40px rgba(0,0,0,.5)); }
-.frame.photo { border-radius: 28px; overflow: hidden; box-shadow: 0 40px 80px -20px rgba(0,0,0,.7), 0 0 0 1px rgba(255,255,255,.12), 0 0 60px rgba(27,109,255,.35); }
-.frame.photo img { width: min(400px, 78vw); aspect-ratio: 4 / 3; object-fit: cover; filter: none; }
-.shine { position: absolute; inset: 0; background: radial-gradient(circle at var(--sx, 30%) var(--sy, 20%), rgba(255,255,255,.28), transparent 45%); pointer-events: none; mix-blend-mode: overlay; }
-@keyframes levitar { 50% { translate: 0 -10px; } }
-.float-chip { position: absolute; z-index: 3; display: inline-flex; align-items: center; gap: 6px; font: 600 13px var(--body); color: #fff; padding: 8px 12px; border-radius: 99px;
-  background: rgba(14,27,48,.55); border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); animation: levitar 5s ease-in-out infinite; white-space: nowrap; }
-.float-chip svg { width: 16px; height: 16px; color: #8EC5FF; }
-.float-chip.c1 { top: 8%; left: -4%; } .float-chip.c2 { bottom: 12%; right: -2%; animation-delay: -2s; } .float-chip.c3 { bottom: -2%; left: 6%; animation-delay: -3.5s; }
-@media (max-width: 760px) { .hero-img { min-height: 0; } .frame.photo img { width: min(320px, 84vw); } .float-chip { font-size: 11px; padding: 6px 10px; } .float-chip.c1 { left: 0; top: 2%; } .float-chip.c2 { right: 0; } .float-chip.c3 { display: none; } }
-
-.showroom { padding: 64px 0 24px; overflow: hidden; background: linear-gradient(180deg, var(--bg), var(--soft)); }
-.sr-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 26px; }
-.sr-head .eyebrow { color: var(--brand); }
-.sr-head h2 { font-size: clamp(28px, 4.5vw, 44px); font-weight: 800; margin-top: 8px; }
-.stats { display: flex; gap: 28px; }
-.stats b { display: block; font: 800 34px/1 var(--display); color: var(--brand); }
-.stats span { font-size: 13px; color: var(--muted); }
-.marquee { mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
-.track { display: flex; gap: 16px; width: max-content; animation: desfilar 60s linear infinite; padding: 6px 0 16px; }
-.marquee:hover .track { animation-play-state: paused; }
-@keyframes desfilar { to { transform: translateX(-50%); } }
-.shot { position: relative; width: 240px; height: 300px; border-radius: 22px; overflow: hidden; flex: none; text-decoration: none; box-shadow: 0 18px 40px -20px rgba(10,27,51,.45); }
-.shot img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
-.shot:hover img { transform: scale(1.07); }
-.shot span { position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 14px 14px; color: #fff; font-size: 13px; background: linear-gradient(transparent, rgba(6,16,31,.85)); }
-.shot b { display: block; font: 700 16px var(--display); }
-
-.card { overflow: hidden; }
-.card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .25s;
-  background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 0), rgba(27,109,255,.13), transparent 60%); }
-.card:hover::after { opacity: 1; }
-.card .pic img.real { width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; transition: transform .5s; }
-.card:hover .pic img { transform: scale(1.06); }
-.card .pic img { transition: transform .5s; }
-
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+/* WhatsApp flotante, carrito, toast */
+.fab { position: fixed; right: 20px; bottom: 20px; z-index: 50; width: 56px; height: 56px; border-radius: 50%; background: var(--wa); color: #fff; display: grid; place-items: center; box-shadow: 0 12px 28px -10px rgba(29,168,81,.8); transition: transform .2s; }
+.fab:hover { transform: scale(1.06); }
+.drawer { position: fixed; inset: 0; z-index: 70; background: rgba(14,23,38,.45); display: flex; justify-content: flex-end; }
+.drawer aside { background: #fff; width: min(440px, 100%); height: 100%; display: flex; flex-direction: column; }
+.drawer .hd { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; border-bottom: 1px solid var(--line); }
+.drawer .hd h2 { font-size: 20px; }
+#lines { flex: 1; overflow-y: auto; padding: 8px 20px; }
+.line { display: grid; grid-template-columns: 60px 1fr auto; gap: 12px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.line img, .line .tile { width: 60px; height: 60px; border-radius: 12px; object-fit: contain; background: var(--surface); }
+.line b { display: block; font-size: 15px; }
+.line small { color: var(--muted); font-size: 12px; display: block; }
+.line .rm { background: none; border: 0; color: var(--offer); font-size: 12px; padding: 0; cursor: pointer; margin-top: 4px; }
+.line.gone { opacity: .6; }
+.drawer .ft { border-top: 1px solid var(--line); padding: 18px 20px; display: grid; gap: 10px; }
+.drawer .ft .tot { display: flex; justify-content: space-between; font-weight: 700; font-size: 18px; }
+.drawer input { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; width: 100%; }
+.drawer .empty { padding: 40px 0; }
+.drawer .empty a { color: var(--brand); font-weight: 600; }
+#toast { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%); background: var(--fg); color: #fff; padding: 12px 20px; border-radius: 999px; font-size: 14px; z-index: 80; }
+.loading { padding: 120px 0; text-align: center; color: var(--muted); }
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s, transform .6s; }
 .reveal.in { opacity: 1; transform: none; }
-
-.pdp .gallery { display: flex; flex-direction: column; align-items: stretch; gap: 12px; padding: 18px; }
-.gal-main { width: 100%; display: grid; place-items: center; min-height: 380px; }
-.gal-main img { max-width: 72%; max-height: 420px; animation: aparecer .4s ease; }
-.gal-main img.real { max-width: 100%; width: 100%; max-height: 460px; object-fit: cover; border-radius: 20px; filter: none; }
-.thumbs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
-.thumbs button { width: 64px; height: 64px; border-radius: 12px; border: 2px solid transparent; padding: 0; overflow: hidden; background: var(--surface); cursor: pointer; }
-.thumbs button[aria-pressed="true"] { border-color: var(--brand); }
-.thumbs img { width: 100%; height: 100%; object-fit: cover; }
-@keyframes aparecer { from { opacity: 0; transform: scale(.97); } }
-.spark { position: fixed; width: 7px; height: 7px; border-radius: 50%; z-index: 70; pointer-events: none; animation: chispa .75s ease-out forwards; }
-@keyframes chispa { to { transform: translate(var(--dx), var(--dy)) scale(.2); opacity: 0; } }
-.btn { transition: transform .15s, box-shadow .2s, background .2s; }
-.btn-primary { box-shadow: 0 10px 30px -10px rgba(27,109,255,.8); }
-.btn:hover { transform: translateY(-2px); }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .reveal { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ticker .run, .hero .art img { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 </head>
 <body>
-<header class="nav">
+<div class="ticker" aria-hidden="true"><div class="run" id="ticker"></div></div>
+<div class="util"><div class="wrap">
+  <span class="loc"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>Bodega IHUB · despachos a todo Ecuador</span>
+  <span class="sep hide-s"></span><a class="hide-s" href="#/nosotros">Quiénes somos</a><a class="hide-s" href="#/contacto">Contacto</a>
+  <div class="r"><a href="https://instagram.com/ihub_ec" target="_blank" rel="noopener" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><span class="sep"></span><a href="../" title="Precios por mayor">Mayoristas</a></div>
+</div></div>
+<header class="top">
   <div class="wrap">
-    <a class="logo" href="#/" aria-label="IHUB inicio"><img src="../logo-blanco.png" alt="IHUB" width="900" height="274"></a>
-    <nav aria-label="Secciones">
-      <a href="#/">Inicio</a><a href="#/c/iphone">iPhone</a><a href="#/c/android">Android</a><a href="#/c/seminuevos">Seminuevos</a><a href="#/garantia">Garantía</a>
-    </nav>
-    <button class="cart-btn" id="cart-open" aria-label="Abrir carrito">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
-      <b id="cart-count" hidden>0</b>
-    </button>
+    <button class="ib burger" id="burger" aria-label="Menú"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a class="logo" href="#/" aria-label="IHUB inicio"><img src="../logo-azul.png" alt="IHUB" width="908" height="274"></a>
+    <nav class="menu" id="menu" aria-label="Categorías"></nav>
+    <div class="icons">
+      <button class="ib" id="search-open" aria-label="Buscar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      <button class="ib solid" id="cart-open" aria-label="Tu pedido"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><b id="cart-count" hidden>0</b></button>
+    </div>
   </div>
+  <div class="searchbar" id="searchbar" hidden><div class="wrap"><form id="search-form" role="search"><input id="q" type="search" placeholder="Buscar: iPhone 17 Pro, MacBook, AirPods…" autocomplete="off" aria-label="Buscar productos"><button class="btn btn-p btn-sm">Buscar</button></form></div></div>
 </header>
-<div class="subnav"><div class="wrap"><a href="#/">Inicio</a><a href="#/c/iphone">iPhone</a><a href="#/c/android">Android</a><a href="#/c/seminuevos">Seminuevos</a><a href="#/garantia">Garantía</a></div></div>
+<div class="sheet" id="sheet" hidden><nav id="sheet-nav" aria-label="Menú"></nav></div>
 
-<main id="app"><div class="loading">Cargando el stock de IHUB…</div></main>
+<main id="app"><div class="loading">Cargando el stock de la bodega…</div></main>
 
 <footer>
   <div class="wrap">
-    <div>
-      <a class="logo" href="#/"><img src="../logo-blanco.png" alt="IHUB" width="900" height="274"></a>
-      <p>iPhone y celulares nuevos sellados y seminuevos grado A. Bodega en Quito. Stock y precios actualizados automáticamente.</p>
+    <div class="fcols">
+      <div>
+        <a class="logo" href="#/"><img src="../logo-blanco.png" alt="IHUB" width="900" height="274"></a>
+        <p style="margin:0">Bodega de tecnología en Ecuador · Sellados con garantía de 12 meses · Open Box verificado · Envíos a todo el país.</p>
+        <div class="soc">
+          <a href="https://instagram.com/ihub_ec" target="_blank" rel="noopener"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></span>@ihub_ec</a>
+          <a id="wa-foot2" target="_blank" rel="noopener"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></span>WhatsApp 096 260 8262</a>
+        </div>
+      </div>
+      <div><h4>Productos</h4><ul id="foot-cats"></ul></div>
+      <div><h4>Ayuda</h4><ul>
+        <li><a href="#/garantia">Garantía y términos</a></li>
+        <li><a href="#/como-comprar">Cómo comprar</a></li>
+        <li><a href="#/nosotros">Quiénes somos</a></li>
+        <li><a href="../">Precios por mayor</a></li>
+      </ul></div>
+      <div><h4>Contáctanos</h4><ul>
+        <li style="color:#8C98AB;font-size:12px">Ventas por WhatsApp</li>
+        <li><a id="wa-foot" target="_blank" rel="noopener" style="color:#fff;font-weight:600;font-size:16px">+593 96 260 8262</a></li>
+        <li><a href="https://instagram.com/ihub_ec" target="_blank" rel="noopener">Instagram @ihub_ec</a></li>
+        <li style="margin-top:8px;color:#8C98AB">Somos bodega: no tenemos tienda física. Despachamos desde Quito a todo Ecuador.</li>
+      </ul></div>
     </div>
-    <div>
-      <h4>Tienda</h4>
-      <a href="#/c/iphone">iPhone</a><a href="#/c/android">Android</a><a href="#/c/seminuevos">Seminuevos grado A</a><a href="../">Ver stock completo (app)</a>
-    </div>
-    <div>
-      <h4>Contacto</h4>
-      <a id="wa-foot" href="#" target="_blank" rel="noopener">WhatsApp 096 260 8262</a>
-      <a href="https://instagram.com/ihub_ec" target="_blank" rel="noopener">Instagram @ihub_ec</a>
-      <a href="#/garantia">Garantía y términos</a>
-    </div>
-    <div class="fine">
-      © <span id="year"></span> IHUB · Precios en USD, sujetos a disponibilidad. <span id="upd"></span>
-      <details class="credits"><summary>Créditos de imágenes</summary><div id="credits"></div></details>
-    </div>
+    <details><summary>Créditos de imágenes</summary><div id="credits"></div></details>
+    <div class="bar"><span>© <span id="year"></span> IHUB · Tecnología que enseña</span><span id="upd"></span></div>
   </div>
 </footer>
 
-<div class="drawer" id="drawer" hidden>
-  <div class="panel" role="dialog" aria-modal="true" aria-label="Carrito">
-    <header><h2>Tu pedido</h2><button class="x" id="cart-close" aria-label="Cerrar">✕</button></header>
-    <div class="lines" id="lines"></div>
-    <form class="checkout" id="checkout">
-      <div class="sum"><span>Total</span><span id="sum">$0</span></div>
-      <input id="c-nombre" placeholder="Tu nombre" autocomplete="name" required>
-      <input id="c-ciudad" placeholder="Ciudad" autocomplete="address-level2">
-      <button class="btn btn-wa" type="submit">Enviar pedido por WhatsApp</button>
-      <small style="color:var(--muted);text-align:center">Confirmamos disponibilidad y forma de pago por WhatsApp.</small>
-    </form>
-  </div>
-</div>
-<div class="toast" id="toast" hidden></div>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg></a>
+
+<div class="drawer" id="drawer" hidden><aside aria-label="Tu pedido">
+  <div class="hd"><h2>Tu pedido</h2><button class="ib" id="cart-close" aria-label="Cerrar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div>
+  <div id="lines"></div>
+  <form class="ft" id="checkout" hidden>
+    <div class="tot"><span>Total</span><span id="sum"></span></div>
+    <input id="c-nombre" required placeholder="Tu nombre" autocomplete="name">
+    <input id="c-ciudad" placeholder="Ciudad de envío" autocomplete="address-level2">
+    <button class="btn btn-wa">Enviar pedido por WhatsApp</button>
+    <small style="color:var(--muted);font-size:12px">Confirmamos disponibilidad y forma de pago por WhatsApp antes de cobrar.</small>
+  </form>
+</aside></div>
+<div id="toast" hidden></div>
 
 <script>
-/* ---------- Configuración ---------- */
 const WHATSAPP = "593962608262";
 const SUPABASE_URL = "https://qqxseabhnzrzzbmemjjg.supabase.co";
 const SUPABASE_KEY = "sb_publishable_ITWl2tblQAiOlHGelV4oTw_yNLVjm-r";
@@ -315,42 +397,11 @@ const IMAGENES = [
   ["IPHONE AIR", "iphone-air.png"], ["IPHONE 17E", "iphone-17e.png"], ["IPHONE 17", "iphone-17.png"],
   ["IPHONE 16 PRO MAX", "iphone-16-pro-max.png"], ["IPHONE 16 PRO", "iphone-16-pro.png"], ["IPHONE 16 PLUS", "iphone-16-plus.png"], ["IPHONE 16", "iphone-16.png"],
   ["IPHONE 15 PRO MAX", "iphone-15-pro-max.png"], ["IPHONE 15 PRO", "iphone-15-pro.png"], ["IPHONE 15 PLUS", "iphone-15-plus.png"], ["IPHONE 15", "iphone-15.png"],
-  ["IPHONE 14 PRO", "iphone-14-pro.png"], ["IPHONE 14", "iphone-14.png"], ["SAMSUNG GALAXY S23 ULTRA", "galaxy-s23-ultra.jpg"],
+  ["IPHONE 14 PRO", "iphone-14-pro.png"], ["IPHONE 14", "iphone-14.png"],
 ];
-// Imágenes servidas desde Wikimedia Commons (licencias CC; créditos en el pie de página).
+// Renders provisionales (Wikimedia Commons, CC BY-SA) hasta cargar las imágenes oficiales.
 const FOTOS = {"iphone-16-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/IPhone_16_Pro_Vector.svg/500px-IPhone_16_Pro_Vector.svg.png", "archivo": "IPhone 16 Pro Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_16_Pro_Vector.svg"}, "iphone-16-pro-max.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/IPhone_16_Pro_Max_Vector.svg/500px-IPhone_16_Pro_Max_Vector.svg.png", "archivo": "IPhone 16 Pro Max Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_16_Pro_Max_Vector.svg"}, "iphone-15.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IPhone_15_Vector.svg/500px-IPhone_15_Vector.svg.png", "archivo": "IPhone 15 Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_15_Vector.svg"}, "iphone-15-plus.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/IPhone_15_Plus_Vector.svg/500px-IPhone_15_Plus_Vector.svg.png", "archivo": "IPhone 15 Plus Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_15_Plus_Vector.svg"}, "iphone-15-pro-max.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/IPhone_15_Pro_Max_Vector.svg/500px-IPhone_15_Pro_Max_Vector.svg.png", "archivo": "IPhone 15 Pro Max Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_15_Pro_Max_Vector.svg"}, "iphone-14.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/IPhone_14_vector.svg/500px-IPhone_14_vector.svg.png", "archivo": "IPhone 14 vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_14_vector.svg"}, "iphone-14-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/IPhone_14_Pro_vector.svg/500px-IPhone_14_Pro_vector.svg.png", "archivo": "IPhone 14 Pro vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_14_Pro_vector.svg"}, "galaxy-s23-ultra.jpg": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Samsung_Galaxy_S23_Ultra%2C_512_GB%2C_Lavender_20230416_HOF00318_RAW-Export_cens.png/500px-Samsung_Galaxy_S23_Ultra%2C_512_GB%2C_Lavender_20230416_HOF00318_RAW-Export_cens.png", "archivo": "Samsung Galaxy S23 Ultra, 512 GB, Lavender 20230416 HOF00318 RAW-Export cens.png", "autor": "PantheraLeo1359531", "licencia": "CC BY 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_S23_Ultra,_512_GB,_Lavender_20230416_HOF00318_RAW-Export_cens.png"}, "iphone-17.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/IPhone_17_Vector.svg/500px-IPhone_17_Vector.svg.png", "archivo": "IPhone 17 Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17_Vector.svg"}, "iphone-air.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/IPhone_Air_Vector.svg/500px-IPhone_Air_Vector.svg.png", "archivo": "IPhone Air Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_Air_Vector.svg"}, "iphone-17e.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/IPhone_17e_Vector.svg/500px-IPhone_17e_Vector.svg.png", "archivo": "IPhone 17e Vector.svg", "autor": "Pncke", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17e_Vector.svg"}, "iphone-duo.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Iphone_Duo_Back_Vector.svg/500px-Iphone_Duo_Back_Vector.svg.png", "archivo": "Iphone Duo Back Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:Iphone_Duo_Back_Vector.svg"}, "iphone-16.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/IPhone_16_Vector.svg/500px-IPhone_16_Vector.svg.png", "archivo": "IPhone 16 Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_16_Vector.svg"}, "iphone-16-plus.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/IPhone_16_Plus_Vector.svg/500px-IPhone_16_Plus_Vector.svg.png", "archivo": "IPhone 16 Plus Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_16_Plus_Vector.svg"}, "iphone-15-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_15_Pro_Vector.svg/500px-IPhone_15_Pro_Vector.svg.png", "archivo": "IPhone 15 Pro Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_15_Pro_Vector.svg"}, "iphone-18-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/IPhone_18_Pro_Vector.svg/500px-IPhone_18_Pro_Vector.svg.png", "archivo": "IPhone 18 Pro Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_18_Pro_Vector.svg"}, "iphone-17-pro.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_17_Pro_Vector.svg/500px-IPhone_17_Pro_Vector.svg.png", "archivo": "IPhone 17 Pro Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_Vector.svg"}, "iphone-17-pro-max.png": {"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/IPhone_17_Pro_Max_Vector.svg/500px-IPhone_17_Pro_Max_Vector.svg.png", "archivo": "IPhone 17 Pro Max Vector.svg", "autor": "Rafael Fernandez", "licencia": "CC BY-SA 4.0", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_Max_Vector.svg"}};
-// Fotos reales de equipos (Wikimedia Commons, licencias CC0 / CC BY / CC BY-SA).
-const REAL = {"i13pro": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Apple_iPhone_13_Pro_and_13_Pro_Max.jpg/500px-Apple_iPhone_13_Pro_and_13_Pro_Max.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Apple_iPhone_13_Pro_and_13_Pro_Max.jpg/960px-Apple_iPhone_13_Pro_and_13_Pro_Max.jpg", "archivo": "Apple iPhone 13 Pro and 13 Pro Max.jpg", "licencia": "CC BY-SA 4.0", "autor": "SimonWaldherr", "pagina": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_13_Pro_and_13_Pro_Max.jpg"}, "i14pro_back": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Back_of_the_iPhone_14_Pro.jpg/500px-Back_of_the_iPhone_14_Pro.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Back_of_the_iPhone_14_Pro.jpg/960px-Back_of_the_iPhone_14_Pro.jpg", "archivo": "Back of the iPhone 14 Pro.jpg", "licencia": "CC BY-SA 4.0", "autor": "Hajoon0102", "pagina": "https://commons.wikimedia.org/wiki/File:Back_of_the_iPhone_14_Pro.jpg", "color": "PURPLE"}, "i14red": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/IPhone_14_Product_Red.jpg/500px-IPhone_14_Product_Red.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/IPhone_14_Product_Red.jpg/960px-IPhone_14_Product_Red.jpg", "archivo": "IPhone 14 Product Red.jpg", "licencia": "CC BY-SA 4.0", "autor": "Hajoon0102", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_14_Product_Red.jpg", "color": "RED"}, "i15pro": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Apple_iPhone_15_Pro.jpg/500px-Apple_iPhone_15_Pro.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Apple_iPhone_15_Pro.jpg/960px-Apple_iPhone_15_Pro.jpg", "archivo": "Apple iPhone 15 Pro.jpg", "licencia": "CC BY-SA 4.0", "autor": "IPHONE 15", "pagina": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_15_Pro.jpg"}, "i16_ultra": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/About_iPhone_16_Ultramarine.jpg/500px-About_iPhone_16_Ultramarine.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/About_iPhone_16_Ultramarine.jpg/960px-About_iPhone_16_Ultramarine.jpg", "archivo": "About iPhone 16 Ultramarine.jpg", "licencia": "CC BY-SA 4.0", "autor": "メイド理世", "pagina": "https://commons.wikimedia.org/wiki/File:About_iPhone_16_Ultramarine.jpg"}, "s25u": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Samsung_Galaxy_S25_Ultra.jpg/500px-Samsung_Galaxy_S25_Ultra.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Samsung_Galaxy_S25_Ultra.jpg/960px-Samsung_Galaxy_S25_Ultra.jpg", "archivo": "Samsung Galaxy S25 Ultra.jpg", "licencia": "CC BY 4.0", "autor": "Jakub CA", "pagina": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_S25_Ultra.jpg"}, "air_black": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Space_Black_iPhone_Air.jpg/500px-Space_Black_iPhone_Air.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Space_Black_iPhone_Air.jpg/960px-Space_Black_iPhone_Air.jpg", "archivo": "Space Black iPhone Air.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Space_Black_iPhone_Air.jpg", "color": "BLACK"}, "air_gold": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Light_Gold_iPhone_Air.jpg/500px-Light_Gold_iPhone_Air.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Light_Gold_iPhone_Air.jpg/960px-Light_Gold_iPhone_Air.jpg", "archivo": "Light Gold iPhone Air.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Light_Gold_iPhone_Air.jpg", "color": "GOLD"}, "a17pm_silver": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Silver_iPhone_17_Pro_Max.jpg/500px-Silver_iPhone_17_Pro_Max.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Silver_iPhone_17_Pro_Max.jpg/960px-Silver_iPhone_17_Pro_Max.jpg", "archivo": "Silver iPhone 17 Pro Max.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Silver_iPhone_17_Pro_Max.jpg", "color": "SILVER"}, "a17pm_orange": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cosmic_Orange_iPhone_17_Pro_Max.jpg/500px-Cosmic_Orange_iPhone_17_Pro_Max.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Cosmic_Orange_iPhone_17_Pro_Max.jpg/960px-Cosmic_Orange_iPhone_17_Pro_Max.jpg", "archivo": "Cosmic Orange iPhone 17 Pro Max.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Cosmic_Orange_iPhone_17_Pro_Max.jpg", "color": "ORANGE"}, "air_blue": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sky_Blue_iPhone_Air.jpg/500px-Sky_Blue_iPhone_Air.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Sky_Blue_iPhone_Air.jpg/960px-Sky_Blue_iPhone_Air.jpg", "archivo": "Sky Blue iPhone Air.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:Sky_Blue_iPhone_Air.jpg", "color": "BLUE"}, "a17line": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg/500px-IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg/960px-IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg", "archivo": "IPhone 17, Air, 17 Pro, and Pro max.jpg", "licencia": "CC BY-SA 4.0", "autor": "Premeditated", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17%2C_Air%2C_17_Pro%2C_and_Pro_max.jpg"}, "a17pro": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/IPhone_17_Pro_%282025-12-28%29.jpg/500px-IPhone_17_Pro_%282025-12-28%29.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/IPhone_17_Pro_%282025-12-28%29.jpg/960px-IPhone_17_Pro_%282025-12-28%29.jpg", "archivo": "IPhone 17 Pro (2025-12-28).jpg", "licencia": "CC0", "autor": "Olgierd Rudak", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17_Pro_%282025-12-28%29.jpg"}, "i17e_back": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/IPhone_17e_backside.jpg/500px-IPhone_17e_backside.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/IPhone_17e_backside.jpg/960px-IPhone_17e_backside.jpg", "archivo": "IPhone 17e backside.jpg", "licencia": "CC BY-SA 4.0", "autor": "茅野ふたば", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17e_backside.jpg", "color": "PINK"}, "x17tpro": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Xiaomi_17T_Pro.jpg/500px-Xiaomi_17T_Pro.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Xiaomi_17T_Pro.jpg/960px-Xiaomi_17T_Pro.jpg", "archivo": "Xiaomi 17T Pro.jpg", "licencia": "CC BY-SA 4.0", "autor": "茅野ふたば", "pagina": "https://commons.wikimedia.org/wiki/File:Xiaomi_17T_Pro.jpg"}, "duo2": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg/500px-IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg/960px-IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg", "archivo": "IPhone Duo taken using an iPhone Duo 01.jpg", "licencia": "CC0", "autor": "Ahmad Ali Karim", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_Duo_taken_using_an_iPhone_Duo_01.jpg"}, "duo": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Apple_iPhone_Duo.jpg/500px-Apple_iPhone_Duo.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Apple_iPhone_Duo.jpg/960px-Apple_iPhone_Duo.jpg", "archivo": "Apple iPhone Duo.jpg", "licencia": "CC BY 4.0", "autor": "SimonWaldherr", "pagina": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_Duo.jpg"}, "i18box": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg/500px-Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg/960px-Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg", "archivo": "Apple iPhone 18 Pro box (2026-11-12).jpg", "licencia": "CC BY-SA 4.0", "autor": "Olgierd Rudak", "pagina": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_18_Pro_box_%282026-11-12%29.jpg"}, "i17e": {"s": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/IPhone_17e_white.jpg/500px-IPhone_17e_white.jpg", "l": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/IPhone_17e_white.jpg/960px-IPhone_17e_white.jpg", "archivo": "IPhone 17e white.jpg", "licencia": "CC BY-SA 4.0", "autor": "茅野ふたば", "pagina": "https://commons.wikimedia.org/wiki/File:IPhone_17e_white.jpg", "color": "WHITE"}};
-const REALES = [
-  ["IPHONE 18 PRO", ["i18box"]], ["IPHONE DUO", ["duo", "duo2"]], ["IPHONE 17 PRO MAX", ["a17pm_orange", "a17pm_silver"]],
-  ["IPHONE 17 PRO", ["a17pro", "a17line"]], ["IPHONE 17 AIR", ["air_blue", "air_gold", "air_black"]], ["IPHONE AIR", ["air_blue", "air_gold", "air_black"]],
-  ["IPHONE 17E", ["i17e_back", "i17e"]], ["IPHONE 17", ["a17line"]], ["IPHONE 16 PRO", []], ["IPHONE 16", ["i16_ultra"]],
-  ["IPHONE 15 PRO", ["i15pro"]], ["IPHONE 14 PRO", ["i14pro_back"]], ["IPHONE 14", ["i14red"]], ["IPHONE 13 PRO", ["i13pro"]],
-  ["SAMSUNG GALAXY S25 ULTRA", ["s25u"]], ["XIAOMI 17T PRO", ["x17tpro"]],
-];
-// Fotos reales del modelo; si hay una del mismo color, va primero.
-function fotos(m, col) {
-  const ks = [...((REALES.find(([k]) => m.startsWith(k)) || [, []])[1])];
-  if (col) { const i = ks.findIndex(k => REAL[k].color && String(col).toUpperCase().includes(REAL[k].color)); if (i > 0) ks.unshift(ks.splice(i, 1)[0]); }
-  return ks.map(k => REAL[k]);
-}
 const imagen = m => FOTOS[(IMAGENES.find(([k]) => m.startsWith(k)) || [])[1]]?.url;
-
-// Descripción corta por familia.
-function descripcion(m) {
-  if (/IPHONE 18 PRO/.test(m)) return "La generación más nueva de iPhone Pro: el mejor sistema de cámaras de Apple, chip de última generación y batería para todo el día. Sellado, con garantía IHUB.";
-  if (/IPHONE DUO/.test(m)) return "El iPhone plegable: pantalla grande cuando la necesitas y tamaño de bolsillo cuando no. Sellado, con garantía IHUB.";
-  if (/PRO MAX/.test(m) && /IPHONE/.test(m)) return "Pantalla grande, la mejor batería de su generación y sistema de cámaras Pro con teleobjetivo.";
-  if (/PRO/.test(m) && /IPHONE/.test(m)) return "Tamaño cómodo con cámaras Pro, pantalla ProMotion y diseño premium.";
-  if (/AIR/.test(m)) return "El iPhone más delgado: ligero, elegante y con todo el rendimiento de Apple.";
-  if (/PLUS/.test(m)) return "Pantalla grande y batería de larga duración a un precio más accesible que la línea Pro.";
-  if (/IPHONE 17E/.test(m)) return "La puerta de entrada a iPhone: rendimiento actual de Apple a un mejor precio.";
-  if (/IPHONE/.test(m)) return "Lo esencial de iPhone: gran cámara, rendimiento fluido y años de actualizaciones de iOS.";
-  if (/ULTRA/.test(m)) return "La gama más alta de Samsung Galaxy: pantalla enorme, zoom de largo alcance y S Pen integrado.";
-  if (/SAMSUNG/.test(m)) return "Samsung Galaxy con pantalla AMOLED, buenas cámaras y Galaxy AI.";
-  if (/XIAOMI|REDMI/.test(m)) return "Xiaomi con excelente relación precio/calidad: pantalla AMOLED, carga rápida y mucha memoria.";
-  return "Equipo verificado por IHUB, con garantía por escrito.";
-}
 
 const COLORES = { BLACK: "#1d1d1f", NEGRO: "#1d1d1f", MIDNIGHT: "#1f2633", "SPACE BLACK": "#2b2b2e", WHITE: "#f2f1ec", "STAR WHITE": "#f4f2ea", STARLIGHT: "#efe8da",
   BLANCO: "#f2f1ec", SILVER: "#e3e4e5", BLUE: "#9fb8d8", "SKY BLUE": "#a9cbe8", "DEEP BLUE": "#22406b", ULTRAMARINE: "#5b6fd6", TEAL: "#7fb8b2", PINK: "#f2c6cf",
@@ -368,302 +419,499 @@ const titulo = m => String(m).toLowerCase().replace(/\b\w/g, c => c.toUpperCase(
   .replace(/\bIphone/g, "iPhone").replace(/\bIpad/g, "iPad").replace(/(\d+)gb/gi, "$1GB").replace(/\bRam\b/g, "RAM").replace(/(\d)E\b/g, "$1e").replace(/\bZte\b/g, "ZTE").replace(/\bFe\b/g, "FE");
 const slug = s => s.toLowerCase().normalize("NFD").replace(/[^\w]+/g, "-").replace(/^-|-$/g, "");
 const wa = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
-const esTelefono = p => (p.categoria === "iphone" || p.categoria === "android") && !/\bPAD\b|TAB/i.test(p.modelo);
+Object.assign(COLORES, { BLUSH: "#EBC7C3", INDIGO: "#3F4A7A", "SPACE GRAY": "#5E5F63", "COBALT VIOLET": "#5B4A9E", NAVY: "#26324D", "GRAPHITE GRAY": "#4A4C50", "LAVENDER PURPLE": "#B7A6D9", "SKY BLUE": "#A9CBE8", "PHANTOM BLACK": "#232325", MIDNIGHT: "#1f2633" });
+
+const IMG960 = u => u && u.replace("/500px-", "/960px-");
+// Imágenes oficiales que carga IHUB: en tienda.json → "imagenes": { "IPHONE 17 PRO": ["fotos/iphone-17-pro.jpg"] }
+// (el nombre más específico gana; si la imagen tiene color, se puede poner { "url": "...", "color": "ORANGE" }).
+function fotos(m, col) {
+  const mapa = (D && D.cfg.imagenes) || {};
+  const k = Object.keys(mapa).filter(k => m.startsWith(k)).sort((a, b) => b.length - a.length)[0];
+  const lista = (k ? [].concat(mapa[k]) : []).map(x => typeof x === "string" ? { url: x } : x).filter(x => x && x.url);
+  if (col) { const i = lista.findIndex(x => x.color && String(col).toUpperCase().includes(String(x.color).toUpperCase())); if (i > 0) lista.unshift(lista.splice(i, 1)[0]); }
+  return lista.map(x => ({ s: x.url, l: x.url }));
+}
+
+/* ---------- Secciones de la tienda (se crean solas según lo que haya en stock) ---------- */
+const SECCIONES = [
+  { id: "iphone", nombre: "iPhone", test: p => p.categoria === "iphone", lema: "Sellados de fábrica y Open Box verificados." },
+  { id: "mac", nombre: "Mac", test: p => p.categoria === "macbook" || /^MAC/.test(p.modelo), lema: "Potencia para trabajar, estudiar y crear." },
+  { id: "ipad", nombre: "iPad", test: p => p.categoria === "ipad", lema: "El iPad para todo, al precio de bodega." },
+  { id: "watch", nombre: "Watch", test: p => /APPLE WATCH/.test(p.modelo), lema: "Salud, deporte y notificaciones en tu muñeca." },
+  { id: "airpods", nombre: "AirPods", test: p => /AIRPODS/.test(p.modelo), lema: "Sonido inmersivo y cancelación de ruido." },
+  { id: "android", nombre: "Android", test: p => p.categoria === "android", lema: "Samsung, Xiaomi, Redmi y más." },
+  { id: "tv", nombre: "TV y Hogar", test: p => p.categoria === "tv" || /\bTV\b|TELEVISOR|SMART TV|PROYECTOR|PARLANTE|ASPIRADORA/.test(p.modelo), lema: "Pantallas y tecnología para tu casa." },
+  { id: "gaming", nombre: "Gaming", test: p => p.categoria === "palancas" || /DUALSENSE|PS5|PLAYSTATION|NINTENDO|XBOX|SWITCH/.test(p.modelo), lema: "Controles y accesorios para jugar." },
+  { id: "accesorios", nombre: "Accesorios", test: () => true, lema: "Cargadores, Apple Pencil y más." },
+];
+const seccionDe = p => SECCIONES.find(s => s.test(p)).id;
+const SEC = id => SECCIONES.find(s => s.id === id);
+
+const nombre = m => titulo(m).replace(/\bMacbook/g, "MacBook").replace(/\bAirpods/g, "AirPods").replace(/\bDualsense/g, "DualSense").replace(/\bPs5\b/g, "PS5")
+  .replace(/\bSe\b/g, "SE").replace(/\bUsb-c\b/gi, "USB-C").replace(/(\d+)w\b/gi, "$1W").replace(/(\d+)mm\b/gi, "$1 mm").replace(/\bS(\d+)\b/g, "S$1").replace(/\bWcc\b/g, "WCC")
+  .replace(/\bA(\d+)\b/g, "A$1").replace(/\bM(\d)\b/g, "M$1").replace(/(\d+)Ram\b/g, "$1 GB RAM").replace(/\bGb\b/g, "GB").replace(/ 11va Gen/, " (11.ª gen)").replace(/\bNuvia\b/, "Nubia");
+const condicion = l => l === "openbox" ? "Open Box" : "Sellado";
+
+function descripcion(m) {
+  if (/IPHONE 18 PRO/.test(m)) return "La generación más nueva de iPhone Pro: el mejor sistema de cámaras de Apple, chip de última generación y batería para todo el día.";
+  if (/IPHONE DUO/.test(m)) return "El iPhone plegable: pantalla grande cuando la necesitas y tamaño de bolsillo cuando no.";
+  if (/IPHONE.*PRO MAX/.test(m)) return "Pantalla grande, la mejor batería de su generación y cámaras Pro con teleobjetivo.";
+  if (/IPHONE.*PRO/.test(m)) return "Tamaño cómodo con cámaras Pro, pantalla ProMotion y diseño premium.";
+  if (/IPHONE.*AIR/.test(m)) return "El iPhone más delgado: ligero, elegante y con todo el rendimiento de Apple.";
+  if (/IPHONE.*PLUS/.test(m)) return "Pantalla grande y batería de larga duración a un precio más accesible.";
+  if (/IPHONE 17E/.test(m)) return "La puerta de entrada a iPhone: rendimiento actual de Apple a mejor precio.";
+  if (/IPHONE/.test(m)) return "Lo esencial de iPhone: gran cámara, rendimiento fluido y años de actualizaciones.";
+  if (/MACBOOK NEO/.test(m)) return "Potencia para llevar. Diseño ultra delgado, colores nuevos y batería para todo el día.";
+  if (/MACBOOK AIR/.test(m)) return "Delgada, silenciosa y rapidísima con chip de Apple. Ideal para trabajo y estudio.";
+  if (/MACBOOK/.test(m)) return "MacBook con chip de Apple: rendimiento profesional y autonomía real.";
+  if (/IPAD PRO/.test(m)) return "El iPad más potente. Pantalla increíble para crear sin límites.";
+  if (/IPAD AIR/.test(m)) return "Potencia de chip M en un diseño ligero. Perfecto con Apple Pencil.";
+  if (/IPAD/.test(m)) return "El iPad para todo: clases, series, trabajo y juegos. Al precio justo.";
+  if (/WATCH ULTRA/.test(m)) return "El Apple Watch más avanzado: titanio, batería de varios días y GPS de precisión.";
+  if (/WATCH SE/.test(m)) return "El Apple Watch perfecto para empezar: salud, actividad y notificaciones.";
+  if (/WATCH/.test(m)) return "Apple Watch con pantalla siempre activa, sensores de salud y detección de caídas.";
+  if (/AIRPODS PRO/.test(m)) return "Cancelación activa de ruido, audio espacial y modo ambiente. Sonido Pro.";
+  if (/AIRPODS/.test(m)) return "Los AirPods de siempre, ahora mejores: sonido claro y conexión instantánea.";
+  if (/PENCIL/.test(m)) return "Precisión de píxel para dibujar, tomar notas y crear en tu iPad.";
+  if (/DUALSENSE|PS5/.test(m)) return "Control inalámbrico original con respuesta háptica y gatillos adaptativos.";
+  if (/NINTENDO|SWITCH/.test(m)) return "Control inalámbrico para Nintendo Switch.";
+  if (/ADAPTER|CUBO|CARGADOR/.test(m)) return "Cargador original USB-C de carga rápida.";
+  if (/PAD/.test(m)) return "Tablet con pantalla grande, buena batería y excelente precio.";
+  if (/ULTRA/.test(m)) return "La gama más alta de Samsung Galaxy: pantalla enorme, zoom de largo alcance y S Pen.";
+  if (/SAMSUNG/.test(m)) return "Samsung Galaxy con pantalla AMOLED, buenas cámaras y Galaxy AI.";
+  if (/XIAOMI|REDMI/.test(m)) return "Xiaomi con excelente relación precio/calidad: pantalla AMOLED, carga rápida y mucha memoria.";
+  return "Producto original con garantía IHUB.";
+}
+const capTexto = (c, sec) => {
+  if (!["iphone", "android", "ipad", "mac"].includes(sec)) return "";
+  const n = parseInt(c) * (/TB/i.test(c) ? 1024 : 1);
+  if (!n) return "";
+  if (n <= 128) return "Para uso diario: fotos, apps y redes sin problema.";
+  if (n <= 256) return "Espacio de sobra para fotos, apps y videos en 4K.";
+  if (n <= 512) return "Para creadores: toda tu vida sin preocuparte por el espacio.";
+  return "Para profesionales: ProRes, RAW y librerías enormes sin compromisos.";
+};
+
+/* ---------- Utilidades ---------- */
 function toast(t) { const el = $("toast"); el.textContent = t; el.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => el.hidden = true, 2200); }
+const ICO = {
+  shield: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>',
+  truck: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>',
+  box: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>',
+  live: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>',
+  chat: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>',
+  doc: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>',
+  arrow: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+};
 
 /* ---------- Datos ---------- */
-async function leerSupabase() {
-  const h = { apikey: SUPABASE_KEY };
-  const pedir = r => fetch(`${SUPABASE_URL}/rest/v1/${r}`, { headers: h, cache: "no-store" }).then(x => { if (!x.ok) throw 0; return x.json(); });
-  const [productos, [estado]] = await Promise.all([pedir("productos?select=lista,modelo,categoria,color,capacidad,bateria,sim,precio&order=orden"), pedir("estado?select=actualizado,revisado")]);
-  if (!productos.length) throw 0;
-  return { productos: productos.map(p => ({ ...p, precio: Number(p.precio) })), ...estado };
-}
 async function leerJSON() {
   for (const u of DATA_URLS) { try { const r = await fetch(u + "?t=" + Date.now(), { cache: "no-store" }); if (r.ok) return await r.json(); } catch {} }
   throw 0;
 }
 async function leerConfig() { try { const r = await fetch("tienda.json?t=" + Date.now(), { cache: "no-store" }); if (r.ok) return await r.json(); } catch {} return {}; }
-async function leerDatos() {
-  const [a, b, cfg] = await Promise.allSettled([Promise.reject(), leerJSON(), leerConfig()]);
-  const ok = [a, b].filter(f => f.status === "fulfilled" && f.value?.productos?.length).map(f => f.value);
-  if (!ok.length) throw new Error("sin datos");
-  const fecha = d => Date.parse(d.revisado || d.actualizado) || 0;
-  const elegido = ok.reduce((x, y) => fecha(y) > fecha(x) ? y : x);
-  return { ...elegido, ingresos: b.status === "fulfilled" ? b.value.ingresos || [] : [], cfg: cfg.value || {} };
-}
 
-let D = null;   // { productos, cfg, nuevos:Set }
-function preparar(d) {
+let D = null;
+function preparar(d, cfg) {
   const nuevos = new Set((d.ingresos || []).map(i => i.clave));
-  const ofertas = d.cfg.ofertas || [];
-  const productos = d.productos.filter(esTelefono).map(p => {
+  const ofertas = cfg.ofertas || [];
+  const productos = d.productos.map(p => {
     const o = ofertas.find(o => o.modelo === p.modelo && (!o.lista || o.lista === p.lista));
     const id = slug([p.lista, p.modelo, p.color, p.capacidad, p.bateria || ""].join(" "));
-    if (p.lista === "nuevos") p = { ...p, bateria: null };
-    return { ...p, id, nuevo: nuevos.has([p.lista, p.modelo, p.color, p.capacidad].join("|")),
-      antes: o?.descuento ? p.precio : null, precio: o?.descuento ? Math.max(0, p.precio - o.descuento) : p.precio, oferta: o?.texto || (o ? "Oferta" : "") };
+    const bateria = p.lista === "openbox" ? p.bateria : null;
+    return { ...p, bateria, id, sec: seccionDe(p), nuevo: nuevos.has([p.lista, p.modelo, p.color, p.capacidad].join("|")),
+      antes: o?.descuento ? p.precio : null, precio: o?.descuento ? Math.max(0, p.precio - o.descuento) : p.precio, oferta: o ? (o.texto || "Oferta") : "" };
   });
-  return { productos, cfg: d.cfg, revisado: d.revisado || d.actualizado };
+  return { productos, cfg, revisado: d.revisado || d.actualizado };
 }
-// Agrupa por modelo dentro de una lista.
-function modelos(lista, filtro = () => true) {
+// Grupos por modelo + condición (sellado / open box).
+function grupos(filtro = () => true) {
   const g = new Map();
-  for (const p of D.productos.filter(p => p.lista === lista && filtro(p))) {
-    if (!g.has(p.modelo)) g.set(p.modelo, []);
-    g.get(p.modelo).push(p);
+  for (const p of D.productos.filter(filtro)) {
+    const lista = p.lista === "openbox" ? "openbox" : "nuevos", k = lista + "|" + p.modelo;
+    if (!g.has(k)) g.set(k, { modelo: p.modelo, lista, sec: p.sec, items: [] });
+    g.get(k).items.push(p);
   }
-  return [...g].map(([modelo, items]) => ({ modelo, lista, items, desde: Math.min(...items.map(i => i.precio)),
-    antes: items.find(i => i.antes)?.antes, nuevo: items.some(i => i.nuevo), oferta: items.find(i => i.oferta)?.oferta }));
+  return [...g.values()].map(x => ({ ...x, desde: Math.min(...x.items.map(i => i.precio)), antes: x.items.find(i => i.antes)?.antes,
+    nuevo: x.items.some(i => i.nuevo), oferta: x.items.find(i => i.oferta)?.oferta }));
 }
-const ordenIphone = m => { const n = parseInt((m.match(/\d+/) || [0])[0]); return (/DUO/.test(m) ? 99 : n) * 10 + (/PRO MAX/.test(m) ? 3 : /PRO/.test(m) ? 2 : /AIR|PLUS/.test(m) ? 1 : 0); };
-const ordenar = arr => arr.sort((a, b) => (b.modelo.startsWith("IPHONE") - a.modelo.startsWith("IPHONE")) || (ordenIphone(b.modelo) - ordenIphone(a.modelo)) || a.desde - b.desde);
+const rango = m => { const n = parseInt((m.match(/\d+/) || [0])[0]); return (/DUO/.test(m) ? 99 : n) * 10 + (/PRO MAX|ULTRA/.test(m) ? 3 : /PRO/.test(m) ? 2 : /AIR|PLUS/.test(m) ? 1 : 0); };
+const ordenar = arr => arr.sort((a, b) => (a.lista === "openbox") - (b.lista === "openbox") || rango(b.modelo) - rango(a.modelo) || b.desde - a.desde);
+const urlG = g => `#/p/${g.lista}/${slug(g.modelo)}`;
 
-// Alternativas en stock para un modelo agotado o como "también te puede interesar".
-function alternativas(modelo, precioRef, n = 4) {
-  const esIphone = modelo.startsWith("IPHONE");
-  const todos = [...modelos("nuevos"), ...modelos("openbox")].filter(g => g.modelo !== modelo || g.lista !== "nuevos");
-  return todos.filter(g => g.modelo.startsWith("IPHONE") === esIphone)
+function alternativas(modelo, sec, precioRef, n = 4) {
+  return grupos(p => p.sec === sec).filter(g => g.modelo !== modelo)
     .sort((a, b) => Math.abs(a.desde - precioRef) - Math.abs(b.desde - precioRef)).slice(0, n);
 }
 
-/* ---------- Componentes ---------- */
-const urlModelo = (lista, modelo) => `#/p/${lista}/${slug(modelo)}`;
-function pic(modelo, alt, col) {
+/* ---------- Imágenes ---------- */
+// Tarjetas: imagen oficial cargada por IHUB; si no, render del modelo; si no, tarjeta con el nombre.
+function imgCard(modelo, col) {
   const f = fotos(modelo, col)[0];
-  if (f) return `<img class="real" src="${f.s}" alt="${esc(alt || titulo(modelo))}" loading="lazy">`;
-  const img = imagen(modelo);
-  if (img) return `<img src="${img}" alt="${esc(alt || titulo(modelo))}" loading="lazy">`;
-  const marca = modelo.split(" ")[0];
-  return `<div class="brandtile"><div><small>${esc(titulo(marca))}</small>${esc(titulo(modelo.replace(marca, "").replace(/\d+GB RAM|\d+RAM/i, "").trim()))}</div></div>`;
+  if (f) return `<img src="${f.s}" alt="${esc(nombre(modelo))}" loading="lazy">`;
+  const v = imagen(modelo);
+  if (v) return `<img src="${v}" alt="${esc(nombre(modelo))}" loading="lazy">`;
+  return tile(modelo);
 }
+const tile = (modelo, cls = "") => { const marca = modelo.split(" ")[0]; return `<div class="tile ${cls}" style="display:grid;place-items:center;width:100%;height:100%;background:linear-gradient(150deg,#EAF3FD,#F7F9FC);color:var(--brand);font-weight:700;text-align:center;padding:12px;font-size:15px;line-height:1.2"><div><small style="display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase">${esc(nombre(marca))}</small>${esc(nombre(modelo.replace(marca, "").replace(/\d+\s?GB RAM|\d+RAM/i, "").trim()))}</div></div>`; };
+const fotoReal = (modelo, col) => fotos(modelo, col)[0]?.l || IMG960(imagen(modelo));
+const miniImg = (modelo, col) => { const f = fotos(modelo, col)[0]?.s || imagen(modelo); return f ? `<img src="${f}" alt="" loading="lazy">` : `<span class="tile"></span>`; };
+
+/* ---------- Componentes ---------- */
 function tarjeta(g) {
-  const colores = [...new Set(g.items.map(i => i.color))];
-  const caps = [...new Set(g.items.map(i => i.capacidad))].join(" · ");
-  const bat = g.lista === "openbox" ? (() => { const b = g.items.map(i => i.bateria).filter(Boolean); return b.length ? ` · batería ${Math.min(...b)}–${Math.max(...b)}%` : ""; })() : "";
-  return `<a class="card reveal" href="${urlModelo(g.lista, g.modelo)}">
-    <div class="tags">${g.oferta ? `<span class="tag offer">Oferta</span>` : ""}${g.nuevo ? `<span class="tag new">Nuevo ingreso</span>` : ""}</div>
-    <div class="pic">${pic(g.modelo, "", g.items[0].color)}</div>
-    <div class="dots">${colores.slice(0, 6).map(c => `<i style="background:${color(c)}" title="${esc(titulo(c))}"></i>`).join("")}</div>
-    <h3>${esc(titulo(g.modelo))}</h3>
-    <div class="meta">${g.lista === "nuevos" ? "Nuevo sellado" : "Seminuevo grado A"} · ${esc(caps)}${bat}</div>
-    <div class="from">Desde <b>${usd(g.desde)}</b>${g.antes ? `<s>${usd(g.antes)}</s>` : ""}</div>
+  const colores = [...new Set(g.items.map(i => i.color).filter(Boolean))];
+  const caps = [...new Set(g.items.map(i => i.capacidad).filter(Boolean))];
+  const sub = g.lista === "openbox"
+    ? (() => { const b = g.items.map(i => i.bateria).filter(Boolean); return "Batería " + (b.length ? `${Math.min(...b)}–${Math.max(...b)}%` : "verificada") + (caps.length ? " · " + caps.join(" · ") : ""); })()
+    : caps.join(" · ");
+  return `<a class="card reveal" href="${urlG(g)}">
+    <div class="ph">${imgCard(g.modelo, colores[0])}</div>
+    <div class="corner">${g.oferta ? `<span class="badge offer">${esc(g.oferta)}</span>` : ""}${g.nuevo ? `<span class="badge new">Recién llegado</span>` : ""}</div>
+    <span class="badge ${g.lista === "openbox" ? "ob" : ""}">${g.lista === "openbox" ? "Open Box · verificado" : "Sellado de fábrica"}</span>
+    <h3>${esc(nombre(g.modelo))}</h3>
+    ${sub ? `<div class="sub">${esc(sub)}</div>` : ""}
+    <div class="row"><span class="price">${g.items.length > 1 && new Set(g.items.map(i => i.precio)).size > 1 ? `<small style="font-weight:500;font-size:12px;color:var(--muted)">desde </small>` : ""}${usd(g.desde)}${g.antes ? `<s>${usd(g.antes)}</s>` : ""}</span>
+      <span class="dots">${colores.slice(0, 5).map(c => `<i style="background:${color(c)}" title="${esc(titulo(c))}"></i>`).join("")}</span></div>
   </a>`;
 }
 function tarjetaAgotada(modelo) {
-  return `<a class="card out reveal" href="${urlModelo("nuevos", modelo)}">
-    <div class="tags"><span class="tag out">Agotado</span></div>
-    <div class="pic">${pic(modelo)}</div>
-    <h3>${esc(titulo(modelo))}</h3>
-    <div class="meta">Nuevo sellado · pronto de vuelta</div>
-    <div class="from" style="color:var(--brand);font-weight:700">Ver opciones disponibles →</div>
+  return `<a class="card out reveal" href="#/p/nuevos/${slug(modelo)}">
+    <div class="ph">${imgCard(modelo)}</div>
+    <span class="badge out">Agotado</span>
+    <h3>${esc(nombre(modelo))}</h3>
+    <div class="sub">Pronto de vuelta · ver opciones</div>
+    <div class="row"><span class="link">Avísame ${ICO.arrow}</span></div>
   </a>`;
-}
-const iconos = {
-  shield: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg>',
-  box: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg>',
-  doc: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>',
-  chat: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>',
-};
-
-// Vitrina: fotos reales de los modelos que hay en stock, en movimiento continuo.
-function showroom() {
-  const vistos = new Set(), items = [];
-  for (const g of ordenar([...modelos("nuevos"), ...modelos("openbox")])) {
-    for (const f of fotos(g.modelo, g.items[0].color)) {
-      if (vistos.has(f.s)) continue; vistos.add(f.s);
-      items.push(`<a class="shot" href="${urlModelo(g.lista, g.modelo)}"><img src="${f.s}" alt="${esc(titulo(g.modelo))}" loading="lazy"><span><b>${esc(titulo(g.modelo))}</b>desde ${usd(g.desde)}</span></a>`);
-    }
-  }
-  if (items.length < 3) return "";
-  const total = D.productos.length, modelosN = new Set(D.productos.map(p => p.modelo)).size;
-  return `<section class="showroom">
-    <div class="wrap sr-head reveal">
-      <div><span class="eyebrow">Showroom IHUB</span><h2>Equipos reales, stock real</h2></div>
-      <div class="stats"><div><b data-count="${total}">0</b><span>equipos en bodega</span></div><div><b data-count="${modelosN}">0</b><span>modelos</span></div><div><b data-count="12">0</b><span>meses de garantía</span></div></div>
-    </div>
-    <div class="marquee"><div class="track">${items.join("")}${items.join("")}</div></div>
-  </section>`;
 }
 
 /* ---------- Páginas ---------- */
 function inicio() {
-  const cfg = D.cfg, dest = cfg.destacado || "IPHONE 18 PRO MAX";
-  const nuevos = modelos("nuevos");
-  const gDest = nuevos.find(g => g.modelo === dest);
-  const coloresDest = gDest ? [...new Set(gDest.items.map(i => i.color))] : [];
-  const siempre = cfg.siempre || [];
-  const enStock = new Set(nuevos.map(g => g.modelo));
-  const iphonesNuevos = ordenar(nuevos.filter(g => g.modelo.startsWith("IPHONE")));
-  const agotados = siempre.filter(m => !enStock.has(m));
-  const ofertas = [...nuevos, ...modelos("openbox")].filter(g => g.oferta);
-  const recientes = ordenar([...modelos("nuevos", p => p.nuevo), ...modelos("openbox", p => p.nuevo)]).slice(0, 8);
-  const android = modelos("nuevos", p => p.categoria === "android").sort((a, b) => b.desde - a.desde);
-  const alt = !gDest ? alternativas(dest, 1500, 3) : [];
+  const cfg = D.cfg, todos = grupos();
+  const destacado = cfg.destacado || "IPHONE 18 PRO MAX";
+  const heroImg = cfg.imagen_destacado || fotoReal(destacado, "") || IMG960(imagen(destacado));
+  const sellados = ordenar(todos.filter(g => g.sec === "iphone" && g.lista === "nuevos"));
+  const agotados = (cfg.siempre || []).filter(m => !sellados.some(g => g.modelo === m)).slice(0, Math.max(0, 8 - sellados.length));
+  const enStock = D.productos.length, modelosN = new Set(D.productos.map(p => p.modelo)).size;
+  const desdeOB = Math.min(...D.productos.filter(p => p.lista === "openbox" && p.sec === "iphone").map(p => p.precio));
+  const banner = cfg.banner || { etiqueta: "BODEGA", texto: "Precio de bodega, directo y sin intermediarios. ¿Tienes un negocio? Pide tu acceso de mayorista.", boton: "Ver precios por mayor", link: "../" };
+
+  const bloques = ["mac", "ipad", "watch"].map((id, i) => bloque(id, todos, i)).join("");
+  const audio = ordenar(todos.filter(g => g.sec === "airpods"));
+  const android = ordenar(todos.filter(g => g.sec === "android" && g.lista === "nuevos"));
+  const openbox = ordenar(todos.filter(g => g.sec === "iphone" && g.lista === "openbox"));
+  const extras = ["tv", "gaming", "accesorios"].map(id => ({ s: SEC(id), gs: ordenar(todos.filter(g => g.sec === id)) })).filter(x => x.gs.length);
 
   return `
-  <section class="hero">
-  <div class="wrap">
+  <section class="hero"><div class="wrap">
     <div>
-      <span class="eyebrow">${gDest ? "Nuevo · sellado" : "Muy pronto de vuelta"}</span>
-      <h1 class="grad-text">${esc(titulo(dest))}</h1>
-      <p class="lead">${esc(cfg.frase_destacado || descripcion(dest))}</p>
-      ${gDest ? `<div class="price">Desde ${usd(gDest.desde)}<small>${[...new Set(gDest.items.map(i => i.capacidad))].join(" · ")} · ${coloresDest.map(titulo).join(", ")}</small></div>
-        <div class="swatches">${coloresDest.map(c => `<span class="sw" style="background:${color(c)}" title="${esc(titulo(c))}"></span>`).join("")}</div>
-        <div class="btns"><a class="btn btn-primary" href="${urlModelo("nuevos", dest)}">Comprar</a><a class="btn btn-light" href="#/c/iphone">Ver todos los iPhone</a></div>`
-      : `<p><span class="sold">Agotado</span></p><div class="btns"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa(`Hola IHUB, quiero que me avisen cuando llegue el ${titulo(dest)}.`)}">Avísame cuando llegue</a>${alt[0] ? `<a class="btn btn-light" href="${urlModelo(alt[0].lista, alt[0].modelo)}">Ver ${esc(titulo(alt[0].modelo))}</a>` : ""}</div>`}
+      <h1>${esc(cfg.titular || "Tu próximo iPhone, a precio de bodega.")}</h1>
+      <p>${esc(cfg.subtitulo || "Directo de nuestra bodega a tu puerta. Sellados de fábrica con garantía de 12 meses y Open Box verificado.")}</p>
+      <div class="btns"><a class="btn btn-p" href="#/c/iphone/sellados">Ver Sellados</a><a class="btn btn-o" href="#/c/iphone/openbox">Ver Open Box</a></div>
     </div>
-    <div class="hero-img" id="tilt">${(() => { const f = fotos(dest)[0]; const src = f ? f.l : imagen(dest);
-      return src ? `<div class="frame${f ? " photo" : ""}"><img src="${src}" alt="${esc(titulo(dest))}"><span class="shine"></span></div>
-      <span class="float-chip c1">${iconos.box} Sellado en caja</span><span class="float-chip c2">${iconos.shield} Garantía 1 año</span><span class="float-chip c3">⚡ Stock en vivo</span>` : ""; })()}</div>
-  </div><canvas id="particles" aria-hidden="true"></canvas><div class="orb o1"></div><div class="orb o2"></div></section>
+    <div class="art"><div class="glow"></div>
+      <a href="#/p/nuevos/${slug(destacado)}" aria-label="${esc(nombre(destacado))}">${heroImg ? `<img src="${heroImg}" alt="${esc(nombre(destacado))}">` : ""}</a>
+      <span class="pill a"><i></i>Stock en vivo · ${enStock} equipos</span>
+      <span class="pill b">Nuevo: ${esc(nombre(destacado))}</span>
+    </div>
+  </div></section>
 
-  <div class="trust"><div class="wrap">
-    <div>${iconos.box}<span><b>Nuevos sellados</b>Originales, en caja</span></div>
-    <div>${iconos.shield}<span><b>Garantía por escrito</b>Hasta 1 año</span></div>
-    <div>${iconos.doc}<span><b>Contrato de compraventa</b>Con IMEI del equipo</span></div>
-    <div>${iconos.chat}<span><b>Bodega en Quito</b>Atención por WhatsApp</span></div>
-  </div></div>
+  <section class="trust"><div class="wrap">
+    <span>${ICO.live}<b>${enStock}</b> equipos en bodega</span>
+    <span>${ICO.box}<b>${modelosN}</b> modelos disponibles</span>
+    <span>${ICO.shield}<b>12 meses</b> de garantía en sellados</span>
+    <span>${ICO.truck}Envíos a <b>todo Ecuador</b></span>
+  </div></section>
 
-  ${showroom()}
+  <section class="promo"><div class="wrap">
+    <div class="tag">${esc(banner.etiqueta || "IHUB")}</div>
+    <p>${esc(banner.texto)}</p>
+    ${banner.boton ? `<a class="btn btn-w" href="${esc(banner.link || "../")}">${esc(banner.boton)} →</a>` : ""}
+  </div></section>
 
-  <div class="wrap">
-    ${ofertas.length ? `<section class="block"><div class="offers"><span class="eyebrow">Ofertas IHUB</span><h2>Precios especiales por tiempo limitado</h2>
-      <div class="offer-row">${ofertas.map(g => `<a href="${urlModelo(g.lista, g.modelo)}">${imagen(g.modelo) ? `<img src="${imagen(g.modelo)}" alt="">` : ""}<span><b>${esc(titulo(g.modelo))}</b><br>${esc(g.oferta)} · <b>${usd(g.desde)}</b> <s style="opacity:.7">${g.antes ? usd(g.antes) : ""}</s></span></a>`).join("")}</div></div></section>` : ""}
+  <section class="sec card-bg"><div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">iPhone</span><h2>iPhones destacados</h2></div><a class="link" href="#/c/iphone">Ver todos los iPhone ${ICO.arrow}</a></div>
+    <div class="grid">${sellados.slice(0, 8).map(tarjeta).join("")}${agotados.map(tarjetaAgotada).join("")}</div>
+  </div></section>
 
-    <section class="block" id="nuevos">
-      <div class="sec-head"><div><h2>iPhone nuevos sellados</h2><p>Los modelos que siempre manejamos. Stock en vivo.</p></div><a class="btn btn-ghost" href="#/c/iphone">Ver todo</a></div>
-      <div class="grid">${iphonesNuevos.map(tarjeta).join("")}${agotados.map(tarjetaAgotada).join("")}</div>
-    </section>
+  <section class="sec surface"><div class="wrap versus">
+    <h2>¿Sellado u Open Box?</h2>
+    <p><b>Sellado:</b> nuevo, cerrado de fábrica, con garantía de 12 meses.</p>
+    <p><b>Open Box:</b> revisado y verificado por IHUB, con el porcentaje real de batería de cada equipo, y más barato.</p>
+    <p>Los dos se entregan con contrato de compraventa e IMEI.</p>
+    <a class="btn btn-d" href="#/c/iphone/openbox">Ver cuánto ahorras →</a>
+  </div></section>
 
-    ${recientes.length ? `<section class="block"><div class="sec-head"><div><h2>Recién llegados</h2><p>Lo que entró a bodega esta semana.</p></div></div><div class="grid">${recientes.map(tarjeta).join("")}</div></section>` : ""}
+  <section class="band"><div class="wrap">
+    <p>${isFinite(desdeOB) ? `iPhone Open Box desde ${usd(desdeOB)}, con batería verificada.` : "Pregunta por nuestros iPhone Open Box."}</p>
+    <a class="btn btn-w" href="#/c/iphone/openbox">Ver Open Box →</a>
+  </div></section>
 
-    ${android.length ? `<section class="block"><div class="sec-head"><div><h2>Android nuevos</h2><p>Samsung, Xiaomi y más, sellados.</p></div><a class="btn btn-ghost" href="#/c/android">Ver todo</a></div><div class="grid">${android.slice(0, 8).map(tarjeta).join("")}</div></section>` : ""}
+  ${bloques}
 
-    <section class="block"><div class="sec-head"><div><h2>Seminuevos grado A</h2><p>Open Box revisados, con % de batería real y garantía.</p></div><a class="btn btn-ghost" href="#/c/seminuevos">Ver todo</a></div>
-      <div class="grid">${ordenar(modelos("openbox")).slice(0, 8).map(tarjeta).join("")}</div></section>
+  ${audio.length ? `<section class="sec card-bg" style="border-top:1px solid var(--line)"><div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Audio Apple</span><h2>AirPods</h2><p>Sonido inmersivo. Cancelación activa de ruido. Audio espacial.</p></div><a class="link" href="#/c/airpods">Ver todos los AirPods ${ICO.arrow}</a></div>
+    <div class="grid">${audio.slice(0, 4).map(tarjeta).join("")}</div></div></section>` : ""}
+
+  ${android.length ? `<section class="sec" style="border-top:1px solid var(--line)"><div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Android</span><h2>Samsung, Xiaomi y más</h2><p>Nuevos sellados, con garantía.</p></div><a class="link" href="#/c/android">Ver todos los Android ${ICO.arrow}</a></div>
+    <div class="grid">${android.slice(0, 8).map(tarjeta).join("")}</div></div></section>` : ""}
+
+  ${openbox.length ? `<section class="sec card-bg" style="border-top:1px solid var(--line)"><div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Open Box</span><h2>iPhone Open Box verificados</h2><p>Revisados uno por uno. Te decimos la batería exacta.</p></div><a class="link" href="#/c/iphone/openbox">Ver todos ${ICO.arrow}</a></div>
+    <div class="grid">${openbox.slice(0, 8).map(tarjeta).join("")}</div></div></section>` : ""}
+
+  ${extras.map(({ s, gs }) => `<section class="sec" style="border-top:1px solid var(--line)"><div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">${esc(s.nombre)}</span><h2>${esc(s.nombre)}</h2><p>${esc(s.lema)}</p></div><a class="link" href="#/c/${s.id}">Ver todo ${ICO.arrow}</a></div>
+    <div class="grid">${gs.slice(0, 4).map(tarjeta).join("")}</div></div></section>`).join("")}
+
+  <section class="bodega"><div class="wrap">
+    <div>
+      <span class="eyebrow">Somos bodega</span>
+      <h2>Sin tiendas, sin sobreprecio.</h2>
+      <p>IHUB es una bodega de tecnología: no tenemos local de atención al público. Por eso el precio es de bodega. Haces tu pedido por WhatsApp, confirmamos el equipo y lo despachamos a cualquier ciudad de Ecuador.</p>
+      <div class="btns"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa("Hola IHUB, quiero hacer un pedido.")}">Escribir por WhatsApp</a><a class="btn btn-o" href="#/como-comprar">Cómo comprar</a></div>
+    </div>
+    <div class="box3">
+      <div><b>${enStock}</b><span>equipos en bodega ahora</span></div>
+      <div><b>${modelosN}</b><span>modelos distintos</span></div>
+      <div><b>12 meses</b><span>de garantía en sellados</span></div>
+      <div><b>24</b><span>provincias con envío</span></div>
+    </div>
+  </div></section>
+
+  <section class="sec card-bg" style="border-top:1px solid var(--line)"><div class="wrap">
+    <div class="sec-head"><div><span class="eyebrow">Así de fácil</span><h2>Cómo comprar en IHUB</h2></div></div>
+    <div class="steps">
+      <div><i>1</i><h3>Elige tu equipo</h3><p>Todo lo que ves está en bodega: el stock se actualiza solo durante el día.</p></div>
+      <div><i>2</i><h3>Pídelo por WhatsApp</h3><p>Agrégalo a tu pedido o escríbenos directo. Confirmamos disponibilidad y forma de pago.</p></div>
+      <div><i>3</i><h3>Recíbelo en tu ciudad</h3><p>Despachamos a todo Ecuador con contrato de compraventa, IMEI y garantía por escrito.</p></div>
+    </div>
+  </div></section>
+
+  <section class="sec surface why-sec"><div class="wrap">
+    <span class="eyebrow">Por qué nosotros</span>
+    <div class="sec-head" style="margin-bottom:0"><h2>Por qué IHUB.</h2></div>
+    <ul class="why">
+      <li>Precio de bodega: compras directo, sin intermediarios.</li>
+      <li>Garantía de 12 meses en sellados, por escrito y con contrato.</li>
+      <li>Open Box revisado uno por uno, con batería real indicada.</li>
+      <li>Stock en vivo: si está en la web, está en bodega.</li>
+      <li>Envíos a todo Ecuador desde Quito.</li>
+      <li>Precios por mayor para negocios y revendedores.</li>
+    </ul>
+    <a class="link" href="#/nosotros">Conoce más de IHUB ${ICO.arrow}</a>
+  </div></section>`;
+}
+
+// Bloque estilo "Mac / iPad / Watch": texto + foto + mini tarjeta del más accesible.
+function bloque(id, todos, i) {
+  const s = SEC(id), gs = todos.filter(g => g.sec === id).sort((a, b) => b.desde - a.desde);
+  if (!gs.length) return "";
+  const top = gs[0], low = gs[gs.length - 1], img = fotoReal(top.modelo, top.items[0].color);
+  return `<section class="split reveal">
+    <div class="txt">
+      <span class="eyebrow">${esc(s.nombre)}</span>
+      <h2>${esc(nombre(top.modelo))}</h2>
+      <p class="lead">${esc(descripcion(top.modelo))}</p>
+      <div class="big">desde ${usd(top.desde)}</div>
+      ${low !== top ? `<div class="alt">O empieza desde <b>${usd(low.desde)}</b> con ${esc(nombre(low.modelo))} →</div>
+      <a class="mini" href="${urlG(low)}">${miniImg(low.modelo, low.items[0].color)}<div><b>${esc(nombre(low.modelo))}</b><small>${esc(descripcion(low.modelo).split(".")[0])}.</small><b>desde ${usd(low.desde)}</b></div><span class="arrow">${ICO.arrow}</span></a>` : `<div class="alt">${esc(s.lema)}</div>`}
+      <div class="links"><a class="link" href="${urlG(top)}">Comprar ${ICO.arrow}</a><a class="link" href="#/c/${id}">Ver todos los ${esc(s.nombre)} (${gs.length}) ${ICO.arrow}</a></div>
+    </div>
+    <div class="pic"><a href="${urlG(top)}">${img ? `<img src="${img}" alt="${esc(nombre(top.modelo))}" loading="lazy">` : tile(top.modelo)}</a></div>
+  </section>`;
+}
+
+function categoria(id, filtro) {
+  const s = SEC(id);
+  if (!s) return noEncontrado();
+  let gs = ordenar(grupos(p => p.sec === id));
+  const hayOB = gs.some(g => g.lista === "openbox"), hayN = gs.some(g => g.lista === "nuevos");
+  const sold = id === "iphone" ? (D.cfg.siempre || []).filter(m => !gs.some(g => g.modelo === m && g.lista === "nuevos")) : [];
+  const chips = hayOB && hayN ? `<div class="chips" id="chips">
+    <button class="chip" data-f="" aria-pressed="${!filtro}">Todos</button>
+    <button class="chip" data-f="nuevos" aria-pressed="${filtro === "sellados"}">Sellados</button>
+    <button class="chip" data-f="openbox" aria-pressed="${filtro === "openbox"}">Open Box</button></div>` : "";
+  const f = filtro === "sellados" ? "nuevos" : filtro === "openbox" ? "openbox" : "";
+  return `<div class="wrap">
+    <div class="crumbs"><a href="#/">Inicio</a>›<b>${esc(s.nombre)}</b></div>
+    <div class="cat-head"><h1>${esc(s.nombre)}</h1><p>${esc(s.lema)} ${gs.length} ${gs.length === 1 ? "modelo" : "modelos"} en bodega.</p></div>
+    ${chips}
+    ${gs.length ? `<div class="grid" id="cat-grid">${gs.map(g => `<div data-l="${g.lista}" ${f && g.lista !== f ? "hidden" : ""} style="display:contents">${tarjeta(g)}</div>`).join("")}
+      ${sold.map(m => `<div data-l="nuevos" ${f === "openbox" ? "hidden" : ""} style="display:contents">${tarjetaAgotada(m)}</div>`).join("")}</div>`
+      : `<div class="empty">Por ahora no hay ${esc(s.nombre)} en bodega. <a class="link" target="_blank" rel="noopener" href="${wa(`Hola IHUB, ¿cuándo les llega ${s.nombre}?`)}">Pregúntanos por WhatsApp</a></div>`}
+    <div style="height:70px"></div></div>`;
+}
+
+function buscar(q) {
+  const t = decodeURIComponent(q || "").trim().toUpperCase(), palabras = t.split(/\s+/).filter(Boolean);
+  const gs = ordenar(grupos(p => palabras.every(w => (p.modelo + " " + p.color + " " + p.capacidad + " " + SEC(p.sec).nombre.toUpperCase()).includes(w))));
+  return `<div class="wrap">
+    <div class="crumbs"><a href="#/">Inicio</a>›<b>Búsqueda</b></div>
+    <div class="cat-head"><h1>“${esc(nombre(t))}”</h1><p>${gs.length} ${gs.length === 1 ? "resultado" : "resultados"} en bodega.</p></div>
+    ${gs.length ? `<div class="grid">${gs.map(tarjeta).join("")}</div>` : `<div class="empty">No encontramos eso en bodega ahora. <a class="link" target="_blank" rel="noopener" href="${wa(`Hola IHUB, busco: ${t}`)}">Pregúntanos por WhatsApp</a></div>`}
+    <div style="height:70px"></div></div>`;
+}
+
+let SEL = null;
+function producto(lista, s) {
+  const g = grupos(p => (p.lista === "openbox" ? "openbox" : "nuevos") === lista).find(x => slug(x.modelo) === s);
+  if (!g) {
+    const m = [...(D.cfg.siempre || []), D.cfg.destacado || ""].find(m => slug(m) === s) || s.toUpperCase().replace(/-/g, " ");
+    const sec = /IPHONE/.test(m) ? "iphone" : "android", alt = alternativas(m, sec, 1200);
+    const otra = grupos(p => p.modelo === m)[0];
+    SEL = null;
+    return `<div class="wrap">
+      <div class="crumbs"><a href="#/">Inicio</a>›<a href="#/c/${sec}">${esc(SEC(sec).nombre)}</a>›<b>${esc(nombre(m))}</b></div>
+      <div class="pdp-head"><span class="badge out">Agotado</span><h1>${esc(nombre(m))}</h1><p>${esc(descripcion(m))}</p></div>
+      <div class="pdp"><div class="gal"><div class="gal-main">${fotoReal(m) ? `<img src="${fotoReal(m)}" alt="${esc(nombre(m))}">` : tile(m)}</div></div>
+        <div><div class="summary"><div class="l">Estado</div><div class="cfg">Se vendió todo el stock de la bodega.</div><p style="margin:0;color:var(--muted)">Escríbenos y te avisamos apenas vuelva a entrar.</p></div>
+          <div class="buy"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa(`Hola IHUB, avísenme cuando llegue el ${nombre(m)}.`)}">Avísame cuando llegue</a>
+          ${otra ? `<a class="btn btn-o" href="${urlG(otra)}">Ver ${otra.lista === "openbox" ? "Open Box" : "sellado"} disponible</a>` : ""}</div></div></div>
+      ${alt.length ? `<section style="padding-bottom:70px"><div class="sec-head"><div><h2>Disponibles ahora</h2><p>Opciones parecidas, listas para enviar.</p></div></div><div class="grid">${alt.map(tarjeta).join("")}</div></section>` : ""}</div>`;
+  }
+  const sec = SEC(g.sec), colores = [...new Set(g.items.map(i => i.color))];
+  const primero = g.items.slice().sort((a, b) => a.precio - b.precio)[0];
+  SEL = { g, color: primero.color, cap: primero.capacidad, id: primero.id, foto: 0 };
+  const alt = alternativas(g.modelo, g.sec, g.desde);
+  const otra = grupos(p => p.modelo === g.modelo).find(x => x.lista !== g.lista);
+  return `<div class="wrap">
+    <div class="crumbs"><a href="#/">Inicio</a>›<a href="#/c/${sec.id}">${esc(sec.nombre)}</a>›<a href="#/c/${sec.id}/${g.lista === "openbox" ? "openbox" : "sellados"}">${esc(sec.nombre)} ${g.lista === "openbox" ? "Open Box" : "Sellado"}</a>›<b>${esc(nombre(g.modelo))}</b></div>
+    <div class="pdp-head">
+      <span class="badge dark">${g.lista === "openbox" ? "Open Box · verificado" : "Sellado · nuevo"}</span>
+      <h1>${esc(nombre(g.modelo))}</h1>
+      <p>${esc(descripcion(g.modelo))}</p>
+      <div class="meta"><span>Garantía por escrito</span>·<span>Bodega IHUB</span>·<span>Envíos a todo Ecuador</span></div>
+    </div>
+    <div class="pdp">
+      <div class="gal"><div class="gal-main" id="gal-main"></div><div class="thumbs" id="gal-thumbs"></div></div>
+      <div id="cfg"></div>
+    </div>
+    ${otra ? `<div class="band" style="border-radius:22px;margin-bottom:40px"><div class="wrap"><p>${g.lista === "openbox" ? `¿Lo prefieres sellado? Hay ${esc(nombre(g.modelo))} nuevo desde ${usd(otra.desde)}.` : `¿Quieres ahorrar? Hay ${esc(nombre(g.modelo))} Open Box desde ${usd(otra.desde)}.`}</p><a class="btn btn-w" href="${urlG(otra)}">Ver ${otra.lista === "openbox" ? "Open Box" : "sellado"} →</a></div></div>` : ""}
+    <section style="padding:10px 0 40px"><div class="sec-head"><div><h2 style="font-size:30px">Compra con total tranquilidad.</h2><p>Tres razones por las que nos eligen.</p></div></div>
+      <div class="calm">
+        <div><h3>${g.lista === "openbox" ? "Verificado" : "Sellado"}</h3><p>${g.lista === "openbox" ? "Revisado uno por uno. Te decimos el porcentaje real de batería." : "Caja original intacta, nunca abierto."}</p></div>
+        <div><h3>Garantía por escrito</h3><p>Contrato de compraventa con IMEI. ${g.lista === "openbox" ? "Garantía según el equipo." : "12 meses por defectos de fábrica."}</p></div>
+        <div><h3>Envío a todo Ecuador</h3><p>Despachamos desde nuestra bodega en Quito a tu ciudad.</p></div>
+      </div></section>
+    ${alt.length ? `<section style="padding-bottom:70px"><div class="sec-head"><div><h2 style="font-size:30px">También te puede interesar</h2></div></div><div class="grid">${alt.map(tarjeta).join("")}</div></section>` : ""}
   </div>`;
 }
+function pintarConfig() {
+  if (!SEL || !$("cfg")) return;
+  const { g } = SEL, ob = g.lista === "openbox";
+  const colores = [...new Set(g.items.map(i => i.color))];
+  const delColor = g.items.filter(i => i.color === SEL.color);
+  const caps = [...new Set(delColor.map(i => i.capacidad))];
+  if (!caps.includes(SEL.cap)) SEL.cap = caps[0];
+  const unidades = delColor.filter(i => i.capacidad === SEL.cap).sort((a, b) => a.precio - b.precio || (b.bateria || 0) - (a.bateria || 0));
+  if (!unidades.some(u => u.id === SEL.id)) SEL.id = unidades[0].id;
+  const it = g.items.find(i => i.id === SEL.id);
+  let n = 0; const paso = t => `<h3><span style="color:var(--muted);font-weight:500">${String(++n).padStart(2, "0")}.</span> ${t}</h3>`;
+  const msg = `Hola IHUB, quiero comprar: ${nombre(g.modelo)} ${it.capacidad} ${titulo(it.color)}${it.bateria ? ` (batería ${it.bateria}%)` : ""} · ${ob ? "Open Box" : "sellado"} · ${usd(it.precio)}. ¿Está disponible?`;
+  $("cfg").innerHTML = `
+    ${colores.length > 1 || colores[0] ? `<div class="step">${paso("Elige tu color.")}
+      <div class="swatches">${colores.map(c => `<button class="sw" data-color="${esc(c)}" aria-pressed="${c === SEL.color}" style="background:${color(c)}" title="${esc(titulo(c))}" aria-label="${esc(titulo(c))}"></button>`).join("")}<span class="swname">${esc(titulo(SEL.color))}</span></div></div>` : ""}
+    ${caps.filter(Boolean).length ? `<div class="step">${paso(g.sec === "watch" ? "Elige la versión." : "¿Cuánta capacidad necesitas?")}
+      ${caps.map(c => { const p = Math.min(...delColor.filter(i => i.capacidad === c).map(i => i.precio)); return `<button class="opt" data-cap="${esc(c)}" aria-pressed="${c === SEL.cap}"><div class="t"><span>${esc(c)}</span><span>USD ${p.toFixed(2)}</span></div>${capTexto(c, g.sec) ? `<p>${capTexto(c, g.sec)}</p>` : ""}</button>`; }).join("")}</div>` : ""}
+    ${ob && unidades.length > 1 ? `<div class="step">${paso("Elige tu equipo.")} <p style="margin:-6px 0 12px;color:var(--muted);font-size:14px">Cada Open Box es único: elige por batería.</p>
+      ${unidades.map(u => `<button class="opt" data-id="${u.id}" aria-pressed="${u.id === SEL.id}"><div class="t"><span>Batería ${u.bateria || "—"}%</span><span>USD ${u.precio.toFixed(2)}</span></div>${u.sim ? `<p>${esc(u.sim)}</p>` : ""}</button>`).join("")}</div>` : ""}
+    <div class="summary">
+      <div class="l">Tu configuración</div>
+      <div class="cfg">${[it.capacidad, titulo(it.color), it.bateria ? `Batería ${it.bateria}%` : "", ob ? "Open Box" : "Sellado"].filter(Boolean).map(esc).join(" · ")}</div>
+      <div class="p">${usd(it.precio)}${it.antes ? `<s>${usd(it.antes)}</s>` : ""}</div>
+      ${it.oferta ? `<div style="color:var(--offer);font-weight:600;font-size:14px">${esc(it.oferta)}</div>` : ""}
+      <div class="ok"><i></i>Disponible en bodega</div>
+    </div>
+    <div class="buy">
+      <a class="btn btn-p" target="_blank" rel="noopener" href="${wa(msg)}">Comprar por WhatsApp — ${usd(it.precio)}</a>
+      <button class="btn btn-o" id="add">Agregar al pedido</button>
+    </div>
+    <ul class="perks">
+      <li>${ICO.shield}${ob ? "Garantía IHUB por escrito, con contrato e IMEI" : "Garantía de 12 meses por defectos de fábrica"}</li>
+      <li>${ICO.truck}Envíos a todo Ecuador desde nuestra bodega</li>
+      <li>${ICO.chat}Confírmalo por WhatsApp antes de pagar</li>
+      <li>${ICO.doc}Contrato de compraventa con IMEI</li>
+    </ul>`;
+  pintarGaleria();
+}
+function pintarGaleria() {
+  const { g } = SEL, fs = fotos(g.modelo, SEL.color).map(f => ({ s: f.s, l: f.l, fit: false }));
+  const v = imagen(g.modelo); if (v) fs.push({ s: v, l: IMG960(v), fit: true });
+  if (SEL.foto >= fs.length) SEL.foto = 0;
+  const f = fs[SEL.foto];
+  $("gal-main").innerHTML = f ? `<img class="${f.fit ? "fit" : ""}" src="${f.l}" alt="${esc(nombre(g.modelo))}">` : tile(g.modelo);
+  $("gal-thumbs").innerHTML = fs.length > 1 ? fs.map((x, i) => `<button data-foto="${i}" aria-pressed="${i === SEL.foto}" aria-label="Foto ${i + 1}"><img src="${x.s}" alt="" style="${x.fit ? "object-fit:contain" : ""}"></button>`).join("") : "";
+}
+document.addEventListener("click", e => {
+  if (!SEL) return;
+  const sw = e.target.closest("[data-color]"), cap = e.target.closest("[data-cap]"), un = e.target.closest("[data-id]"), ft = e.target.closest("[data-foto]");
+  if (sw) { SEL.color = sw.dataset.color; SEL.foto = 0; pintarConfig(); }
+  else if (cap) { SEL.cap = cap.dataset.cap; pintarConfig(); }
+  else if (un) { SEL.id = un.dataset.id; pintarConfig(); }
+  else if (ft) { SEL.foto = +ft.dataset.foto; pintarGaleria(); }
+  else if (e.target.closest("#add")) agregar(SEL.id);
+});
 
-function categoria(c) {
-  const conf = {
-    iphone: ["iPhone", "Nuevos sellados y seminuevos grado A.", p => p.categoria === "iphone"],
-    android: ["Android", "Samsung, Xiaomi y más.", p => p.categoria === "android"],
-    seminuevos: ["Seminuevos grado A", "Open Box revisados con porcentaje de batería real.", () => true],
-  }[c];
-  if (!conf) return inicio();
-  const [t, sub, f] = conf;
-  const listas = c === "seminuevos" ? ["openbox"] : ["nuevos", "openbox"];
-  const grupos = listas.flatMap(l => modelos(l, f));
-  const agot = c === "iphone" ? (D.cfg.siempre || []).filter(m => !modelos("nuevos").some(g => g.modelo === m)) : [];
-  return `<div class="wrap"><section class="block">
-    <div class="sec-head"><div><h2>${t}</h2><p>${sub}</p></div></div>
-    ${listas.length > 1 ? `<div class="chips" id="chips"><button class="chip" aria-pressed="true" data-l="">Todos</button><button class="chip" data-l="nuevos" aria-pressed="false">Nuevos sellados</button><button class="chip" data-l="openbox" aria-pressed="false">Seminuevos</button></div>` : ""}
-    <div class="grid" id="cat-grid">${ordenar(grupos).map(g => `<div data-l="${g.lista}" style="display:contents">${tarjeta(g)}</div>`).join("")}${agot.map(m => `<div data-l="nuevos" style="display:contents">${tarjetaAgotada(m)}</div>`).join("")}</div>
-  </section></div>`;
-}
-
-function producto(lista, s) {
-  const g = modelos(lista).find(x => slug(x.modelo) === s);
-  const nombreAg = [...(D.cfg.siempre || []), D.cfg.destacado || ""].find(m => slug(m) === s);
-  if (!g) {
-    const m = nombreAg || s.toUpperCase().replace(/-/g, " ");
-    const alt = alternativas(m, 1200);
-    return `<div class="wrap"><div class="pdp">
-      <div class="gallery">${pic(m)}</div>
-      <div><span class="sold">Agotado</span><h1>${esc(titulo(m))}</h1><p class="desc">${esc(descripcion(m))}</p>
-        <p>Se vendió todo el stock. Te avisamos apenas vuelva a entrar.</p>
-        <div class="btns"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa(`Hola IHUB, quiero que me avisen cuando llegue el ${titulo(m)}.`)}">Avísame cuando llegue</a></div>
-        <a class="back" href="#/">← Volver a la tienda</a></div></div>
-      ${alt.length ? `<section class="block"><div class="sec-head"><div><h2>Disponibles ahora</h2><p>Opciones similares en stock.</p></div></div><div class="grid">${alt.map(tarjeta).join("")}</div></section>` : ""}</div>`;
-  }
-  const alt = alternativas(g.modelo, g.desde);
-  return `<div class="wrap"><div class="pdp" id="pdp" data-lista="${lista}" data-modelo="${esc(g.modelo)}">
-    <div class="gallery" id="gal"><div class="gal-main" id="gal-main"></div><div class="thumbs" id="gal-thumbs"></div></div>
-    <div>
-      <span class="eyebrow" style="color:var(--brand)">${lista === "nuevos" ? "Nuevo sellado" : "Seminuevo grado A"}</span>
-      <h1>${esc(titulo(g.modelo))}</h1>
-      <p class="desc">${esc(descripcion(g.modelo))}</p>
-      <div id="pdp-opts"></div>
-      <div class="total" id="pdp-price"></div>
-      <div class="note" id="pdp-note"></div>
-      <div class="btns"><button class="btn btn-primary" id="add">Agregar al pedido</button><a class="btn btn-wa" id="buy" target="_blank" rel="noopener">Pedir por WhatsApp</a></div>
-      <ul class="feats">
-        ${lista === "nuevos" ? "<li>Nuevo, sellado en caja</li>" : "<li>Open Box revisado, grado A, batería indicada</li>"}
-        <li>Garantía IHUB por escrito, con contrato de compraventa e IMEI</li>
-        <li>Bodega en Quito · confirmación inmediata por WhatsApp</li>
-      </ul>
-      <a class="back" href="#/">← Seguir comprando</a>
-    </div></div>
-    ${alt.length ? `<section class="block"><div class="sec-head"><div><h2>También te puede interesar</h2></div></div><div class="grid">${alt.map(tarjeta).join("")}</div></section>` : ""}</div>`;
-}
-function pintarGaleria(modelo, col) {
-  const imgs = [...fotos(modelo, col).map(f => ({ src: f.l, real: true })), ...(imagen(modelo) ? [{ src: imagen(modelo) }] : [])];
-  if (!imgs.length) { $("gal-main").innerHTML = pic(modelo); $("gal-thumbs").innerHTML = ""; return; }
-  const ver = i => { $("gal-main").innerHTML = `<img class="${imgs[i].real ? "real" : ""}" src="${imgs[i].src}" alt="${esc(titulo(modelo))}">`;
-    $("gal-thumbs").querySelectorAll("button").forEach((b, j) => b.setAttribute("aria-pressed", i === j)); };
-  $("gal-thumbs").innerHTML = imgs.length > 1 ? imgs.map((x, i) => `<button aria-label="Imagen ${i + 1}"><img src="${x.src}" alt=""></button>`).join("") : "";
-  $("gal-thumbs").onclick = e => { const b = e.target.closest("button"); if (b) ver([...$("gal-thumbs").children].indexOf(b)); };
-  ver(0);
-}
-function montarProducto() {
-  const el = $("pdp"); if (!el) return;
-  const g = modelos(el.dataset.lista).find(x => x.modelo === el.dataset.modelo);
-  let color0 = g.items[0].color, sel = g.items[0];
-  const pintar = () => {
-    const delColor = g.items.filter(i => i.color === color0);
-    if (!delColor.includes(sel)) sel = delColor[0];
-    const colores = [...new Set(g.items.map(i => i.color))];
-    $("pdp-opts").innerHTML = `
-      <div class="opt-label">Color · ${esc(titulo(color0))}</div>
-      <div class="opts">${colores.map(c => `<button class="opt" data-c="${esc(c)}" aria-pressed="${c === color0}"><i class="sw" style="background:${color(c)};width:18px;height:18px;border-color:var(--line)"></i>${esc(titulo(c))}</button>`).join("")}</div>
-      <div class="opt-label">${g.lista === "openbox" ? "Capacidad y batería" : "Capacidad"}</div>
-      <div class="opts">${delColor.map(i => `<button class="opt" data-id="${i.id}" aria-pressed="${i === sel}"><span>${esc(i.capacidad)}${i.bateria ? ` · ${i.bateria}% batería` : ""}<small>${usd(i.precio)}${i.sim ? " · " + esc(i.sim) : ""}</small></span></button>`).join("")}</div>`;
-    pintarGaleria(g.modelo, color0);
-    $("pdp-price").innerHTML = usd(sel.precio) + (sel.antes ? `<s>${usd(sel.antes)}</s>` : "");
-    $("pdp-note").textContent = (sel.oferta ? sel.oferta + " · " : "") + "Precio en USD. Disponible ahora en bodega.";
-    $("buy").href = wa(`Hola IHUB, quiero comprar: ${titulo(sel.modelo)} ${sel.capacidad} ${titulo(sel.color)}${sel.bateria ? ` (batería ${sel.bateria}%)` : ""} · ${sel.lista === "nuevos" ? "nuevo sellado" : "seminuevo grado A"} · ${usd(sel.precio)}`);
-  };
-  $("pdp-opts").addEventListener("click", e => {
-    const b = e.target.closest(".opt"); if (!b) return;
-    if (b.dataset.c) color0 = b.dataset.c; else sel = g.items.find(i => i.id === b.dataset.id);
-    pintar();
-  });
-  $("add").onclick = e => { chispas(e.currentTarget); agregar(sel.id); };
-  pintar();
-}
-
+const pagina = (t, cuerpo) => `<div class="wrap"><div class="crumbs"><a href="#/">Inicio</a>›<b>${t}</b></div><div class="doc">${cuerpo}</div></div>`;
 function garantia() {
-  return `<div class="wrap"><section class="block" style="max-width:760px">
-    <h2 style="font-size:36px;margin-bottom:14px">Garantía y términos</h2>
+  return pagina("Garantía", `<h1>Garantía y términos</h1>
     <p>Cada venta se respalda con un <b>contrato de compraventa</b> que detalla el equipo, su IMEI, su estado y el plazo de garantía.</p>
-    <h3 style="margin:24px 0 8px">Garantía</h3>
-    <p>IHUB otorga garantía por <b>defectos de fábrica y/o de homologación</b>. El plazo depende del costo y del tiempo de fabricación del equipo, hasta <b>1 año</b>, y consta por escrito en el contrato.</p>
-    <p>La garantía es personal e intransferible y <b>no cubre daños ocasionados por el comprador</b> (golpes, humedad, pantallas rotas, manipulación por terceros).</p>
-    <h3 style="margin:24px 0 8px">Grado A (seminuevos)</h3>
-    <p>Equipos Open Box revisados, en excelente estado estético y funcional. Indicamos el porcentaje real de batería de cada equipo.</p>
-    <h3 style="margin:24px 0 8px">Precios y disponibilidad</h3>
-    <p>Precios en dólares, sujetos a disponibilidad. El stock se actualiza automáticamente durante el día; confirmamos cada pedido por WhatsApp antes de cobrar.</p>
-    <div class="btns" style="margin-top:22px"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa("Hola IHUB, tengo una consulta sobre garantía.")}">Preguntar por WhatsApp</a></div>
-  </section></div>`;
+    <h3>Sellados</h3><p>Equipos nuevos, en caja cerrada de fábrica, con <b>garantía de 12 meses</b> por defectos de fábrica y/o de homologación.</p>
+    <h3>Open Box</h3><p>Equipos revisados por IHUB, en excelente estado estético y funcional. Indicamos el porcentaje real de batería de cada uno. El plazo de garantía consta en el contrato.</p>
+    <h3>Qué no cubre</h3><p>La garantía es personal e intransferible y no cubre daños ocasionados por el comprador: golpes, humedad, pantallas rotas o manipulación por terceros.</p>
+    <h3>Precios y disponibilidad</h3><p>Precios en dólares, sujetos a disponibilidad. El stock se actualiza automáticamente durante el día y confirmamos cada pedido por WhatsApp antes de cobrar.</p>
+    <p style="margin-top:24px"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa("Hola IHUB, tengo una consulta sobre garantía.")}">Preguntar por WhatsApp</a></p>`);
+}
+function nosotros() {
+  return pagina("Quiénes somos", `<span class="eyebrow">Quiénes somos</span><h1>IHUB · Tecnología que enseña</h1>
+    <p>Somos una <b>bodega de tecnología en Ecuador</b>. Trabajamos iPhone sellados y Open Box, Mac, iPad, Apple Watch, AirPods, Android y accesorios.</p>
+    <p>No tenemos tienda física ni locales de atención al público: somos bodega. Eso nos permite trabajar con <b>precio de bodega</b> y despachar directo a tu ciudad.</p>
+    <h3 id="contacto">Contacto</h3>
+    <p>WhatsApp: <a class="link" target="_blank" rel="noopener" href="${wa("Hola IHUB")}">+593 96 260 8262</a><br>Instagram: <a class="link" href="https://instagram.com/ihub_ec" target="_blank" rel="noopener">@ihub_ec</a></p>
+    <h3>Mayoristas</h3><p>¿Tienes un negocio de celulares o tecnología? Pide tu acceso para ver nuestros precios por mayor.</p>
+    <p><a class="btn btn-p" href="../">Ver precios por mayor</a></p>`);
+}
+function comoComprar() {
+  return pagina("Cómo comprar", `<h1>Cómo comprar</h1>
+    <h3>1. Elige tu equipo</h3><p>Todo lo que ves en la web está en bodega. Elige color, capacidad y, en Open Box, la batería del equipo exacto.</p>
+    <h3>2. Pídelo por WhatsApp</h3><p>Toca “Comprar por WhatsApp” o agrega varios productos a tu pedido y envíalo. Te confirmamos disponibilidad, forma de pago y envío.</p>
+    <h3>3. Recíbelo</h3><p>Despachamos desde nuestra bodega a cualquier ciudad de Ecuador. Recibes tu equipo con contrato de compraventa e IMEI.</p>
+    <p style="margin-top:24px"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa("Hola IHUB, quiero hacer un pedido.")}">Escribir por WhatsApp</a></p>`);
+}
+const noEncontrado = () => `<div class="wrap"><div class="empty"><h2 style="margin-bottom:10px">No encontramos esa página</h2><a class="link" href="#/">Volver al inicio</a></div></div>`;
+
+/* ---------- Menú ---------- */
+function pintarMenu(actual) {
+  const conStock = SECCIONES.filter(s => s.id === "iphone" || D.productos.some(p => p.sec === s.id));
+  const hayOferta = D.productos.some(p => p.oferta);
+  const links = conStock.map(s => `<a href="#/c/${s.id}" class="${s.id === actual ? "on" : ""}">${s.nombre}</a>`).join("")
+    + `<a href="#/c/iphone/openbox" class="hot">Open Box</a>` + (hayOferta ? `<a href="#/ofertas" class="hot">Ofertas</a>` : "") + `<a href="../" class="green">Mayoristas</a>`;
+  $("menu").innerHTML = links;
+  $("sheet-nav").innerHTML = `<a href="#/">Inicio</a>` + links + `<a href="#/como-comprar">Cómo comprar</a><a href="#/garantia">Garantía</a><a href="#/nosotros">Quiénes somos</a>`;
+  $("foot-cats").innerHTML = conStock.map(s => `<li><a href="#/c/${s.id}">${s.nombre}</a></li>`).join("") + `<li><a href="#/c/iphone/openbox">iPhone Open Box</a></li>`;
+}
+function ofertas() {
+  const gs = ordenar(grupos(p => p.oferta));
+  return `<div class="wrap"><div class="crumbs"><a href="#/">Inicio</a>›<b>Ofertas</b></div>
+    <div class="cat-head"><h1>Ofertas</h1><p>Precios especiales por tiempo limitado.</p></div>
+    ${gs.length ? `<div class="grid">${gs.map(tarjeta).join("")}</div>` : `<div class="empty">No hay ofertas activas ahora mismo.</div>`}<div style="height:70px"></div></div>`;
 }
 
 /* ---------- Carrito ---------- */
 const leerCarrito = () => { try { return JSON.parse(localStorage.getItem(CARRITO)) || []; } catch { return []; } };
 const guardarCarrito = c => { try { localStorage.setItem(CARRITO, JSON.stringify(c)); } catch {} pintarCarrito(); };
 function agregar(id) {
-  const c = leerCarrito();
-  if (!c.includes(id)) c.push(id);
+  const c = leerCarrito(); if (!c.includes(id)) c.push(id);
   guardarCarrito(c); toast("Agregado a tu pedido"); abrirCarrito();
 }
 function pintarCarrito() {
-  const ids = leerCarrito(), items = ids.map(id => D?.productos.find(p => p.id === id) || { id, gone: true });
-  const vivos = items.filter(i => !i.gone);
+  const ids = leerCarrito(), items = ids.map(id => D?.productos.find(p => p.id === id) || { id, gone: true }), vivos = items.filter(i => !i.gone);
   $("cart-count").hidden = !ids.length; $("cart-count").textContent = ids.length;
   $("lines").innerHTML = ids.length ? items.map(i => i.gone
-    ? `<div class="line gone"><div class="ph"></div><div><b>Ya no está disponible</b><small>Se vendió mientras lo tenías guardado.</small><button class="rm" data-id="${i.id}">Quitar</button></div><span></span></div>`
-    : `<div class="line">${imagen(i.modelo) ? `<img src="${imagen(i.modelo)}" alt="">` : `<div class="ph"></div>`}<div><b>${esc(titulo(i.modelo))}</b><small>${esc(i.capacidad)} · ${esc(titulo(i.color))}${i.bateria ? ` · ${i.bateria}%` : ""} · ${i.lista === "nuevos" ? "Sellado" : "Grado A"}</small><button class="rm" data-id="${i.id}">Quitar</button></div><b>${usd(i.precio)}</b></div>`).join("")
-    : `<div class="empty">Tu pedido está vacío.<br><a href="#/" data-close>Ver equipos</a></div>`;
+    ? `<div class="line gone"><span class="tile"></span><div><b>Ya no está disponible</b><small>Se vendió mientras lo tenías guardado.</small><button class="rm" data-id="${i.id}">Quitar</button></div><span></span></div>`
+    : `<div class="line">${miniImg(i.modelo, i.color)}<div><b>${esc(nombre(i.modelo))}</b><small>${[i.capacidad, titulo(i.color), i.bateria ? i.bateria + "%" : "", condicion(i.lista)].filter(Boolean).map(esc).join(" · ")}</small><button class="rm" data-id="${i.id}">Quitar</button></div><b>${usd(i.precio)}</b></div>`).join("")
+    : `<div class="empty">Tu pedido está vacío.<br><a href="#/" data-close>Ver productos</a></div>`;
   $("sum").textContent = usd(vivos.reduce((s, i) => s + i.precio, 0));
   $("checkout").hidden = !vivos.length;
 }
@@ -677,119 +925,72 @@ $("drawer").addEventListener("click", e => {
 $("checkout").addEventListener("submit", e => {
   e.preventDefault();
   const vivos = leerCarrito().map(id => D.productos.find(p => p.id === id)).filter(Boolean);
-  const lineas = vivos.map((i, n) => `${n + 1}. ${titulo(i.modelo)} ${i.capacidad} ${titulo(i.color)}${i.bateria ? ` (bat. ${i.bateria}%)` : ""} · ${i.lista === "nuevos" ? "sellado" : "grado A"} · ${usd(i.precio)}`);
+  const lineas = vivos.map((i, n) => `${n + 1}. ${nombre(i.modelo)} ${i.capacidad} ${titulo(i.color)}${i.bateria ? ` (bat. ${i.bateria}%)` : ""} · ${condicion(i.lista).toLowerCase()} · ${usd(i.precio)}`);
   const msg = `Hola IHUB, quiero hacer este pedido:\n${lineas.join("\n")}\nTotal: ${usd(vivos.reduce((s, i) => s + i.precio, 0))}\n\nNombre: ${$("c-nombre").value.trim()}${$("c-ciudad").value.trim() ? `\nCiudad: ${$("c-ciudad").value.trim()}` : ""}`;
   window.open(wa(msg), "_blank", "noopener");
 });
+
+/* ---------- Búsqueda y menú móvil ---------- */
+$("search-open").onclick = () => { const sb = $("searchbar"); sb.hidden = !sb.hidden; if (!sb.hidden) $("q").focus(); };
+$("search-form").onsubmit = e => { e.preventDefault(); const q = $("q").value.trim(); if (q) { location.hash = "#/buscar/" + encodeURIComponent(q); $("searchbar").hidden = true; } };
+$("burger").onclick = () => $("sheet").hidden = false;
+$("sheet").onclick = e => { if (e.target === $("sheet") || e.target.closest("a")) $("sheet").hidden = true; };
 
 /* ---------- Router ---------- */
 function ruta() {
   if (!D) return;
   const [, a, b, c] = (location.hash || "#/").split("/");
+  SEL = null;
   let html;
   if (a === "p" && b && c) html = producto(b, c);
-  else if (a === "c" && b) html = categoria(b);
+  else if (a === "c" && b) html = categoria(b, c);
+  else if (a === "buscar") html = buscar(b);
+  else if (a === "ofertas") html = ofertas();
   else if (a === "garantia") html = garantia();
+  else if (a === "nosotros" || a === "contacto") html = nosotros();
+  else if (a === "como-comprar") html = comoComprar();
   else html = inicio();
   $("app").innerHTML = html;
-  montarProducto();
-  efectos();
+  pintarMenu(a === "c" ? b : a === "p" && SEL ? SEL.g.sec : "");
+  pintarConfig();
   const chips = $("chips");
   if (chips) chips.onclick = e => { const ch = e.target.closest(".chip"); if (!ch) return;
     chips.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === ch));
-    document.querySelectorAll("#cat-grid > [data-l]").forEach(x => x.hidden = ch.dataset.l && x.dataset.l !== ch.dataset.l); };
-  window.scrollTo(0, 0);
+    document.querySelectorAll("#cat-grid > [data-l]").forEach(x => x.hidden = !!ch.dataset.f && x.dataset.l !== ch.dataset.f); };
+  aparecer();
+  if (a === "contacto") setTimeout(() => $("contacto")?.scrollIntoView(), 50); else window.scrollTo(0, 0);
+  document.title = a === "p" && SEL ? `${nombre(SEL.g.modelo)} — IHUB Ecuador | Desde ${usd(SEL.g.desde)}` : "IHUB Ecuador — iPhone, Mac, iPad y más a precio de bodega";
 }
 window.addEventListener("hashchange", ruta);
+const QUIETO = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function aparecer() {
+  const els = document.querySelectorAll(".reveal");
+  if (QUIETO || !("IntersectionObserver" in window)) { els.forEach(e => e.classList.add("in")); return; }
+  const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), { rootMargin: "0px 0px -40px 0px" });
+  els.forEach((e, i) => { e.style.transitionDelay = (i % 4) * 60 + "ms"; io.observe(e); });
+}
 
 async function cargar(primera) {
   try {
-    D = preparar(await leerDatos());
+    const [d, cfg] = await Promise.all([leerJSON(), leerConfig()]);
+    D = preparar(d, cfg);
     if (!primera) { pintarCarrito(); return; }
     const mins = Math.round((Date.now() - Date.parse(D.revisado)) / 60000);
-    $("upd").textContent = isFinite(mins) ? `Stock revisado hace ${mins < 60 ? mins + " min" : Math.round(mins / 60) + " h"}.` : "";
+    $("upd").textContent = isFinite(mins) ? `Stock revisado hace ${mins < 60 ? mins + " min" : Math.round(mins / 60) + " h"}` : "";
+    const msgs = cfg.mensajes || ["Precio de bodega", "Sellados con 12 meses de garantía", "Open Box con batería verificada", "Envíos a todo Ecuador", "Stock en vivo: si está en la web, está en bodega", "Pedidos por WhatsApp", "Precios por mayor para negocios", "Contrato de compraventa con IMEI"];
+    $("ticker").innerHTML = [...msgs, ...msgs].map(m => `<span>${esc(m)}</span>`).join("");
     ruta(); pintarCarrito();
   } catch {
-    if (!primera) return;
-    $("app").innerHTML = `<div class="loading">No pudimos cargar el stock. <a href="javascript:location.reload()">Reintentar</a></div>`;
+    if (primera) $("app").innerHTML = `<div class="loading">No pudimos cargar el stock. <a class="link" href="javascript:location.reload()">Reintentar</a></div>`;
   }
 }
-/* ---------- Efectos: partículas, 3D, aparición al hacer scroll, contadores, chispas ---------- */
-const QUIETO = matchMedia("(prefers-reduced-motion: reduce)").matches;
-let parar = null;
-function particulas(cv) {
-  if (parar) parar();
-  const ctx = cv.getContext("2d"), dpr = Math.min(devicePixelRatio || 1, 2);
-  let W, H, pts = [], raf, mouse = { x: -999, y: -999 };
-  const medir = () => { W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.round(Math.min(90, W * H / 9000));
-    pts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35, r: Math.random() * 1.8 + .6 })); };
-  const paso = () => {
-    ctx.clearRect(0, 0, W, H);
-    for (const p of pts) {
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
-      const dx = p.x - mouse.x, dy = p.y - mouse.y, d = Math.hypot(dx, dy);
-      if (d < 120) { p.x += dx / d * 1.2; p.y += dy / d * 1.2; }
-      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fillStyle = "rgba(142,197,255,.85)"; ctx.fill();
-    }
-    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
-      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
-      if (d < 110) { ctx.strokeStyle = `rgba(27,109,255,${(1 - d / 110) * .45})`; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
-    }
-    raf = requestAnimationFrame(paso);
-  };
-  const mover = e => { const r = cv.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; };
-  medir(); addEventListener("resize", medir); cv.parentElement.addEventListener("pointermove", mover);
-  if (QUIETO) { paso(); cancelAnimationFrame(raf); } else paso();
-  parar = () => { cancelAnimationFrame(raf); removeEventListener("resize", medir); parar = null; };
-}
-function inclinar(el) {
-  if (QUIETO || !el) return;
-  const f = el.querySelector(".frame"); if (!f) return;
-  el.closest(".hero").addEventListener("pointermove", e => {
-    const r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-    f.style.transform = `perspective(900px) rotateY(${x * 16}deg) rotateX(${-y * 12}deg)`;
-    f.style.setProperty("--sx", `${(x + .5) * 100}%`); f.style.setProperty("--sy", `${(y + .5) * 100}%`);
-  });
-  el.closest(".hero").addEventListener("pointerleave", () => f.style.transform = "");
-}
-function contar(el) {
-  const fin = +el.dataset.count, t0 = performance.now(), dur = 1400;
-  const tick = t => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(fin * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(tick); };
-  QUIETO ? el.textContent = fin : requestAnimationFrame(tick);
-}
-const obs = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
-  if (!e.isIntersecting) return;
-  e.target.classList.add("in"); e.target.querySelectorAll("[data-count]").forEach(contar); obs.unobserve(e.target);
-}), { rootMargin: "0px 0px -8% 0px" }) : null;
-function efectos() {
-  if (parar && !$("particles")) parar();
-  if ($("particles")) particulas($("particles"));
-  inclinar($("tilt"));
-  document.querySelectorAll(".reveal").forEach((el, i) => { el.style.transitionDelay = `${(i % 4) * 70}ms`; obs ? obs.observe(el) : el.classList.add("in"); });
-  // Luz que sigue al cursor sobre las tarjetas.
-  document.querySelectorAll(".card").forEach(c => c.addEventListener("pointermove", e => {
-    const r = c.getBoundingClientRect(); c.style.setProperty("--mx", `${e.clientX - r.left}px`); c.style.setProperty("--my", `${e.clientY - r.top}px`);
-  }));
-}
-function chispas(btn) {
-  if (QUIETO) return;
-  const r = btn.getBoundingClientRect();
-  for (let i = 0; i < 18; i++) {
-    const s = document.createElement("i"); s.className = "spark";
-    const a = Math.random() * 6.283, d = 40 + Math.random() * 60;
-    s.style.cssText = `left:${r.left + r.width / 2}px;top:${r.top + r.height / 2}px;--dx:${Math.cos(a) * d}px;--dy:${Math.sin(a) * d}px;background:${["#1B6DFF", "#8EC5FF", "#D7F74A", "#fff"][i % 4]}`;
-    document.body.appendChild(s); setTimeout(() => s.remove(), 750);
-  }
-}
-
 function creditos() {
-  $("credits").innerHTML = [...Object.values(REAL), ...Object.values(FOTOS)].map(v => `<a href="${esc(v.pagina)}" target="_blank" rel="noopener">${esc(v.archivo)} · ${esc(v.autor)} · ${esc(v.licencia)}</a>`).join("") +
-    "<p>Imágenes de Wikimedia Commons bajo licencias Creative Commons. Son ilustrativas; el color y el estado reales se indican en cada equipo. Apple, iPhone, Samsung y Xiaomi son marcas de sus respectivos dueños.</p>";
+  const usados = new Map(Object.values(FOTOS).map(v => [v.archivo, v]));
+  $("credits").innerHTML = [...usados.values()].map(v => `<a href="${esc(v.pagina)}" target="_blank" rel="noopener">${esc(v.archivo)} · ${esc(v.autor)} · ${esc(v.licencia)}</a>`).join("") +
+    "<p>Renders provisionales de Wikimedia Commons (CC BY-SA) para los modelos sin imagen oficial cargada. Son ilustrativos; el color y el estado reales se indican en cada producto. Apple, iPhone, Mac, iPad, AirPods, Samsung, Xiaomi y PlayStation son marcas de sus respectivos dueños.</p>";
 }
 $("year").textContent = new Date().getFullYear();
-$("wa-foot").href = wa("Hola IHUB, vengo de la tienda web.");
+for (const id of ["wa-foot", "wa-foot2", "fab"]) $(id).href = wa("Hola IHUB, vengo de la tienda web.");
 cargar(true); creditos();
 setInterval(cargar, 5 * 60 * 1000);
 </script>
