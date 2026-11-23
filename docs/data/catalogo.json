@@ -414,16 +414,6 @@
    "lista": "openbox",
    "modelo": "SAMSUNG GALAXY S23 ULTRA",
    "categoria": "android",
-   "color": "GREEN",
-   "capacidad": "512GB",
-   "bateria": 99,
-   "sim": "",
-   "precio": 529.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "SAMSUNG GALAXY S23 ULTRA",
-   "categoria": "android",
    "color": "LAVENDER",
    "capacidad": "512GB",
    "bateria": 91,
@@ -499,16 +489,6 @@
    "bateria": 100,
    "sim": "eSIM",
    "precio": 1289.99
-  },
-  {
-   "lista": "nuevos",
-   "modelo": "IPHONE 18 PRO MAX",
-   "categoria": "iphone",
-   "color": "BURGUNDY",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1575.0
   },
   {
    "lista": "nuevos",
@@ -961,8 +941,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-22T21:02:13+00:00",
- "revisado": "2026-11-23T15:47:14+00:00",
+ "actualizado": "2026-11-23T16:55:05+00:00",
+ "revisado": "2026-11-23T16:55:05+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1024,10 +1004,6 @@
   {
    "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|1TB",
    "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 18 PRO MAX|BURGUNDY|256GB",
-   "desde": "2026-11-19T21:43:59+00:00"
   },
   {
    "clave": "nuevos|IPHONE 18 PRO MAX|BURGUNDY|512GB",
