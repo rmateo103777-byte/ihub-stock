@@ -22,6 +22,516 @@
       "texto": "Precio especial esta semana"
     }
   ],
-  "_imagenes_ayuda": "Imágenes oficiales de cada producto. Sube el archivo a docs/tienda/fotos/ y pon aquí su ruta. El nombre del modelo va como en el stock; el más específico gana. Ej.: \"IPHONE 17 PRO MAX\": [\"fotos/iphone-17-pro-max-naranja.png\", \"fotos/iphone-17-pro-max-plata.png\"]. Para ligar una imagen a un color: {\"url\": \"fotos/x.png\", \"color\": \"ORANGE\"}.",
-  "imagenes": {}
+  "_imagenes_ayuda": "Imágenes oficiales de cada producto (de la web del fabricante). El nombre del modelo va como en el stock; el más específico gana. Para ligar una imagen a un color: {\"url\": \"...\", \"color\": \"ORANGE\"}. La web las recorta y centra solas para que todas se vean del mismo tamaño.",
+  "imagenes": {
+    "IPHONE 14": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-midnight?wid=900&hei=900&fmt=png-alpha",
+        "color": "MIDNIGHT"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-purple?wid=900&hei=900&fmt=png-alpha",
+        "color": "PURPLE"
+      }
+    ],
+    "IPHONE 14 PRO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-deeppurple?wid=900&hei=900&fmt=png-alpha",
+        "color": "DEEP PURPLE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-1inch-spaceblack?wid=900&hei=900&fmt=png-alpha",
+        "color": "SPACE BLACK"
+      }
+    ],
+    "IPHONE 14 PRO MAX": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-deeppurple?wid=900&hei=900&fmt=png-alpha",
+        "color": "DEEP PURPLE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-14-pro-finish-select-202209-6-7inch-spaceblack?wid=900&hei=900&fmt=png-alpha",
+        "color": "SPACE BLACK"
+      }
+    ],
+    "IPHONE 15": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-black?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLUE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-green?wid=900&hei=900&fmt=png-alpha",
+        "color": "GREEN"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-pink?wid=900&hei=900&fmt=png-alpha",
+        "color": "PINK"
+      }
+    ],
+    "IPHONE 15 PLUS": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-pink?wid=900&hei=900&fmt=png-alpha",
+        "color": "PINK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-black?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-blue?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLUE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-7inch-green?wid=900&hei=900&fmt=png-alpha",
+        "color": "GREEN"
+      }
+    ],
+    "IPHONE 15 PRO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-naturaltitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "NATURAL TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-blacktitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-bluetitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLUE TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-whitetitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "WHITE TITANIUM"
+      }
+    ],
+    "IPHONE 15 PRO MAX": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-blacktitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-bluetitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLUE TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "NATURAL TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-whitetitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "WHITE TITANIUM"
+      }
+    ],
+    "IPHONE 16": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-black?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-pink?wid=900&hei=900&fmt=png-alpha",
+        "color": "PINK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-teal?wid=900&hei=900&fmt=png-alpha",
+        "color": "TEAL"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-ultramarine?wid=900&hei=900&fmt=png-alpha",
+        "color": "ULTRAMARINE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-1inch-white?wid=900&hei=900&fmt=png-alpha",
+        "color": "WHITE"
+      }
+    ],
+    "IPHONE 16 PLUS": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-7inch-black?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-7inch-pink?wid=900&hei=900&fmt=png-alpha",
+        "color": "PINK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-7inch-teal?wid=900&hei=900&fmt=png-alpha",
+        "color": "TEAL"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-7inch-ultramarine?wid=900&hei=900&fmt=png-alpha",
+        "color": "ULTRAMARINE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-finish-select-202409-6-7inch-white?wid=900&hei=900&fmt=png-alpha",
+        "color": "WHITE"
+      }
+    ],
+    "IPHONE 16 PRO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-blacktitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-deserttitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "DESERT TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-whitetitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "WHITE TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-3inch-naturaltitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "NATURAL TITANIUM"
+      }
+    ],
+    "IPHONE 16 PRO MAX": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-blacktitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-whitetitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "WHITE TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-deserttitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "DESERT TITANIUM"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-16-pro-finish-select-202409-6-9inch-naturaltitanium?wid=900&hei=900&fmt=png-alpha",
+        "color": "NATURAL TITANIUM"
+      }
+    ],
+    "IPHONE 17": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-select-black-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-select-lavender-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "LAVENDER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-select-mistblue-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "MIST BLUE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-select-sage-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "SAGE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-finish-select-white-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "WHITE"
+      }
+    ],
+    "IPHONE 17 AIR": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-finish-select-lightgold-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "LIGHT GOLD"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-finish-select-spaceblack-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "SPACE BLACK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-finish-select-skyblue-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "SKY BLUE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-air-finish-select-cloudwhite-202509?wid=900&hei=900&fmt=png-alpha",
+        "color": "CLOUD WHITE"
+      }
+    ],
+    "IPHONE 17 PRO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-3inch-cosmicorange?wid=900&hei=900&fmt=png-alpha",
+        "color": "COSMIC ORANGE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-3inch-silver?wid=900&hei=900&fmt=png-alpha",
+        "color": "SILVER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-3inch-deepblue?wid=900&hei=900&fmt=png-alpha",
+        "color": "DEEP BLUE"
+      }
+    ],
+    "IPHONE 17 PRO MAX": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-cosmicorange?wid=900&hei=900&fmt=png-alpha",
+        "color": "COSMIC ORANGE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-silver?wid=900&hei=900&fmt=png-alpha",
+        "color": "SILVER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-deepblue?wid=900&hei=900&fmt=png-alpha",
+        "color": "DEEP BLUE"
+      }
+    ],
+    "IPHONE 17E": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17e-finish-select-softpink-202603?wid=900&hei=900&fmt=png-alpha",
+        "color": "SOFT PINK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17e-finish-select-white-202603?wid=900&hei=900&fmt=png-alpha",
+        "color": "WHITE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17e-finish-select-black-202603?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK"
+      }
+    ],
+    "IPHONE 18 PRO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-finish-select-burgundy-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "BURGUNDY"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-finish-select-glacier-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "GLACIER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-finish-select-silver-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "SILVER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-finish-select-black-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK"
+      }
+    ],
+    "IPHONE 18 PRO MAX": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-max-finish-select-burgundy-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "BURGUNDY"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-max-finish-select-glacier-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "GLACIER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-max-finish-select-silver-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "SILVER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-18-pro-max-finish-select-black-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLACK"
+      }
+    ],
+    "IPHONE DUO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-duo-finish-select-night-sky-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "NIGHT SKY"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-duo-finish-select-star-white-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "STAR WHITE"
+      }
+    ],
+    "IPAD A16": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-blue-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLUE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-pink-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "PINK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-silver-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "SILVER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-yellow-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "YELLOW"
+      }
+    ],
+    "IPAD AIR": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-11inch-blue-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLUE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-11inch-purple-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "PURPLE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-11inch-starlight-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "STARLIGHT"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-air-finish-select-gallery-202405-11inch-space-gray-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "SPACE GRAY"
+      }
+    ],
+    "IPAD PRO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-spaceblack-glossy-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "SPACE BLACK"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-pro-finish-select-202405-13inch-silver-glossy-wifi?wid=900&hei=900&fmt=png-alpha",
+        "color": "SILVER"
+      }
+    ],
+    "MACBOOK AIR": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-midnight-select-202503?wid=900&hei=900&fmt=png-alpha",
+        "color": "MIDNIGHT"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-silver-select-202503?wid=900&hei=900&fmt=png-alpha",
+        "color": "SILVER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-skyblue-select-202503?wid=900&hei=900&fmt=png-alpha",
+        "color": "SKY BLUE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/mba13-starlight-select-202503?wid=900&hei=900&fmt=png-alpha",
+        "color": "STARLIGHT"
+      }
+    ],
+    "MACBOOK NEO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/macbook-neo-blush-cto-hero-202603?wid=900&hei=900&fmt=png-alpha",
+        "color": "BLUSH"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/macbook-neo-indigo-cto-hero-202603?wid=900&hei=900&fmt=png-alpha",
+        "color": "INDIGO"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/macbook-neo-silver-cto-hero-202603?wid=900&hei=900&fmt=png-alpha",
+        "color": "SILVER"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/macbook-neo-citrus-cto-hero-202603?wid=900&hei=900&fmt=png-alpha",
+        "color": "CITRUS"
+      }
+    ],
+    "APPLE WATCH S": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-series-12-202609?wid=900&hei=900&fmt=png-alpha"
+      }
+    ],
+    "APPLE WATCH SE": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-se-3-202609?wid=900&hei=900&fmt=png-alpha"
+      }
+    ],
+    "APPLE WATCH ULTRA": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/watch-compare-ultra-4-202609?wid=900&hei=900&fmt=png-alpha"
+      }
+    ],
+    "AIRPODS PRO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-pro-3-hero-select-202509?wid=900&hei=900&fmt=png-alpha"
+      }
+    ],
+    "AIRPODS 5": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-5-wcc-select-202609?wid=900&hei=900&fmt=png-alpha"
+      }
+    ],
+    "AIRPODS 4": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-5-select-202609?wid=900&hei=900&fmt=png-alpha"
+      }
+    ],
+    "APPLE PENCIL PRO": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MX2D3?wid=900&hei=900&fmt=png-alpha"
+      }
+    ],
+    "ORIGINAL 20W": [
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MHJA3?wid=900&hei=900&fmt=png-alpha"
+      }
+    ],
+    "SAMSUNG GALAXY S25 ULTRA": [
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2501/gallery/uk-galaxy-s25-s938-sm-s938bzkdeub-544815309?$650_519_PNG$",
+        "color": "TITANIUM BLACK"
+      },
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2501/gallery/uk-galaxy-s25-s938-sm-s938bztdeub-544815533?$650_519_PNG$",
+        "color": "TITANIUM GRAY"
+      },
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2501/gallery/uk-galaxy-s25-s938-sm-s938bzsdeub-544815421?$650_519_PNG$",
+        "color": "TITANIUM WHITESILVER"
+      },
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2501/gallery/uk-galaxy-s25-s938-sm-s938bzbdeub-544815197?$650_519_PNG$",
+        "color": "TITANIUM SILVERBLUE"
+      }
+    ],
+    "SAMSUNG GALAXY S24 PLUS": [
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2401/gallery/uk-galaxy-s24--491390-sm-s926bzvdeub-539463607?$650_519_PNG$",
+        "color": "COBALT VIOLET"
+      },
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2401/gallery/uk-galaxy-s24--491390-sm-s926bzkdeub-539463689?$650_519_PNG$",
+        "color": "ONYX BLACK"
+      }
+    ],
+    "SAMSUNG GALAXY S23 ULTRA": [
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2302/gallery/uk-galaxy-s23-s918-sm-s918bzkdeub-534793350?$650_519_PNG$",
+        "color": "PHANTOM BLACK"
+      },
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2302/gallery/uk-galaxy-s23-s918-sm-s918bzgdeub-534793187?$650_519_PNG$",
+        "color": "GREEN"
+      },
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/2302/gallery/uk-galaxy-s23-s918-sm-s918blideub-534792965?$650_519_PNG$",
+        "color": "LAVENDER"
+      }
+    ],
+    "XIAOMI 17T PRO": [
+      {
+        "url": "https://i02.appmifile.com/616_operatorx_operatorx_opx/04/06/2026/48bd65ec2fa8d6dcf4d306bbd80c884f.png"
+      }
+    ],
+    "XIAOMI 17T": [
+      {
+        "url": "https://i02.appmifile.com/198_operatorx_operatorx_opx/04/06/2026/0cb5863ee776589e933e2a3864d66dd9.png"
+      }
+    ],
+    "XIAOMI REDMI 15C": [
+      {
+        "url": "https://i02.appmifile.com/178_operatorx_operatorx_xm/25/08/2025/c4c7a1ef7fb5bf4d40f015082f299cbe.png"
+      }
+    ],
+    "REDMI PAD 2": [
+      {
+        "url": "https://i02.appmifile.com/960_operatorx_operatorx_opx/25/06/2025/e0600c6969ac39175681aa866d2ef9bf.png"
+      }
+    ],
+    "DUALSENSE PS5 WHITE": [
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-white-screenshot-04-en-08dec21"
+      }
+    ],
+    "DUALSENSE PS5 GALACTIC": [
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-galactic-purple-screenshot-01-en-30nov21"
+      }
+    ],
+    "DUALSENSE PS5 CAMUFLAJE": [
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-gray-camo-screenshot-01-en-13sep22"
+      }
+    ]
+  }
 }
