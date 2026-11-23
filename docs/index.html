@@ -728,6 +728,9 @@ $("tab-registro").addEventListener("click", () => verPanel("form-registro"));
 $("ir-correo").addEventListener("click", () => verPanel("form-correo"));
 $("ir-clave").addEventListener("click", () => verPanel("form-ingresar"));
 $("re-ya-tengo").addEventListener("click", () => verPanel("form-ingresar"));
+{ const h = location.hash.slice(1);   // enlaces desde la tienda: #solicitar / #ingresar
+  if (!TOKEN && (h === "solicitar" || h === "ingresar")) { verPanel(h === "solicitar" ? "form-registro" : "form-ingresar"); $("acceso").showModal(); }
+  if (h) history.replaceState(null, "", location.pathname + location.search); }
 $("salir").addEventListener("click", () => {
   if (TOKEN) rpc("salir_mayorista", { p_token: TOKEN }).catch(() => {});
   guardarToken(null); MAYOR = null; cargar();
