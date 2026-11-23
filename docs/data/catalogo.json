@@ -24,16 +24,6 @@
    "lista": "openbox",
    "modelo": "IPHONE 14 PRO",
    "categoria": "iphone",
-   "color": "SPACE BLACK",
-   "capacidad": "128GB",
-   "bateria": 82,
-   "sim": "eSIM",
-   "precio": 579.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 14 PRO",
-   "categoria": "iphone",
    "color": "DEEP PURPLE",
    "capacidad": "256GB",
    "bateria": 77,
@@ -139,16 +129,6 @@
    "bateria": 82,
    "sim": "eSIM",
    "precio": 705.0
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 15 PRO",
-   "categoria": "iphone",
-   "color": "NATURAL TITANIUM",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 740.0
   },
   {
    "lista": "openbox",
@@ -339,6 +319,16 @@
    "bateria": 92,
    "sim": "eSIM",
    "precio": 919.99
+  },
+  {
+   "lista": "openbox",
+   "modelo": "IPHONE 16 PRO MAX",
+   "categoria": "iphone",
+   "color": "BLACK TITANIUM",
+   "capacidad": "512GB",
+   "bateria": 88,
+   "sim": "eSIM",
+   "precio": 959.99
   },
   {
    "lista": "openbox",
@@ -941,8 +931,8 @@
    "precio": 265.0
   }
  ],
- "actualizado": "2026-11-23T16:55:05+00:00",
- "revisado": "2026-11-23T16:55:05+00:00",
+ "actualizado": "2026-11-23T17:53:47+00:00",
+ "revisado": "2026-11-23T17:53:47+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -1002,16 +992,16 @@
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
+   "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|512GB",
+   "desde": "2026-11-23T17:53:47+00:00"
+  },
+  {
    "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|1TB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
    "clave": "nuevos|IPHONE 18 PRO MAX|BURGUNDY|512GB",
    "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE DUO|STAR WHITE|256GB",
-   "desde": "2026-11-16T17:03:39+00:00"
   },
   {
    "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM BLACK|512GB",
