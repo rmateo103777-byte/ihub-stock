@@ -369,7 +369,7 @@ img[data-nz].nz-raw { opacity: 1; }
         <li style="color:#8C98AB;font-size:12px">Ventas por WhatsApp</li>
         <li><a id="wa-foot" target="_blank" rel="noopener" style="color:#fff;font-weight:600;font-size:16px">+593 96 260 8262</a></li>
         <li><a href="https://instagram.com/ihub_ec" target="_blank" rel="noopener">Instagram @ihub_ec</a></li>
-        <li style="margin-top:8px;color:#8C98AB">Somos bodega: no tenemos tienda física. Despachamos desde Quito a todo Ecuador.</li>
+        <li style="margin-top:8px;color:#8C98AB">Bodega en Quito · Showrooms autorizados en Guaranda (Bolívar) · Próximamente oficina en Ambato. Envíos a todo Ecuador.</li>
       </ul></div>
     </div>
     <details><summary>Créditos de imágenes</summary><div id="credits"></div></details>
@@ -743,9 +743,9 @@ function inicio() {
 
   <section class="bodega"><div class="wrap">
     <div>
-      <span class="eyebrow">Somos bodega</span>
-      <h2>Sin tiendas, sin sobreprecio.</h2>
-      <p>IHUB es una bodega de tecnología: no tenemos local de atención al público. Por eso el precio es de bodega. Haces tu pedido por WhatsApp, confirmamos el equipo y lo despachamos a cualquier ciudad de Ecuador.</p>
+      <span class="eyebrow">Bodega en Quito · Showrooms en Guaranda</span>
+      <h2>Precio de bodega, atención cercana.</h2>
+      <p>IHUB es una bodega de tecnología en Quito, por eso el precio es de bodega. Nuestro fundador es de Guaranda, y ahí mantenemos nuestros <b>showrooms autorizados</b> en la provincia de Bolívar para que veas los equipos en persona. <b>Próximamente, oficina en Ambato.</b> Haces tu pedido por WhatsApp y lo despachamos a cualquier ciudad de Ecuador.</p>
       <div class="btns"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa("Hola IHUB, quiero hacer un pedido.")}">Escribir por WhatsApp</a><a class="btn btn-o" href="#/como-comprar">Cómo comprar</a></div>
     </div>
     <div class="box3">
@@ -943,7 +943,12 @@ function garantia() {
 function nosotros() {
   return pagina("Quiénes somos", `<span class="eyebrow">Quiénes somos</span><h1>IHUB · Tecnología que enseña</h1>
     <p>Somos una <b>bodega de tecnología en Ecuador</b>. Trabajamos iPhone sellados y Open Box, Mac, iPad, Apple Watch, AirPods, Android y accesorios.</p>
-    <p>No tenemos tienda física ni locales de atención al público: somos bodega. Eso nos permite trabajar con <b>precio de bodega</b> y despachar directo a tu ciudad.</p>
+    <p>Nuestra bodega está en <b>Quito</b>: eso nos permite trabajar con <b>precio de bodega</b> y despachar directo a tu ciudad.</p>
+    <h3>Dónde estamos</h3>
+    <p><b>Bodega · Quito.</b> Desde aquí despachamos a todo Ecuador.<br>
+    <b>Showrooms autorizados · Guaranda, provincia de Bolívar.</b> Nuestro fundador es de Guaranda, y ahí puedes ver y probar los equipos en persona.<br>
+    <b>Oficina · Ambato (próximamente).</b> Estamos armando nuestra oficina para atenderte en Tungurahua.</p>
+    <p>Para visitar un showroom, escríbenos antes por WhatsApp y te confirmamos dirección y que el equipo que buscas esté disponible.</p>
     <h3 id="contacto">Contacto</h3>
     <p>WhatsApp: <a class="link" target="_blank" rel="noopener" href="${wa("Hola IHUB")}">+593 96 260 8262</a><br>Instagram: <a class="link" href="https://instagram.com/ihub_ec" target="_blank" rel="noopener">@ihub_ec</a></p>
     <h3>Mayoristas</h3><p>¿Tienes un negocio de celulares o tecnología? Pide tu acceso para ver nuestros precios por mayor.</p>
@@ -1054,7 +1059,7 @@ async function cargar(primera) {
     if (!primera) { pintarCarrito(); return; }
     const mins = Math.round((Date.now() - Date.parse(D.revisado)) / 60000);
     $("upd").textContent = isFinite(mins) ? `Stock revisado hace ${mins < 60 ? mins + " min" : Math.round(mins / 60) + " h"}` : "";
-    const msgs = cfg.mensajes || ["Precio de bodega", "Sellados con 12 meses de garantía", "Open Box con batería verificada", "Envíos a todo Ecuador", "Stock en vivo: si está en la web, está en bodega", "Pedidos por WhatsApp", "Precios por mayor para negocios", "Contrato de compraventa con IMEI"];
+    const msgs = cfg.mensajes || ["Precio de bodega", "Sellados con 12 meses de garantía", "Open Box con batería verificada", "Envíos a todo Ecuador", "Showrooms autorizados en Guaranda", "Stock en vivo: si está en la web, está en bodega", "Pedidos por WhatsApp", "Precios por mayor para negocios", "Contrato de compraventa con IMEI"];
     $("ticker").innerHTML = [...msgs, ...msgs].map(m => `<span>${esc(m)}</span>`).join("");
     ruta(); pintarCarrito();
   } catch {
