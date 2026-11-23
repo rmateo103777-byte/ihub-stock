@@ -962,25 +962,9 @@
   }
  ],
  "actualizado": "2026-11-22T21:02:13+00:00",
- "revisado": "2026-11-23T03:56:11+00:00",
+ "revisado": "2026-11-23T11:48:54+00:00",
  "noticias": null,
  "ingresos": [
-  {
-   "clave": "openbox|IPHONE 14|MIDNIGHT|128GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 14 PRO|SPACE BLACK|128GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 14 PRO|DEEP PURPLE|256GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 14 PRO|SPACE BLACK|256GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
   {
    "clave": "openbox|IPHONE 14 PRO|DEEP PURPLE|512GB",
    "desde": "2026-11-19T23:38:28+00:00"
@@ -992,10 +976,6 @@
   {
    "clave": "openbox|IPHONE 14 PRO MAX|SPACE BLACK|512GB",
    "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 15|BLACK|128GB",
-   "desde": "2026-11-16T06:01:29+00:00"
   },
   {
    "clave": "openbox|IPHONE 15|GREEN|128GB",
@@ -1018,10 +998,6 @@
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
-   "clave": "openbox|IPHONE 16|PINK|128GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
    "clave": "openbox|IPHONE 16|ULTRAMARINE|128GB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
@@ -1038,10 +1014,6 @@
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
-   "clave": "openbox|IPHONE 16 PRO|BLACK TITANIUM|256GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
    "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|256GB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
@@ -1052,30 +1024,6 @@
   {
    "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|1TB",
    "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 17 AIR|LIGHT GOLD|256GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 17 AIR|SPACE BLACK|256GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 17|LAVENDER|256GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 17 PRO|SILVER|256GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 16|BLACK|128GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 16|ULTRAMARINE|128GB",
-   "desde": "2026-11-16T06:01:29+00:00"
   },
   {
    "clave": "nuevos|IPHONE 18 PRO MAX|BURGUNDY|256GB",
@@ -1090,10 +1038,6 @@
    "desde": "2026-11-16T17:03:39+00:00"
   },
   {
-   "clave": "nuevos|IPHONE DUO|NIGHT SKY|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
    "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM BLACK|512GB",
    "desde": "2026-11-19T21:43:59+00:00"
   },
@@ -1104,38 +1048,6 @@
   {
    "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM WHITESILVER|512GB",
    "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI 17T 12RAM|OPAL WHITE|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI 17T 12RAM|VIOLET|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI 17T PRO 12RAM|DEEP BLUE|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI 17T PRO 12RAM|DEEP VIOLET|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI REDMI NOTE 17 PRO 8GB RAM|BLACK|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI REDMI NOTE 17 PRO 8GB RAM|PURPLE|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI REDMI NOTE 17 PRO 8GB RAM|SKY BLUE|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
-  },
-  {
-   "clave": "nuevos|XIAOMI REDMI NOTE 17 PRO MAX 8GB RAM|BLACK|512GB",
-   "desde": "2026-11-16T06:01:29+00:00"
   },
   {
    "clave": "gadgets|AFTERGLOW WAVE WIRELESS NINTENDO|PURPLE|",
