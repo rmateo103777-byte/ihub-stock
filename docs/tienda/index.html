@@ -313,6 +313,15 @@ footer details summary { cursor: pointer; }
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s, transform .6s; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .ticker .run, .hero .art img { animation: none; } .reveal { opacity: 1; transform: none; transition: none; } }
+
+/* Fotos oficiales normalizadas: todas centradas y del mismo tamaño */
+img[data-nz] { opacity: 0; transition: opacity .35s ease; }
+img[data-nz].nz-ok { opacity: 1; width: 100% !important; height: 100% !important; object-fit: contain; }
+img[data-nz].nz-raw { opacity: 1; }
+.mini img[data-nz].nz-ok, .line img[data-nz].nz-ok { width: 52px !important; height: 52px !important; }
+.line img[data-nz].nz-ok { width: 60px !important; height: 60px !important; }
+.split .pic img[data-nz].nz-ok { width: 100% !important; height: auto !important; max-width: 520px; aspect-ratio: 4 / 3.4; background: #fff; }
+.hero .art img[data-nz].nz-ok { width: min(500px, 100%) !important; height: auto !important; aspect-ratio: 1 / 1.05; }
 </style>
 </head>
 <body>
@@ -384,6 +393,74 @@ footer details summary { cursor: pointer; }
 <div id="toast" hidden></div>
 
 <script>
+/* ---------- Normalizador de fotos oficiales ----------
+   Cada foto del fabricante viene con márgenes y fondos distintos. Aquí se quita el fondo
+   (desde los bordes hacia adentro), se recorta al producto y se centra en un lienzo cuadrado
+   con el mismo margen para todas. Resultado: todas las tarjetas se ven del mismo tamaño. */
+const NZ = new Map();
+function normalizar(url) {
+  if (NZ.has(url)) return NZ.get(url);
+  const pr = new Promise((ok, mal) => {
+    const im = new Image(); im.crossOrigin = "anonymous"; im.decoding = "async";
+    im.onerror = () => mal(new Error("img"));
+    im.onload = () => {
+      try {
+        const k = Math.min(1, 900 / Math.max(im.naturalWidth, im.naturalHeight));
+        const W = Math.max(1, Math.round(im.naturalWidth * k)), H = Math.max(1, Math.round(im.naturalHeight * k));
+        const c = document.createElement("canvas"); c.width = W; c.height = H;
+        const x = c.getContext("2d", { willReadFrequently: true }); x.drawImage(im, 0, 0, W, H);
+        const d = x.getImageData(0, 0, W, H), p = d.data;
+        // Quita el fondo por capas: blanco exterior, luego la caja gris interior si la hay.
+        const caja0 = (X0, Y0, X1, Y1) => {
+          let br = 0, bg = 0, bb = 0, n = 0;
+          for (const [cx, cy] of [[X0, Y0], [X1, Y0], [X0, Y1], [X1, Y1]]) { const o = (cy * W + cx) * 4; if (p[o + 3] > 200) { br += p[o]; bg += p[o + 1]; bb += p[o + 2]; n++; } }
+          if (n) { br /= n; bg /= n; bb /= n; }
+          const claro = n >= 3 && br > 196 && bg > 196 && bb > 196;
+          const es = i => { const o = i * 4; if (p[o + 3] < 24) return true; if (!claro) return false; return Math.abs(p[o] - br) + Math.abs(p[o + 1] - bg) + Math.abs(p[o + 2] - bb) < 30; };
+          const vis = new Uint8Array(W * H), pila = [];
+          for (let i = X0; i <= X1; i++) pila.push(Y0 * W + i, Y1 * W + i);
+          for (let j = Y0; j <= Y1; j++) pila.push(j * W + X0, j * W + X1);
+          while (pila.length) {
+            const i = pila.pop(); if (vis[i]) continue; vis[i] = 1;
+            const xx = i % W, yy = (i - xx) / W;
+            if (xx < X0 || xx > X1 || yy < Y0 || yy > Y1 || !es(i)) continue; p[i * 4 + 3] = 0;
+            pila.push(i - 1, i + 1, i - W, i + W);
+          }
+          let a0 = W, b0 = H, a1 = -1, b1 = -1;
+          for (let y = Y0; y <= Y1; y++) for (let xx = X0; xx <= X1; xx++) if (p[(y * W + xx) * 4 + 3] > 24) { if (xx < a0) a0 = xx; if (xx > a1) a1 = xx; if (y < b0) b0 = y; if (y > b1) b1 = y; }
+          return [a0, b0, a1, b1];
+        };
+        let r = [0, 0, W - 1, H - 1];
+        for (let k = 0; k < 3; k++) {
+          const q = caja0(...r);
+          if (q[2] < 0) { r = q; break; }
+          const igual = q[0] === r[0] && q[1] === r[1] && q[2] === r[2] && q[3] === r[3];
+          r = q; if (igual) break;
+        }
+        const [x0, y0, x1, y1] = r;
+        if (x1 < 0) return mal(new Error("vacía"));
+        x.putImageData(d, 0, 0);
+        const bw = x1 - x0 + 1, bh = y1 - y0 + 1, S = 800, caja = S * 0.8, e = Math.min(caja / bw, caja / bh);
+        const o = document.createElement("canvas"); o.width = S; o.height = S;
+        const ox = o.getContext("2d"); ox.imageSmoothingQuality = "high";
+        ox.drawImage(c, x0, y0, bw, bh, (S - bw * e) / 2, (S - bh * e) / 2, bw * e, bh * e);
+        o.toBlob(b => b ? ok(URL.createObjectURL(b)) : mal(new Error("blob")), "image/png");
+      } catch (err) { mal(err); }
+    };
+    im.src = url;
+  });
+  NZ.set(url, pr); return pr;
+}
+function hidratar(raiz) {
+  (raiz || document).querySelectorAll("img[data-nz]:not([data-nzh])").forEach(img => {
+    img.setAttribute("data-nzh", "1");
+    const u = img.getAttribute("data-nz");
+    normalizar(u).then(b => { img.src = b; img.classList.add("nz-ok"); })
+      .catch(() => { img.src = u; img.classList.add("nz-raw"); });
+  });
+}
+new MutationObserver(() => hidratar()).observe(document.documentElement, { childList: true, subtree: true });
+
 const WHATSAPP = "593962608262";
 const SUPABASE_URL = "https://qqxseabhnzrzzbmemjjg.supabase.co";
 const SUPABASE_KEY = "sb_publishable_ITWl2tblQAiOlHGelV4oTw_yNLVjm-r";
@@ -548,14 +625,14 @@ function alternativas(modelo, sec, precioRef, n = 4) {
 // Tarjetas: imagen oficial cargada por IHUB; si no, render del modelo; si no, tarjeta con el nombre.
 function imgCard(modelo, col) {
   const f = fotos(modelo, col)[0];
-  if (f) return `<img src="${f.s}" alt="${esc(nombre(modelo))}" loading="lazy">`;
+  if (f) return `<img data-nz="${f.s}" alt="${esc(nombre(modelo))}">`;
   const v = imagen(modelo);
   if (v) return `<img src="${v}" alt="${esc(nombre(modelo))}" loading="lazy">`;
   return tile(modelo);
 }
 const tile = (modelo, cls = "") => { const marca = modelo.split(" ")[0]; return `<div class="tile ${cls}" style="display:grid;place-items:center;width:100%;height:100%;background:linear-gradient(150deg,#EAF3FD,#F7F9FC);color:var(--brand);font-weight:700;text-align:center;padding:12px;font-size:15px;line-height:1.2"><div><small style="display:block;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase">${esc(nombre(marca))}</small>${esc(nombre(modelo.replace(marca, "").replace(/\d+\s?GB RAM|\d+RAM/i, "").trim()))}</div></div>`; };
 const fotoReal = (modelo, col) => fotos(modelo, col)[0]?.l || IMG960(imagen(modelo));
-const miniImg = (modelo, col) => { const f = fotos(modelo, col)[0]?.s || imagen(modelo); return f ? `<img src="${f}" alt="" loading="lazy">` : `<span class="tile"></span>`; };
+const miniImg = (modelo, col) => { const r = fotos(modelo, col)[0]?.s; if (r) return `<img data-nz="${r}" alt="">`; const f = imagen(modelo); return f ? `<img src="${f}" alt="" loading="lazy">` : `<span class="tile"></span>`; };
 
 /* ---------- Componentes ---------- */
 function tarjeta(g) {
@@ -609,7 +686,7 @@ function inicio() {
       <div class="btns"><a class="btn btn-p" href="#/c/iphone/sellados">Ver Sellados</a><a class="btn btn-o" href="#/c/iphone/openbox">Ver Open Box</a></div>
     </div>
     <div class="art"><div class="glow"></div>
-      <a href="#/p/nuevos/${slug(destacado)}" aria-label="${esc(nombre(destacado))}">${heroImg ? `<img src="${heroImg}" alt="${esc(nombre(destacado))}">` : ""}</a>
+      <a href="#/p/nuevos/${slug(destacado)}" aria-label="${esc(nombre(destacado))}">${heroImg ? `<img ${/^https?:/.test(heroImg) && !/wikimedia/.test(heroImg) ? "data-nz" : "src"}="${heroImg}" alt="${esc(nombre(destacado))}">` : ""}</a>
       <span class="pill a"><i></i>Stock en vivo · ${enStock} equipos</span>
       <span class="pill b">Nuevo: ${esc(nombre(destacado))}</span>
     </div>
@@ -718,7 +795,7 @@ function bloque(id, todos, i) {
       <a class="mini" href="${urlG(low)}">${miniImg(low.modelo, low.items[0].color)}<div><b>${esc(nombre(low.modelo))}</b><small>${esc(descripcion(low.modelo).split(".")[0])}.</small><b>desde ${usd(low.desde)}</b></div><span class="arrow">${ICO.arrow}</span></a>` : `<div class="alt">${esc(s.lema)}</div>`}
       <div class="links"><a class="link" href="${urlG(top)}">Comprar ${ICO.arrow}</a><a class="link" href="#/c/${id}">Ver todos los ${esc(s.nombre)} (${gs.length}) ${ICO.arrow}</a></div>
     </div>
-    <div class="pic"><a href="${urlG(top)}">${img ? `<img src="${img}" alt="${esc(nombre(top.modelo))}" loading="lazy">` : tile(top.modelo)}</a></div>
+    <div class="pic"><a href="${urlG(top)}">${img ? `<img ${/wikimedia/.test(img) ? "src" : "data-nz"}="${img}" alt="${esc(nombre(top.modelo))}" loading="lazy">` : tile(top.modelo)}</a></div>
   </section>`;
 }
 
@@ -764,7 +841,7 @@ function producto(lista, s) {
     return `<div class="wrap">
       <div class="crumbs"><a href="#/">Inicio</a>›<a href="#/c/${sec}">${esc(SEC(sec).nombre)}</a>›<b>${esc(nombre(m))}</b></div>
       <div class="pdp-head"><span class="badge out">Agotado</span><h1>${esc(nombre(m))}</h1><p>${esc(descripcion(m))}</p></div>
-      <div class="pdp"><div class="gal"><div class="gal-main">${fotoReal(m) ? `<img src="${fotoReal(m)}" alt="${esc(nombre(m))}">` : tile(m)}</div></div>
+      <div class="pdp"><div class="gal"><div class="gal-main">${fotoReal(m) ? `<img ${/wikimedia/.test(fotoReal(m)) ? "src" : "data-nz"}="${fotoReal(m)}" alt="${esc(nombre(m))}">` : tile(m)}</div></div>
         <div><div class="summary"><div class="l">Estado</div><div class="cfg">Se vendió todo el stock de la bodega.</div><p style="margin:0;color:var(--muted)">Escríbenos y te avisamos apenas vuelva a entrar.</p></div>
           <div class="buy"><a class="btn btn-wa" target="_blank" rel="noopener" href="${wa(`Hola IHUB, avísenme cuando llegue el ${nombre(m)}.`)}">Avísame cuando llegue</a>
           ${otra ? `<a class="btn btn-o" href="${urlG(otra)}">Ver ${otra.lista === "openbox" ? "Open Box" : "sellado"} disponible</a>` : ""}</div></div></div>
@@ -837,11 +914,11 @@ function pintarConfig() {
 }
 function pintarGaleria() {
   const { g } = SEL, fs = fotos(g.modelo, SEL.color).map(f => ({ s: f.s, l: f.l, fit: false }));
-  const v = imagen(g.modelo); if (v) fs.push({ s: v, l: IMG960(v), fit: true });
+  const v = imagen(g.modelo); if (v && !fs.length) fs.push({ s: v, l: IMG960(v), fit: true });
   if (SEL.foto >= fs.length) SEL.foto = 0;
   const f = fs[SEL.foto];
-  $("gal-main").innerHTML = f ? `<img class="${f.fit ? "fit" : ""}" src="${f.l}" alt="${esc(nombre(g.modelo))}">` : tile(g.modelo);
-  $("gal-thumbs").innerHTML = fs.length > 1 ? fs.map((x, i) => `<button data-foto="${i}" aria-pressed="${i === SEL.foto}" aria-label="Foto ${i + 1}"><img src="${x.s}" alt="" style="${x.fit ? "object-fit:contain" : ""}"></button>`).join("") : "";
+  $("gal-main").innerHTML = f ? (f.fit ? `<img class="fit" src="${f.l}" alt="${esc(nombre(g.modelo))}">` : `<img data-nz="${f.l}" alt="${esc(nombre(g.modelo))}">`) : tile(g.modelo);
+  $("gal-thumbs").innerHTML = fs.length > 1 ? fs.map((x, i) => `<button data-foto="${i}" aria-pressed="${i === SEL.foto}" aria-label="Foto ${i + 1}"><img ${x.fit ? "src" : "data-nz"}="${x.s}" alt=""></button>`).join("") : "";
 }
 document.addEventListener("click", e => {
   if (!SEL) return;
