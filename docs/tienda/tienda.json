@@ -21,5 +21,7 @@
       "descuento": 30,
       "texto": "Precio especial esta semana"
     }
-  ]
+  ],
+  "_imagenes_ayuda": "Imágenes oficiales de cada producto. Sube el archivo a docs/tienda/fotos/ y pon aquí su ruta. El nombre del modelo va como en el stock; el más específico gana. Ej.: \"IPHONE 17 PRO MAX\": [\"fotos/iphone-17-pro-max-naranja.png\", \"fotos/iphone-17-pro-max-plata.png\"]. Para ligar una imagen a un color: {\"url\": \"fotos/x.png\", \"color\": \"ORANGE\"}.",
+  "imagenes": {}
 }
