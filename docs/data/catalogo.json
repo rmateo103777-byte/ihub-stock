@@ -4,16 +4,6 @@
    "lista": "openbox",
    "modelo": "IPHONE 14",
    "categoria": "iphone",
-   "color": "MIDNIGHT",
-   "capacidad": "128GB",
-   "bateria": 91,
-   "sim": "eSIM",
-   "precio": 459.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 14",
-   "categoria": "iphone",
    "color": "PURPLE",
    "capacidad": "128GB",
    "bateria": 85,
@@ -284,16 +274,6 @@
    "lista": "openbox",
    "modelo": "IPHONE 16 PRO MAX",
    "categoria": "iphone",
-   "color": "WHITE TITANIUM",
-   "capacidad": "256GB",
-   "bateria": 92,
-   "sim": "eSIM",
-   "precio": 919.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 16 PRO MAX",
-   "categoria": "iphone",
    "color": "BLACK TITANIUM",
    "capacidad": "512GB",
    "bateria": 88,
@@ -374,17 +354,6 @@
    "lista": "openbox",
    "modelo": "SAMSUNG GALAXY S23 ULTRA",
    "categoria": "android",
-   "color": "LAVENDER",
-   "capacidad": "512GB",
-   "bateria": 91,
-   "sim": "",
-   "precio": 639.99,
-   "grupo": "android_alta"
-  },
-  {
-   "lista": "openbox",
-   "modelo": "SAMSUNG GALAXY S23 ULTRA",
-   "categoria": "android",
    "color": "PHANTOM BLACK",
    "capacidad": "512GB",
    "bateria": 90,
@@ -444,16 +413,6 @@
    "bateria": 100,
    "sim": "Chip físico",
    "precio": 879.99
-  },
-  {
-   "lista": "nuevos",
-   "modelo": "IPHONE 18 PRO MAX",
-   "categoria": "iphone",
-   "color": "BURGUNDY",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 1819.99
   },
   {
    "lista": "nuevos",
@@ -712,36 +671,6 @@
   },
   {
    "lista": "gadgets",
-   "modelo": "DUALSENSE PS5 CAMUFLAJE",
-   "categoria": "palancas",
-   "color": "",
-   "capacidad": "",
-   "bateria": null,
-   "sim": "",
-   "precio": 104.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "DUALSENSE PS5 GALACTIC PURPLE V2",
-   "categoria": "palancas",
-   "color": "",
-   "capacidad": "",
-   "bateria": null,
-   "sim": "",
-   "precio": 104.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "DUALSENSE PS5 WHITE",
-   "categoria": "palancas",
-   "color": "",
-   "capacidad": "",
-   "bateria": null,
-   "sim": "",
-   "precio": 104.99
-  },
-  {
-   "lista": "gadgets",
    "modelo": "IPAD A16 11VA GEN 11\"",
    "categoria": "ipad",
    "color": "BLUE",
@@ -881,8 +810,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-24T18:54:31+00:00",
- "revisado": "2026-11-24T18:54:31+00:00",
+ "actualizado": "2026-11-24T19:57:10+00:00",
+ "revisado": "2026-11-24T19:57:10+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -930,20 +859,12 @@
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
-   "clave": "openbox|IPHONE 16 PRO MAX|WHITE TITANIUM|256GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
    "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|512GB",
    "desde": "2026-11-23T17:53:47+00:00"
   },
   {
    "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|1TB",
    "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 18 PRO MAX|BURGUNDY|512GB",
-   "desde": "2026-11-19T21:43:59+00:00"
   },
   {
    "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM BLACK|512GB",
@@ -987,18 +908,6 @@
   },
   {
    "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|NATURAL TITANIUM|64GB",
-   "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "gadgets|DUALSENSE PS5 CAMUFLAJE||",
-   "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "gadgets|DUALSENSE PS5 GALACTIC PURPLE V2||",
-   "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "gadgets|DUALSENSE PS5 WHITE||",
    "desde": "2026-11-19T21:43:59+00:00"
   },
   {
