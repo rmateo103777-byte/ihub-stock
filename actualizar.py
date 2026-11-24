@@ -33,6 +33,8 @@ if os.environ.get("MARGENES_JSON"):  # en GitHub Actions: secreto con el conteni
     MARGENES = json.loads(os.environ["MARGENES_JSON"])
 DIAS_NUEVO = 7  # cuántos días un producto recién llegado lleva la etiqueta "Nuevo"
 ANDROID_GAMA_ALTA = 500  # Android con precio de lista desde este monto (S23 Ultra en adelante) usa el margen "android_alta"
+ANDROID_GAMA_MEDIA = 300  # desde este monto y bajo la gama alta (S24+, S25 FE, Note 17 Pro…) usa "android_media"
+GRUPOS_EXTRA = ("android_alta", "android_media", "watch")  # márgenes opcionales; si faltan se usa la categoría normal
 CATEGORIAS = ("iphone", "macbook_ultima_generacion", "macbook_anterior", "ipad",
               "android", "cubos", "palancas", "otros")
 
@@ -74,10 +76,14 @@ def categoria(modelo):
 
 
 def grupo_margen(modelo, base, ultimo_chip_mac):
-    """Categoría de margen: la de la lista, con Android separado en gama alta y el resto."""
+    """Categoría de margen: la de la lista, con Android por gama y Apple Watch aparte."""
     cat = categoria(modelo)
     if cat == "android" and base >= ANDROID_GAMA_ALTA and "android_alta" in MARGENES:
         return "android_alta"
+    if cat == "android" and base >= ANDROID_GAMA_MEDIA and "android_media" in MARGENES:
+        return "android_media"
+    if cat == "otros" and "APPLE WATCH" in modelo.upper() and "watch" in MARGENES:
+        return "watch"
     if cat == "macbook":
         chip = chip_macbook(modelo.upper())
         return "macbook_ultima_generacion" if (chip is not None and ultimo_chip_mac is not None and chip >= ultimo_chip_mac) else "macbook_anterior"
@@ -85,8 +91,9 @@ def grupo_margen(modelo, base, ultimo_chip_mac):
 
 
 def margen(modelo, ultimo_chip_mac, base=0):
-    if grupo_margen(modelo, base, ultimo_chip_mac) == "android_alta":
-        return MARGENES["android_alta"]
+    grupo = grupo_margen(modelo, base, ultimo_chip_mac)
+    if grupo in GRUPOS_EXTRA:
+        return MARGENES[grupo]
     cat = categoria(modelo)
     if cat == "macbook":
         chip = chip_macbook(modelo.upper())
@@ -145,7 +152,7 @@ def armar_producto(lista, modelo, detalle, precio_txt, ultimo_chip_mac):
         "bateria": int(bat.group(1)) if (bat and categoria(modelo) not in ("cubos", "palancas")) else None,
         "sim": sim,
         "precio": final,
-        **({"grupo": grupo} if grupo == "android_alta" else {}),  # para el precio por mayor
+        **({"grupo": grupo} if grupo in GRUPOS_EXTRA else {}),  # para el precio por mayor
     }
 
 
