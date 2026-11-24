@@ -581,7 +581,7 @@ function render() {
   else gs.sort((a, b) => ORDEN.indexOf(catDe(a.cat)) - ORDEN.indexOf(catDe(b.cat))
     || b.modelo.localeCompare(a.modelo, "es", { numeric: true }) || a.lista.localeCompare(b.lista));
 
-  $("summary").textContent = items.length ? `${items.length} equipos en ${gs.length} modelos${MAYOR ? " · precios por mayor" : ""} · toca el botón verde para pedir por WhatsApp` : "";
+  $("summary").textContent = items.length ? `${items.length} equipos en ${gs.length} modelos${MAYOR ? " · precios por mayor, sin envío" : ""} · toca el botón verde para pedir por WhatsApp` : "";
   $("grid").innerHTML = gs.length ? gs.map(card).join("") :
     `<div class="empty"><b>Sin resultados</b>Prueba con otro modelo o quita los filtros.</div>`;
 }
@@ -609,7 +609,7 @@ function row(g, p) {
       <span class="color"><span class="sw" style="background:${swatch(p.color)}"></span>${esc(p.color || "Único")}${p._nuevo ? ' <span class="new-tag">Nuevo</span>' : ""}</span>
       <span class="specs">${specs.join("")}</span></div>
     <span class="price${p._oferta ? " on-offer" : ""}">${p._antes ? `<s>${money(p._antes)}</s>` : ""}${money(p.precio)}</span>
-    <a class="wa-sq" href="${waLink(MAYOR ? `Hola IHUB, soy mayorista (${MAYOR.nombre} ${MAYOR.apellido}, ${MAYOR.celular}). Me interesa: ${desc} (${extra}) – ${money(p.precio)} por mayor${p._oferta ? " (oferta)" : ""}. ¿Está disponible?` : `Hola IHUB, me interesa: ${desc} (${extra}) – ${money(p.precio)}${p._oferta ? " (oferta)" : ""}. ¿Está disponible?`)}" target="_blank" rel="noopener" aria-label="Pedir ${esc(desc)} por WhatsApp">${waIcon}</a></li>`;
+    <a class="wa-sq" href="${waLink(MAYOR ? `Hola IHUB, soy mayorista (${MAYOR.nombre} ${MAYOR.apellido}, ${MAYOR.celular}). Me interesa: ${desc} (${extra}) – ${money(p.precio)} por mayor (sin envío)${p._oferta ? " (oferta)" : ""}. ¿Está disponible?` : `Hola IHUB, me interesa: ${desc} (${extra}) – ${money(p.precio)}${p._oferta ? " (oferta)" : ""}. ¿Está disponible?`)}" target="_blank" rel="noopener" aria-label="Pedir ${esc(desc)} por WhatsApp">${waIcon}</a></li>`;
 }
 
 $("q").addEventListener("input", e => { state.q = e.target.value; render(); });
@@ -723,7 +723,7 @@ function aplicarMayor(productos, descuentos) {
   const chips = productos.filter(p => p.categoria === "macbook").map(p => +(p.modelo.match(/\bM(\d+)\b/) || [])[1]).filter(Boolean);
   const ultimo = chips.length ? Math.max(...chips) : null;
   return productos.map(p => {
-    let cat = p.categoria;
+    let cat = p.grupo && descuentos?.[p.grupo] != null ? p.grupo : p.categoria;
     if (cat === "macbook") { const c = +(p.modelo.match(/\bM(\d+)\b/) || [])[1]; cat = c && ultimo && c >= ultimo ? "macbook_ultima_generacion" : "macbook_anterior"; }
     const d = Number(descuentos?.[cat]) || 0;
     return { ...p, precio: Math.max(0, Math.round((p.precio - d) * 100) / 100), _publico: p.precio };
@@ -739,7 +739,7 @@ function pintarModo() {
   document.documentElement.classList.toggle("modo-mayorista", !!MAYOR);
   $("acc-btn").classList.toggle("on", !!MAYOR);
   $("acc-btn").textContent = MAYOR ? `Mayorista · ${MAYOR.nombre || "mi cuenta"}` : "Mayoristas";
-  if (MAYOR) $("mayor-hola").textContent = `Hola, ${MAYOR.nombre} ${MAYOR.apellido}. Estás viendo el stock con precio por mayor.`;
+  if (MAYOR) $("mayor-hola").textContent = `Hola, ${MAYOR.nombre} ${MAYOR.apellido}. Estás viendo el stock con precio por mayor (no incluye envío).`;
 }
 function verPanel(cual) {
   for (const id of ["form-ingresar", "form-correo", "form-registro", "re-listo"]) $(id).hidden = id !== cual;
@@ -844,7 +844,9 @@ function aplicarOfertas(productos, ofertas) {
   return productos.map(p => {
     const o = ofertas.find(o => o.modelo === p.modelo && (!o.lista || o.lista === p.lista));
     if (!o || !(+o.descuento > 0)) return p;
-    return { ...p, _antes: p.precio, precio: Math.max(0, Math.round((p.precio - o.descuento) * 100) / 100), _oferta: o.texto || "Oferta", _hasta: o.hasta || "" };
+    const base = p._publico ?? p.precio, conOferta = Math.max(0, Math.round((base - o.descuento) * 100) / 100);
+    if (conOferta >= p.precio) return p;   // mayorista: su precio ya es menor que la oferta al público
+    return { ...p, _antes: p.precio, precio: conOferta, _oferta: o.texto || "Oferta", _hasta: o.hasta || "" };
   });
 }
 let OFERTAS = [];
@@ -855,7 +857,7 @@ function renderPromo() {
   const lista = mods.length > 1 ? mods.slice(0, -1).join(", ") + " y " + mods.at(-1) : mods[0];
   const desc = Math.max(...OFERTAS.map(o => +o.descuento || 0)), h = con.find(p => p._hasta)?._hasta || "";
   $("promo-title").textContent = (desc ? `$${desc} de descuento en ` : "Precio especial en ") + lista;
-  $("promo-sub").textContent = (h ? `Válido ${finTexto(h)}` : "Por tiempo limitado") + " o hasta agotar stock." + (MAYOR ? " Ya incluido en tu precio por mayor." : "");
+  $("promo-sub").textContent = (h ? `Válido ${finTexto(h)}` : "Por tiempo limitado") + " o hasta agotar stock." + "";
   $("promo-clock").dataset.fin = h; $("promo-clock").textContent = quedan(h); $("promo-clock").hidden = !h;
   el.hidden = false;
 }
