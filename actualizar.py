@@ -90,6 +90,25 @@ def grupo_margen(modelo, base, ultimo_chip_mac):
     return cat
 
 
+def precio_fijo(modelo):
+    """Cargadores y cables tienen precio al público fijo (no lista + margen). None si no aplica."""
+    m = modelo.upper()
+    lightning = "LIGHTNING" in m
+    if "CABLE" in m:
+        if not re.search(r"\b2\s*M\b|2\s*METROS|\(2\s*M\)", m):
+            return None  # solo los cables de 2 metros tienen precio fijo
+        if "MAGSAFE" in m or "MACBOOK" in m:
+            return 70.0  # cable MacBook 2 m
+        if lightning:
+            return 50.0  # cable Lightning 2 m
+        if "USB-C" in m or "USB C" in m or "TIPO C" in m:
+            return 60.0  # cable tipo C 2 m
+        return None
+    if categoria(modelo) == "cubos":
+        return 60.0 if lightning else 70.0  # cargador original: tipo C $70, Lightning $60
+    return None
+
+
 def margen(modelo, ultimo_chip_mac, base=0):
     grupo = grupo_margen(modelo, base, ultimo_chip_mac)
     if grupo in GRUPOS_EXTRA:
@@ -140,7 +159,8 @@ def armar_producto(lista, modelo, detalle, precio_txt, ultimo_chip_mac):
     sim = "eSIM" if "ESIM" in modelo.upper() else ("Chip físico" if "CHIP" in modelo.upper() else "")
 
     base = precio_a_numero(precio_txt)
-    final = round(base + margen(modelo, ultimo_chip_mac, base), 2)
+    fijo = precio_fijo(modelo)
+    final = fijo if fijo is not None else round(base + margen(modelo, ultimo_chip_mac, base), 2)
     tipo = tipo_lista(lista)
     grupo = grupo_margen(modelo, base, ultimo_chip_mac)
     return {
