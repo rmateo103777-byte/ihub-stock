@@ -426,16 +426,6 @@
   },
   {
    "lista": "nuevos",
-   "modelo": "IPHONE DUO",
-   "categoria": "iphone",
-   "color": "NIGHT SKY",
-   "capacidad": "512GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 2789.99
-  },
-  {
-   "lista": "nuevos",
    "modelo": "SAMSUNG GALAXY S25 ULTRA",
    "categoria": "android",
    "color": "TITANIUM BLACK",
@@ -810,8 +800,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-24T19:57:10+00:00",
- "revisado": "2026-11-24T20:50:17+00:00",
+ "actualizado": "2026-11-24T21:51:03+00:00",
+ "revisado": "2026-11-24T21:51:03+00:00",
  "noticias": null,
  "ingresos": [
   {
