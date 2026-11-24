@@ -32,6 +32,7 @@ MARGENES = json.loads(_ARCHIVO_MARGENES.read_text(encoding="utf-8")) if _ARCHIVO
 if os.environ.get("MARGENES_JSON"):  # en GitHub Actions: secreto con el contenido de margenes.json
     MARGENES = json.loads(os.environ["MARGENES_JSON"])
 DIAS_NUEVO = 7  # cuántos días un producto recién llegado lleva la etiqueta "Nuevo"
+ANDROID_GAMA_ALTA = 500  # Android con precio de lista desde este monto (S23 Ultra en adelante) usa el margen "android_alta"
 CATEGORIAS = ("iphone", "macbook_ultima_generacion", "macbook_anterior", "ipad",
               "android", "cubos", "palancas", "otros")
 
@@ -72,7 +73,20 @@ def categoria(modelo):
     return "otros"
 
 
-def margen(modelo, ultimo_chip_mac):
+def grupo_margen(modelo, base, ultimo_chip_mac):
+    """Categoría de margen: la de la lista, con Android separado en gama alta y el resto."""
+    cat = categoria(modelo)
+    if cat == "android" and base >= ANDROID_GAMA_ALTA and "android_alta" in MARGENES:
+        return "android_alta"
+    if cat == "macbook":
+        chip = chip_macbook(modelo.upper())
+        return "macbook_ultima_generacion" if (chip is not None and ultimo_chip_mac is not None and chip >= ultimo_chip_mac) else "macbook_anterior"
+    return cat
+
+
+def margen(modelo, ultimo_chip_mac, base=0):
+    if grupo_margen(modelo, base, ultimo_chip_mac) == "android_alta":
+        return MARGENES["android_alta"]
     cat = categoria(modelo)
     if cat == "macbook":
         chip = chip_macbook(modelo.upper())
@@ -119,8 +133,9 @@ def armar_producto(lista, modelo, detalle, precio_txt, ultimo_chip_mac):
     sim = "eSIM" if "ESIM" in modelo.upper() else ("Chip físico" if "CHIP" in modelo.upper() else "")
 
     base = precio_a_numero(precio_txt)
-    final = round(base + margen(modelo, ultimo_chip_mac), 2)
+    final = round(base + margen(modelo, ultimo_chip_mac, base), 2)
     tipo = tipo_lista(lista)
+    grupo = grupo_margen(modelo, base, ultimo_chip_mac)
     return {
         "lista": tipo,
         "modelo": nombre_bonito(modelo),
@@ -130,6 +145,7 @@ def armar_producto(lista, modelo, detalle, precio_txt, ultimo_chip_mac):
         "bateria": int(bat.group(1)) if (bat and categoria(modelo) not in ("cubos", "palancas")) else None,
         "sim": sim,
         "precio": final,
+        **({"grupo": grupo} if grupo == "android_alta" else {}),  # para el precio por mayor
     }
 
 
@@ -153,7 +169,7 @@ def margenes_de_supabase():
     try:
         filas = supabase("margenes?select=categoria,monto")
         nuevos = {f["categoria"]: float(f["monto"]) for f in filas}
-        if all(k in nuevos for k in CATEGORIAS):
+        if all(k in nuevos for k in CATEGORIAS):  # android_alta es opcional
             print("Márgenes leídos de Supabase.")
             return nuevos
         print("A la tabla margenes le faltan categorías; uso margenes.json.")
