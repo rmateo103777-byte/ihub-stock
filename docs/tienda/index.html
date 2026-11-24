@@ -547,7 +547,8 @@ const COLORES = { BLACK: "#1d1d1f", NEGRO: "#1d1d1f", MIDNIGHT: "#1f2633", "SPAC
   PURPLE: "#b9a6d6", VIOLET: "#8b6cc4", "DEEP VIOLET": "#4b2f7a", "DEEP PURPLE": "#4b3a5c", RED: "#c8102e", GREEN: "#a8c4a2", YELLOW: "#f4e08b", GOLD: "#e8d2b0",
   BURGUNDY: "#6e1f2e", "COSMIC ORANGE": "#e6782f", ORANGE: "#e6782f", "NIGHT SKY": "#1c2340", DORADO: "#d9b46a", LAVENDER: "#c9b7e3", SAGE: "#b5c2a5",
   "NATURAL TITANIUM": "#bab5ab", "BLACK TITANIUM": "#3b3a38", "WHITE TITANIUM": "#e6e3dc", "DESERT TITANIUM": "#c8a98a", "BLUE TITANIUM": "#3d4a5c",
-  "TITANIUM BLACK": "#2f2f31", "TITANIUM GRAY": "#8a8a8d", "TITANIUM WHITESILVER": "#e5e5e3", "OPAL WHITE": "#f1efe8", "NEGRO OCASO": "#24242a" };
+  "TITANIUM BLACK": "#2f2f31", "TITANIUM GRAY": "#8a8a8d", "TITANIUM WHITESILVER": "#e5e5e3", "OPAL WHITE": "#f1efe8", "NEGRO OCASO": "#24242a",
+  "LIGHT GOLD": "#e6d3b3", "SOFT PINK": "#f3d3da", "GALACTIC PURPLE": "#5a3f8f", "GRAY CAMO": "#8a8d84" };
 const color = c => COLORES[(c || "").toUpperCase()] || (/BLACK|NEGRO|NIGHT|DARK/i.test(c) ? "#222" : /WHITE|BLANC|SILVER/i.test(c) ? "#eee" : /BLUE|AZUL/i.test(c) ? "#7aa2d6" : "#b8b8b8");
 
 /* ---------- Utilidades ---------- */
@@ -588,7 +589,7 @@ const SEC = id => SECCIONES.find(s => s.id === id);
 
 const nombre = m => titulo(m).replace(/\bMacbook/g, "MacBook").replace(/\bAirpods/g, "AirPods").replace(/\bDualsense/g, "DualSense").replace(/\bPs5\b/g, "PS5")
   .replace(/\bSe\b/g, "SE").replace(/\bUsb-c\b/gi, "USB-C").replace(/(\d+)w\b/gi, "$1W").replace(/(\d+)mm\b/gi, "$1 mm").replace(/\bS(\d+)\b/g, "S$1").replace(/\bWcc\b/g, "WCC")
-  .replace(/\bA(\d+)\b/g, "A$1").replace(/\bM(\d)\b/g, "M$1").replace(/(\d+)Ram\b/g, "$1 GB RAM").replace(/\bGb\b/g, "GB").replace(/ 11va Gen/, " (11.ª gen)").replace(/\bNuvia\b/, "Nubia");
+  .replace(/\bA(\d+)\b/g, "A$1").replace(/\bM(\d)\b/g, "M$1").replace(/(\d+)ram\b/gi, "$1GB RAM").replace(/\b(\d+)([tc])\b/g, (_, n, l) => n + l.toUpperCase()).replace(/\bGb\b/g, "GB").replace(/ 11va Gen/, " (11.ª gen)").replace(/\bNuvia\b/, "Nubia");
 const condicion = l => l === "openbox" ? "Open Box" : "Sellado";
 
 function descripcion(m) {
@@ -668,6 +669,7 @@ function preparar(d, cfg) {
   const nuevos = new Set((d.ingresos || []).map(i => i.clave));
   const ofertas = ofertasActivas(cfg);
   const productos = d.productos.map(p => {
+    if (!p.color && /DUALSENSE/.test(p.modelo)) p = { ...p, color: /GALACTIC/.test(p.modelo) ? "GALACTIC PURPLE" : /CAMUFLAJE|CAMO/.test(p.modelo) ? "GRAY CAMO" : /WHITE/.test(p.modelo) ? "WHITE" : /BLACK/.test(p.modelo) ? "BLACK" : "" };
     const o = ofertas.find(o => o.modelo === p.modelo && (!o.lista || o.lista === p.lista));
     const id = slug([p.lista, p.modelo, p.color, p.capacidad, p.bateria || ""].join(" "));
     const bateria = p.lista === "openbox" ? p.bateria : null;
