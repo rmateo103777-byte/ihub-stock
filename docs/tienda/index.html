@@ -363,6 +363,27 @@ img[data-nz].nz-raw { opacity: 1; }
   .my-grid, .my-grid.g4, .my-two { grid-template-columns: 1fr; }
   .my-sec { padding: 44px 0; }
 }
+
+/* Ofertas */
+.of-line { color: var(--offer); font-weight: 600; font-size: 14px; margin-top: 4px; }
+.of-clock { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 5px 11px; border-radius: 999px; background: #FFE4E9; color: var(--offer); font-weight: 700; font-size: 13px; }
+.of-clock::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--offer); animation: ofp 1.2s ease-in-out infinite; }
+@keyframes ofp { 50% { opacity: .25; } }
+.ofz { background: linear-gradient(120deg, #1A0610, #4A0A1E 55%, #E11D48); color: #fff; }
+.ofz .wrap { display: grid; gap: 28px; padding-top: 48px; padding-bottom: 52px; }
+.ofz-txt { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px 32px; }
+.ofz-txt > div:first-child { max-width: 720px; }
+.ofz-tag { display: inline-block; background: #fff; color: var(--offer); font-weight: 800; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+.ofz h2 { font-size: clamp(28px, 3.4vw, 42px); line-height: 1.08; margin: 14px 0 10px; color: #fff; }
+.ofz p { color: #FFD3DC; margin: 0; }
+.ofz-cta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.ofz-cta .of-clock { margin: 0; background: rgba(255,255,255,.14); color: #fff; }
+.ofz-cta .of-clock::before { background: #fff; }
+.ofz-btn { background: #fff; color: var(--offer); }
+.ofz-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.ofz-grid .card { color: var(--fg); }
+@media (max-width: 980px) { .ofz-grid { grid-template-columns: repeat(2, 1fr); } }
+.menu a[href="#/ofertas"] { color: var(--offer); }
 </style>
 </head>
 <body>
@@ -630,15 +651,28 @@ async function leerJSON() {
 async function leerConfig() { try { const r = await fetch("tienda.json?t=" + Date.now(), { cache: "no-store" }); if (r.ok) return await r.json(); } catch {} return {}; }
 
 let D = null;
+/* ---------- Ofertas con fecha de fin ("hasta": "AAAA-MM-DD", vale todo ese día en Ecuador) ---------- */
+const finDe = h => h ? Date.parse(h + "T23:59:59-05:00") : Infinity;
+const ofertasActivas = cfg => (cfg.ofertas || []).filter(o => Date.now() <= finDe(o.hasta) && (!o.desde || Date.now() >= Date.parse(o.desde + "T00:00:00-05:00")));
+const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"], MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+function finTexto(h) { if (!h) return ""; const [y, m, d] = h.split("-").map(Number); const f = new Date(Date.UTC(y, m - 1, d)); return `hasta el ${DIAS[f.getUTCDay()]} ${d} de ${MESES[m - 1]}`; }
+function quedan(h) {
+  const ms = finDe(h) - Date.now(); if (!isFinite(ms)) return ""; if (ms <= 0) return "Terminó";
+  const d = Math.floor(ms / 864e5), hr = Math.floor(ms % 864e5 / 36e5), mi = Math.floor(ms % 36e5 / 6e4);
+  return d ? `Termina en ${d} ${d === 1 ? "día" : "días"} ${hr} h` : hr ? `Termina en ${hr} h ${mi} min` : `Termina en ${mi} min`;
+}
+const reloj = h => h ? `<span class="of-clock" data-fin="${esc(h)}">${quedan(h)}</span>` : "";
+setInterval(() => document.querySelectorAll("[data-fin]").forEach(e => { e.textContent = quedan(e.dataset.fin); }), 30000);
+
 function preparar(d, cfg) {
   const nuevos = new Set((d.ingresos || []).map(i => i.clave));
-  const ofertas = cfg.ofertas || [];
+  const ofertas = ofertasActivas(cfg);
   const productos = d.productos.map(p => {
     const o = ofertas.find(o => o.modelo === p.modelo && (!o.lista || o.lista === p.lista));
     const id = slug([p.lista, p.modelo, p.color, p.capacidad, p.bateria || ""].join(" "));
     const bateria = p.lista === "openbox" ? p.bateria : null;
     return { ...p, bateria, id, sec: seccionDe(p), nuevo: nuevos.has([p.lista, p.modelo, p.color, p.capacidad].join("|")),
-      antes: o?.descuento ? p.precio : null, precio: o?.descuento ? Math.max(0, p.precio - o.descuento) : p.precio, oferta: o ? (o.texto || "Oferta") : "" };
+      antes: o?.descuento ? p.precio : null, precio: o?.descuento ? Math.max(0, p.precio - o.descuento) : p.precio, oferta: o ? (o.texto || "Oferta") : "", hasta: o?.hasta || "" };
   });
   return { productos, cfg, revisado: d.revisado || d.actualizado };
 }
@@ -650,8 +684,8 @@ function grupos(filtro = () => true) {
     if (!g.has(k)) g.set(k, { modelo: p.modelo, lista, sec: p.sec, items: [] });
     g.get(k).items.push(p);
   }
-  return [...g.values()].map(x => ({ ...x, desde: Math.min(...x.items.map(i => i.precio)), antes: x.items.find(i => i.antes)?.antes,
-    nuevo: x.items.some(i => i.nuevo), oferta: x.items.find(i => i.oferta)?.oferta }));
+  return [...g.values()].map(x => ({ ...x, desde: Math.min(...x.items.map(i => i.precio)), antes: [...x.items].sort((a, b) => a.precio - b.precio)[0].antes,
+    nuevo: x.items.some(i => i.nuevo), oferta: x.items.find(i => i.oferta)?.oferta, hasta: x.items.find(i => i.hasta)?.hasta }));
 }
 const rango = m => { const n = parseInt((m.match(/\d+/) || [0])[0]); return (/DUO/.test(m) ? 99 : n) * 10 + (/PRO MAX|ULTRA/.test(m) ? 3 : /PRO/.test(m) ? 2 : /AIR|PLUS/.test(m) ? 1 : 0); };
 const ordenar = arr => arr.sort((a, b) => (a.lista === "openbox") - (b.lista === "openbox") || rango(b.modelo) - rango(a.modelo) || b.desde - a.desde);
@@ -732,7 +766,7 @@ function inicio() {
       <span class="pill b">Nuevo: ${esc(nombre(destacado))}</span>
     </div>
   </div></section>
-
+  ${promo()}
   <section class="trust"><div class="wrap">
     <span>${ICO.live}<b>${enStock}</b> equipos en bodega</span>
     <span>${ICO.box}<b>${modelosN}</b> modelos disponibles</span>
@@ -938,7 +972,7 @@ function pintarConfig() {
       <div class="l">Tu configuración</div>
       <div class="cfg">${[it.capacidad, titulo(it.color), it.bateria ? `Batería ${it.bateria}%` : "", ob ? "Open Box" : "Sellado"].filter(Boolean).map(esc).join(" · ")}</div>
       <div class="p">${usd(it.precio)}${it.antes ? `<s>${usd(it.antes)}</s>` : ""}</div>
-      ${it.oferta ? `<div style="color:var(--offer);font-weight:600;font-size:14px">${esc(it.oferta)}</div>` : ""}
+      ${it.oferta ? `<div class="of-line"><b>${esc(it.oferta)}</b>${it.antes ? ` · Ahorras ${usd(it.antes - it.precio)}` : ""}${it.hasta ? ` · Válido ${finTexto(it.hasta)}` : ""}</div>${reloj(it.hasta)}` : ""}
       <div class="ok"><i></i>Disponible en bodega</div>
     </div>
     <div class="buy">
@@ -1104,10 +1138,26 @@ function pintarMenu(actual) {
   $("sheet-nav").innerHTML = `<a href="#/">Inicio</a>` + links + `<a href="#/como-comprar">Cómo comprar</a><a href="#/garantia">Garantía</a><a href="#/nosotros">Quiénes somos</a>`;
   $("foot-cats").innerHTML = conStock.map(s => `<li><a href="#/c/${s.id}">${s.nombre}</a></li>`).join("") + `<li><a href="#/c/iphone/openbox">iPhone Open Box</a></li>`;
 }
+function promo() {
+  const gs = ordenar(grupos(p => p.oferta)); if (!gs.length) return "";
+  const act = ofertasActivas(D.cfg), desc = Math.max(...act.map(o => +o.descuento || 0));
+  const modelos = [...new Set([...gs].sort((x, y) => rango(x.modelo) - rango(y.modelo)).map(g => nombre(g.modelo)))];
+  const lista = modelos.length > 1 ? modelos.slice(0, -1).join(", ") + " y " + modelos.at(-1) : modelos[0];
+  const h = gs.find(g => g.hasta)?.hasta;
+  return `<section class="ofz"><div class="wrap">
+    <div class="ofz-txt"><div>
+      <span class="ofz-tag">Oferta por tiempo limitado</span>
+      <h2>${desc ? `$${desc} de descuento en ` : "Precio especial en "}${esc(lista)}.</h2>
+      <p>${h ? `Válido ${finTexto(h)} o hasta agotar stock.` : "Hasta agotar stock."}</p></div>
+      <div class="ofz-cta"><a class="btn ofz-btn" href="#/ofertas">Ver ofertas</a>${reloj(h)}</div>
+    </div>
+    <div class="ofz-grid">${gs.slice(0, 4).map(tarjeta).join("")}</div>
+  </div></section>`;
+}
 function ofertas() {
   const gs = ordenar(grupos(p => p.oferta));
   return `<div class="wrap"><div class="crumbs"><a href="#/">Inicio</a>›<b>Ofertas</b></div>
-    <div class="cat-head"><h1>Ofertas</h1><p>Precios especiales por tiempo limitado.</p></div>
+    <div class="cat-head"><h1>Ofertas</h1><p>Precios especiales por tiempo limitado${gs[0]?.hasta ? `, ${finTexto(gs[0].hasta)}` : ""}.</p>${reloj(gs[0]?.hasta)}</div>
     ${gs.length ? `<div class="grid">${gs.map(tarjeta).join("")}</div>` : `<div class="empty">No hay ofertas activas ahora mismo.</div>`}<div style="height:70px"></div></div>`;
 }
 
@@ -1192,6 +1242,8 @@ async function cargar(primera) {
     const mins = Math.round((Date.now() - Date.parse(D.revisado)) / 60000);
     $("upd").textContent = isFinite(mins) ? `Stock revisado hace ${mins < 60 ? mins + " min" : Math.round(mins / 60) + " h"}` : "";
     const msgs = cfg.mensajes || ["Precio de bodega", "Sellados con 12 meses de garantía", "Open Box con batería verificada", "Envíos a todo Ecuador", "Showrooms autorizados en Guaranda", "Stock en vivo: si está en la web, está en bodega", "Pedidos por WhatsApp", "Precios por mayor para negocios", "Contrato de compraventa con IMEI"];
+    const ofs = ofertasActivas(cfg), dmax = Math.max(0, ...ofs.map(o => +o.descuento || 0));
+    if (ofs.length && !cfg.mensajes) msgs.unshift(`🔥 Oferta: ${dmax ? `-$${dmax} en ` : ""}${[...new Set(ofs.map(o => nombre(o.modelo)))].join(", ").replace(/, ([^,]*)$/, " y $1")} ${finTexto(ofs[0].hasta)}`.trim());
     $("ticker").innerHTML = [...msgs, ...msgs].map(m => `<span>${esc(m)}</span>`).join("");
     ruta(); pintarCarrito();
   } catch {
