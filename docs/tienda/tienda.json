@@ -13,13 +13,24 @@
     "IPHONE 17E",
     "IPHONE 16"
   ],
-  "ofertas": [],
-  "_ofertas_ejemplo": [
+  "ofertas": [
     {
       "modelo": "IPHONE 16",
-      "lista": "nuevos",
-      "descuento": 30,
-      "texto": "Precio especial esta semana"
+      "descuento": 60,
+      "texto": "Oferta -$60",
+      "hasta": "2026-11-26"
+    },
+    {
+      "modelo": "IPHONE 16 PRO",
+      "descuento": 60,
+      "texto": "Oferta -$60",
+      "hasta": "2026-11-26"
+    },
+    {
+      "modelo": "IPHONE 16 PRO MAX",
+      "descuento": 60,
+      "texto": "Oferta -$60",
+      "hasta": "2026-11-26"
     }
   ],
   "_imagenes_ayuda": "Imágenes oficiales de cada producto (de la web del fabricante). El nombre del modelo va como en el stock; el más específico gana. Para ligar una imagen a un color: {\"url\": \"...\", \"color\": \"ORANGE\"}. La web las recorta y centra solas para que todas se vean del mismo tamaño.",
@@ -538,5 +549,6 @@
         "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-gray-camo-screenshot-01-en-13sep22"
       }
     ]
-  }
+  },
+  "_ofertas_ayuda": "Cada oferta: modelo (como en el stock), descuento en dólares, texto de la etiqueta y \"hasta\" (AAAA-MM-DD, vale todo ese día). Opcional \"lista\": \"nuevos\" u \"openbox\" para limitarla. Al pasar la fecha la oferta desaparece sola de la web y de la app."
 }
