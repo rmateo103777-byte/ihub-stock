@@ -386,16 +386,6 @@
   },
   {
    "lista": "nuevos",
-   "modelo": "IPHONE 16",
-   "categoria": "iphone",
-   "color": "BLACK",
-   "capacidad": "128GB",
-   "bateria": 100,
-   "sim": "Chip físico",
-   "precio": 879.99
-  },
-  {
-   "lista": "nuevos",
    "modelo": "IPHONE DUO",
    "categoria": "iphone",
    "color": "STAR WHITE",
@@ -759,8 +749,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-24T23:37:37+00:00",
- "revisado": "2026-11-25T14:36:20+00:00",
+ "actualizado": "2026-11-25T15:40:09+00:00",
+ "revisado": "2026-11-25T15:40:09+00:00",
  "noticias": null,
  "ingresos": [
   {
