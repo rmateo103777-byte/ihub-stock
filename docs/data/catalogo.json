@@ -547,16 +547,6 @@
   },
   {
    "lista": "gadgets",
-   "modelo": "AIRPODS 5 GEN (WCC)",
-   "categoria": "otros",
-   "color": "WHITE",
-   "capacidad": "",
-   "bateria": 100,
-   "sim": "",
-   "precio": 204.99
-  },
-  {
-   "lista": "gadgets",
    "modelo": "AIRPODS PRO 3 GEN",
    "categoria": "otros",
    "color": "WHITE",
@@ -750,8 +740,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-25T16:44:53+00:00",
- "revisado": "2026-11-25T17:45:52+00:00",
+ "actualizado": "2026-11-25T18:44:58+00:00",
+ "revisado": "2026-11-25T18:44:58+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -812,10 +802,6 @@
   },
   {
    "clave": "gadgets|AFTERGLOW WAVE WIRELESS NINTENDO|PURPLE|",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|AIRPODS 5 GEN (WCC)|WHITE|",
    "desde": "2026-11-18T19:39:52+00:00"
   },
   {
