@@ -46,7 +46,7 @@
    "categoria": "iphone",
    "color": "DEEP PURPLE",
    "capacidad": "512GB",
-   "bateria": 83,
+   "bateria": 84,
    "sim": "eSIM",
    "precio": 629.99
   },
@@ -126,7 +126,7 @@
    "categoria": "iphone",
    "color": "BLACK TITANIUM",
    "capacidad": "512GB",
-   "bateria": 83,
+   "bateria": 84,
    "sim": "eSIM",
    "precio": 789.99
   },
@@ -186,7 +186,7 @@
    "categoria": "iphone",
    "color": "BLACK",
    "capacidad": "256GB",
-   "bateria": 90,
+   "bateria": 92,
    "sim": "eSIM",
    "precio": 809.99
   },
@@ -256,7 +256,7 @@
    "categoria": "iphone",
    "color": "DESERT TITANIUM",
    "capacidad": "128GB",
-   "bateria": 89,
+   "bateria": 92,
    "sim": "eSIM",
    "precio": 855.0
   },
@@ -289,16 +289,6 @@
    "bateria": 91,
    "sim": "eSIM",
    "precio": 919.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 17",
-   "categoria": "iphone",
-   "color": "BLACK",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "eSIM",
-   "precio": 885.0
   },
   {
    "lista": "openbox",
@@ -740,8 +730,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-25T18:44:58+00:00",
- "revisado": "2026-11-25T18:44:58+00:00",
+ "actualizado": "2026-11-25T19:51:02+00:00",
+ "revisado": "2026-11-25T19:51:02+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -801,26 +791,6 @@
    "desde": "2026-11-19T21:43:59+00:00"
   },
   {
-   "clave": "gadgets|AFTERGLOW WAVE WIRELESS NINTENDO|PURPLE|",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|AIRPODS PRO 3 GEN|WHITE|",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|APPLE PENCIL PRO|WHITE|",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|APPLE WATCH S12 46MM|SPACE GRAY|32GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|APPLE WATCH SE 3 44MM|MIDNIGHT|32GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
    "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|BLACK TITANIUM|64GB",
    "desde": "2026-11-25T16:44:53+00:00"
   },
@@ -829,56 +799,8 @@
    "desde": "2026-11-19T21:43:59+00:00"
   },
   {
-   "clave": "gadgets|IPAD A16 11VA GEN 11\"|BLUE|128GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|IPAD AIR M4 11\"|BLUE|128GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|IPAD AIR M4 11\"|PURPLE|128GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|IPAD AIR M4 11\"|STARLIGHT|128GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
    "clave": "gadgets|MACBOOK AIR M5 13\"|MIDNIGHT|512GB",
    "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "gadgets|MACBOOK AIR M5 13\"|SILVER|512GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|MACBOOK AIR M5 13\"|SKY BLUE|512GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|MACBOOK NEO|SILVER|256GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|MACBOOK NEO|BLUSH|512GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|MACBOOK NEO|INDIGO|512GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|ORIGINAL 20W USB-C POWER ADAPTER|WHITE|",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|REDMI PAD 2 8GB RAM|GRAPHITE GRAY|256GB",
-   "desde": "2026-11-18T19:39:52+00:00"
-  },
-  {
-   "clave": "gadgets|REDMI PAD 2 8GB RAM|LAVENDER PURPLE|256GB",
-   "desde": "2026-11-18T19:39:52+00:00"
   }
  ]
 }
