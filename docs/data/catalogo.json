@@ -272,16 +272,6 @@
   },
   {
    "lista": "openbox",
-   "modelo": "IPHONE 16 PRO MAX",
-   "categoria": "iphone",
-   "color": "BLACK TITANIUM",
-   "capacidad": "512GB",
-   "bateria": 88,
-   "sim": "eSIM",
-   "precio": 959.99
-  },
-  {
-   "lista": "openbox",
    "modelo": "IPHONE 17 AIR",
    "categoria": "iphone",
    "color": "LIGHT GOLD",
@@ -611,6 +601,17 @@
    "lista": "gadgets",
    "modelo": "APPLE WATCH ULTRA 4 49MM",
    "categoria": "otros",
+   "color": "BLACK TITANIUM",
+   "capacidad": "64GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 949.0,
+   "grupo": "watch"
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "APPLE WATCH ULTRA 4 49MM",
+   "categoria": "otros",
    "color": "NATURAL TITANIUM",
    "capacidad": "64GB",
    "bateria": 100,
@@ -749,8 +750,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-25T15:40:09+00:00",
- "revisado": "2026-11-25T15:40:09+00:00",
+ "actualizado": "2026-11-25T16:44:53+00:00",
+ "revisado": "2026-11-25T16:44:53+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -798,10 +799,6 @@
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
-   "clave": "openbox|IPHONE 16 PRO MAX|BLACK TITANIUM|512GB",
-   "desde": "2026-11-23T17:53:47+00:00"
-  },
-  {
    "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM BLACK|512GB",
    "desde": "2026-11-19T21:43:59+00:00"
   },
@@ -836,6 +833,10 @@
   {
    "clave": "gadgets|APPLE WATCH SE 3 44MM|MIDNIGHT|32GB",
    "desde": "2026-11-18T19:39:52+00:00"
+  },
+  {
+   "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|BLACK TITANIUM|64GB",
+   "desde": "2026-11-25T16:44:53+00:00"
   },
   {
    "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|NATURAL TITANIUM|64GB",
