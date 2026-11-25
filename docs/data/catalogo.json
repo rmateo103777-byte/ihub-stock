@@ -26,7 +26,7 @@
    "categoria": "iphone",
    "color": "SPACE BLACK",
    "capacidad": "256GB",
-   "bateria": 73,
+   "bateria": 78,
    "sim": "eSIM",
    "precio": 599.99
   },
@@ -39,26 +39,6 @@
    "bateria": 72,
    "sim": "eSIM",
    "precio": 619.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 14 PRO MAX",
-   "categoria": "iphone",
-   "color": "DEEP PURPLE",
-   "capacidad": "512GB",
-   "bateria": 84,
-   "sim": "eSIM",
-   "precio": 629.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 14 PRO MAX",
-   "categoria": "iphone",
-   "color": "SPACE BLACK",
-   "capacidad": "512GB",
-   "bateria": 78,
-   "sim": "eSIM",
-   "precio": 629.99
   },
   {
    "lista": "openbox",
@@ -112,31 +92,11 @@
   },
   {
    "lista": "openbox",
-   "modelo": "IPHONE 15 PRO",
-   "categoria": "iphone",
-   "color": "NATURAL TITANIUM",
-   "capacidad": "128GB",
-   "bateria": 82,
-   "sim": "eSIM",
-   "precio": 705.0
-  },
-  {
-   "lista": "openbox",
    "modelo": "IPHONE 15 PRO MAX",
    "categoria": "iphone",
    "color": "BLACK TITANIUM",
    "capacidad": "512GB",
-   "bateria": 84,
-   "sim": "eSIM",
-   "precio": 789.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 15 PRO MAX",
-   "categoria": "iphone",
-   "color": "BLUE TITANIUM",
-   "capacidad": "512GB",
-   "bateria": 78,
+   "bateria": 85,
    "sim": "eSIM",
    "precio": 789.99
   },
@@ -296,7 +256,7 @@
    "categoria": "iphone",
    "color": "LAVENDER",
    "capacidad": "256GB",
-   "bateria": 94,
+   "bateria": 95,
    "sim": "eSIM",
    "precio": 885.0
   },
@@ -730,20 +690,12 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-25T21:51:38+00:00",
- "revisado": "2026-11-25T21:51:38+00:00",
+ "actualizado": "2026-11-25T22:48:18+00:00",
+ "revisado": "2026-11-25T22:48:18+00:00",
  "noticias": null,
  "ingresos": [
   {
    "clave": "openbox|IPHONE 14 PRO|DEEP PURPLE|512GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 14 PRO MAX|DEEP PURPLE|512GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 14 PRO MAX|SPACE BLACK|512GB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
@@ -756,10 +708,6 @@
   },
   {
    "clave": "openbox|IPHONE 15 PRO MAX|BLACK TITANIUM|512GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 15 PRO MAX|BLUE TITANIUM|512GB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
