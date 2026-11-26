@@ -92,16 +92,6 @@
   },
   {
    "lista": "openbox",
-   "modelo": "IPHONE 15 PRO MAX",
-   "categoria": "iphone",
-   "color": "BLACK TITANIUM",
-   "capacidad": "512GB",
-   "bateria": 85,
-   "sim": "eSIM",
-   "precio": 789.99
-  },
-  {
-   "lista": "openbox",
    "modelo": "IPHONE 16",
    "categoria": "iphone",
    "color": "BLACK",
@@ -690,8 +680,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-25T22:48:18+00:00",
- "revisado": "2026-11-26T15:39:22+00:00",
+ "actualizado": "2026-11-26T16:44:22+00:00",
+ "revisado": "2026-11-26T16:44:22+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -704,10 +694,6 @@
   },
   {
    "clave": "openbox|IPHONE 15 PLUS|PINK|256GB",
-   "desde": "2026-11-19T23:38:28+00:00"
-  },
-  {
-   "clave": "openbox|IPHONE 15 PRO MAX|BLACK TITANIUM|512GB",
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
