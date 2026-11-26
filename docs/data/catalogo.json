@@ -531,17 +531,6 @@
    "lista": "gadgets",
    "modelo": "APPLE WATCH ULTRA 4 49MM",
    "categoria": "otros",
-   "color": "BLACK TITANIUM",
-   "capacidad": "64GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 949.0,
-   "grupo": "watch"
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "APPLE WATCH ULTRA 4 49MM",
-   "categoria": "otros",
    "color": "NATURAL TITANIUM",
    "capacidad": "64GB",
    "bateria": 100,
@@ -574,16 +563,6 @@
    "modelo": "IPAD AIR M4 11\"",
    "categoria": "ipad",
    "color": "PURPLE",
-   "capacidad": "128GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 859.99
-  },
-  {
-   "lista": "gadgets",
-   "modelo": "IPAD AIR M4 11\"",
-   "categoria": "ipad",
-   "color": "STARLIGHT",
    "capacidad": "128GB",
    "bateria": 100,
    "sim": "",
@@ -680,8 +659,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-26T16:44:22+00:00",
- "revisado": "2026-11-26T17:50:24+00:00",
+ "actualizado": "2026-11-26T20:53:17+00:00",
+ "revisado": "2026-11-26T20:53:17+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -723,10 +702,6 @@
   {
    "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM WHITESILVER|512GB",
    "desde": "2026-11-19T21:43:59+00:00"
-  },
-  {
-   "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|BLACK TITANIUM|64GB",
-   "desde": "2026-11-25T16:44:53+00:00"
   },
   {
    "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|NATURAL TITANIUM|64GB",
