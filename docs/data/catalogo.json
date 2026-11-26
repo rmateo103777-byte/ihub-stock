@@ -316,6 +316,36 @@
   },
   {
    "lista": "nuevos",
+   "modelo": "IPHONE 17",
+   "categoria": "iphone",
+   "color": "LAVENDER",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "Chip físico",
+   "precio": 1059.99
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "IPHONE 17",
+   "categoria": "iphone",
+   "color": "MIST BLUE",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "Chip físico",
+   "precio": 1059.99
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "IPHONE 17 PRO MAX",
+   "categoria": "iphone",
+   "color": "DEEP BLUE",
+   "capacidad": "256GB",
+   "bateria": 100,
+   "sim": "eSIM",
+   "precio": 1369.99
+  },
+  {
+   "lista": "nuevos",
    "modelo": "IPHONE DUO",
    "categoria": "iphone",
    "color": "STAR WHITE",
@@ -355,6 +385,17 @@
    "bateria": 100,
    "sim": "",
    "precio": 1009.99,
+   "grupo": "android_alta"
+  },
+  {
+   "lista": "nuevos",
+   "modelo": "SAMSUNG GALAXY S26 ULTRA",
+   "categoria": "android",
+   "color": "BLACK",
+   "capacidad": "512GB",
+   "bateria": 100,
+   "sim": "",
+   "precio": 1269.99,
    "grupo": "android_alta"
   },
   {
@@ -484,6 +525,16 @@
    "bateria": 100,
    "sim": "",
    "precio": 100.0
+  },
+  {
+   "lista": "gadgets",
+   "modelo": "AIRPODS 5 GEN (WCC)",
+   "categoria": "otros",
+   "color": "WHITE",
+   "capacidad": "",
+   "bateria": 100,
+   "sim": "",
+   "precio": 204.99
   },
   {
    "lista": "gadgets",
@@ -659,8 +710,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-26T20:53:17+00:00",
- "revisado": "2026-11-26T20:53:17+00:00",
+ "actualizado": "2026-11-26T21:47:48+00:00",
+ "revisado": "2026-11-26T21:47:48+00:00",
  "noticias": null,
  "ingresos": [
   {
@@ -692,24 +743,24 @@
    "desde": "2026-11-19T23:38:28+00:00"
   },
   {
-   "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM BLACK|512GB",
-   "desde": "2026-11-19T21:43:59+00:00"
+   "clave": "nuevos|IPHONE 17|LAVENDER|256GB",
+   "desde": "2026-11-26T21:47:48+00:00"
   },
   {
-   "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM GRAY|512GB",
-   "desde": "2026-11-19T21:43:59+00:00"
+   "clave": "nuevos|IPHONE 17|MIST BLUE|256GB",
+   "desde": "2026-11-26T21:47:48+00:00"
   },
   {
-   "clave": "nuevos|SAMSUNG GALAXY S25 ULTRA|TITANIUM WHITESILVER|512GB",
-   "desde": "2026-11-19T21:43:59+00:00"
+   "clave": "nuevos|IPHONE 17 PRO MAX|DEEP BLUE|256GB",
+   "desde": "2026-11-26T21:47:48+00:00"
   },
   {
-   "clave": "gadgets|APPLE WATCH ULTRA 4 49MM|NATURAL TITANIUM|64GB",
-   "desde": "2026-11-19T21:43:59+00:00"
+   "clave": "nuevos|SAMSUNG GALAXY S26 ULTRA|BLACK|512GB",
+   "desde": "2026-11-26T21:47:48+00:00"
   },
   {
-   "clave": "gadgets|MACBOOK AIR M5 13\"|MIDNIGHT|512GB",
-   "desde": "2026-11-19T21:43:59+00:00"
+   "clave": "gadgets|AIRPODS 5 GEN (WCC)|WHITE|",
+   "desde": "2026-11-26T21:47:48+00:00"
   }
  ]
 }
