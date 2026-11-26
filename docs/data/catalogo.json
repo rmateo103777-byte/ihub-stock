@@ -2,16 +2,6 @@
  "productos": [
   {
    "lista": "openbox",
-   "modelo": "IPHONE 14",
-   "categoria": "iphone",
-   "color": "PURPLE",
-   "capacidad": "128GB",
-   "bateria": 85,
-   "sim": "eSIM",
-   "precio": 459.99
-  },
-  {
-   "lista": "openbox",
    "modelo": "IPHONE 14 PRO",
    "categoria": "iphone",
    "color": "DEEP PURPLE",
@@ -69,16 +59,6 @@
    "bateria": 83,
    "sim": "eSIM",
    "precio": 579.99
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 15 PLUS",
-   "categoria": "iphone",
-   "color": "PINK",
-   "capacidad": "128GB",
-   "bateria": 86,
-   "sim": "eSIM",
-   "precio": 639.99
   },
   {
    "lista": "openbox",
@@ -166,7 +146,7 @@
    "categoria": "iphone",
    "color": "BLACK",
    "capacidad": "128GB",
-   "bateria": 89,
+   "bateria": 94,
    "sim": "eSIM",
    "precio": 755.0
   },
@@ -186,7 +166,7 @@
    "categoria": "iphone",
    "color": "TEAL",
    "capacidad": "128GB",
-   "bateria": 88,
+   "bateria": 92,
    "sim": "eSIM",
    "precio": 755.0
   },
@@ -209,16 +189,6 @@
    "bateria": 92,
    "sim": "eSIM",
    "precio": 855.0
-  },
-  {
-   "lista": "openbox",
-   "modelo": "IPHONE 16 PRO",
-   "categoria": "iphone",
-   "color": "BLACK TITANIUM",
-   "capacidad": "256GB",
-   "bateria": 90,
-   "sim": "eSIM",
-   "precio": 869.99
   },
   {
    "lista": "openbox",
@@ -246,7 +216,7 @@
    "categoria": "iphone",
    "color": "LAVENDER",
    "capacidad": "256GB",
-   "bateria": 95,
+   "bateria": 99,
    "sim": "eSIM",
    "precio": 885.0
   },
@@ -710,8 +680,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-26T21:47:48+00:00",
- "revisado": "2026-11-26T21:47:48+00:00",
+ "actualizado": "2026-11-26T22:49:52+00:00",
+ "revisado": "2026-11-26T22:49:52+00:00",
  "noticias": null,
  "ingresos": [
   {
