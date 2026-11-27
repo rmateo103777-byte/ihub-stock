@@ -257,8 +257,6 @@ footer a { color: #fff; font-weight: 600; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .card { animation: up .35s ease both; } @keyframes up { from { transform: translateY(6px); } }
-  .hero-art.flota img { animation: flota 5s ease-in-out infinite; }
-  @keyframes flota { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-14px) rotate(3deg); } }
 }
 
 /* Ofertas */
@@ -519,7 +517,6 @@ function hace(iso) {
 /* ---------- Banner del producto estrella ---------- */
 function renderHero() {
   if (HERO) return renderHeroCampana();
-  $("hero-art").classList.remove("flota");
   $("hero-eyebrow").textContent = "Producto estrella";
   $("hero-title").innerHTML = "iPhone <em>18 Pro</em> y <em>18 Pro Max</em>";
   $("hero-sub").textContent = "Nuevos sellados · eSIM · garantía de 1 año con contrato de compraventa";
@@ -554,7 +551,7 @@ function renderHeroCampana() {
   $("hero-sub").textContent = MAYOR ? "Sellado de fábrica · garantía de 1 año · precio por mayor (sin envío)" : (HERO.subtitulo || "");
   $("hero-ver").textContent = "Ver en el stock";
   const f = HERO.fotos.find(x => items.some(p => p.color === x.color)) || HERO.fotos[0];
-  $("hero-art").hidden = true; $("hero-art").classList.add("flota"); document.querySelector(".hero-card").classList.remove("has-photo");
+  $("hero-art").hidden = true; document.querySelector(".hero-card").classList.remove("has-photo");
   if (f?.url) {
     const foto = new Image(); foto.alt = nombre;
     foto.onload = () => { $("hero-art").replaceChildren(foto); $("hero-art").hidden = false; document.querySelector(".hero-card").classList.add("has-photo"); };
