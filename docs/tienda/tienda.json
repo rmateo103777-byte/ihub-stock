@@ -15,22 +15,277 @@
   ],
   "ofertas": [
     {
+      "modelo": "IPHONE 14 PRO",
+      "lista": "openbox",
+      "descuento": 75,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE 15",
+      "lista": "openbox",
+      "descuento": 80,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE 15 PLUS",
+      "lista": "openbox",
+      "descuento": 70,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
       "modelo": "IPHONE 16",
+      "lista": "openbox",
+      "descuento": 80,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE 16 PLUS",
+      "lista": "openbox",
       "descuento": 60,
-      "texto": "Oferta -$60",
-      "hasta": "2026-11-26"
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
     },
     {
       "modelo": "IPHONE 16 PRO",
+      "lista": "openbox",
       "descuento": 60,
-      "texto": "Oferta -$60",
-      "hasta": "2026-11-26"
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
     },
     {
-      "modelo": "IPHONE 16 PRO MAX",
+      "modelo": "IPHONE 17 AIR",
+      "lista": "openbox",
       "descuento": 60,
-      "texto": "Oferta -$60",
-      "hasta": "2026-11-26"
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE 17",
+      "lista": "openbox",
+      "descuento": 60,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE 17 PRO",
+      "lista": "openbox",
+      "descuento": 60,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE 17E",
+      "lista": "openbox",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "SAMSUNG GALAXY S23 ULTRA",
+      "lista": "openbox",
+      "descuento": 80,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "SAMSUNG GALAXY S24 PLUS",
+      "lista": "openbox",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "SAMSUNG GALAXY S25 FE",
+      "lista": "openbox",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "SAMSUNG GALAXY S25 ULTRA",
+      "lista": "openbox",
+      "descuento": 70,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE 17",
+      "lista": "nuevos",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE 17 PRO MAX",
+      "lista": "nuevos",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPHONE DUO",
+      "lista": "nuevos",
+      "descuento": 40,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "SAMSUNG GALAXY S25 ULTRA",
+      "lista": "nuevos",
+      "descuento": 60,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "SAMSUNG GALAXY S26 ULTRA",
+      "lista": "nuevos",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "XIAOMI 17T 12RAM",
+      "lista": "nuevos",
+      "descuento": 60,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "XIAOMI 17T PRO 12RAM",
+      "lista": "nuevos",
+      "descuento": 60,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "XIAOMI REDMI 15C",
+      "lista": "nuevos",
+      "descuento": 15,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "XIAOMI REDMI NOTE 17 PRO 8GB RAM",
+      "lista": "nuevos",
+      "descuento": 60,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "XIAOMI REDMI NOTE 17 PRO MAX 8GB RAM",
+      "lista": "nuevos",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "ZTE NUVIA V80 MAX",
+      "lista": "nuevos",
+      "descuento": 15,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "AFTERGLOW WAVE WIRELESS NINTENDO",
+      "lista": "gadgets",
+      "descuento": 15,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "AIRPODS 5 GEN (WCC)",
+      "lista": "gadgets",
+      "descuento": 15,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "AIRPODS PRO 3 GEN",
+      "lista": "gadgets",
+      "descuento": 20,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "APPLE PENCIL PRO",
+      "lista": "gadgets",
+      "descuento": 15,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "APPLE WATCH S12 46MM",
+      "lista": "gadgets",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "APPLE WATCH SE 3 44MM",
+      "lista": "gadgets",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "APPLE WATCH ULTRA 4 49MM",
+      "lista": "gadgets",
+      "descuento": 50,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPAD A16 11VA GEN 11\"",
+      "lista": "gadgets",
+      "descuento": 40,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "IPAD AIR M4 11\"",
+      "lista": "gadgets",
+      "descuento": 40,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "MACBOOK AIR M5 13\"",
+      "lista": "gadgets",
+      "descuento": 70,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "MACBOOK NEO",
+      "lista": "gadgets",
+      "descuento": 40,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "ORIGINAL 20W USB-C POWER ADAPTER",
+      "lista": "gadgets",
+      "descuento": 10,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "REDMI PAD 2 8GB RAM",
+      "lista": "gadgets",
+      "descuento": 20,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
+    },
+    {
+      "modelo": "DUALSENSE PS5 COSMIC RED",
+      "lista": "gadgets",
+      "descuento": 15,
+      "texto": "Black Friday",
+      "hasta": "2026-11-29"
     }
   ],
   "_imagenes_ayuda": "Imágenes oficiales de cada producto (de la web del fabricante). El nombre del modelo va como en el stock; el más específico gana. Para ligar una imagen a un color: {\"url\": \"...\", \"color\": \"ORANGE\"}. La web las recorta y centra solas para que todas se vean del mismo tamaño.",
@@ -550,5 +805,6 @@
       }
     ]
   },
-  "_ofertas_ayuda": "Cada oferta: modelo (como en el stock), descuento en dólares, texto de la etiqueta y \"hasta\" (AAAA-MM-DD, vale todo ese día). Opcional \"lista\": \"nuevos\" u \"openbox\" para limitarla. Al pasar la fecha la oferta desaparece sola de la web y de la app."
+  "_ofertas_ayuda": "Cada oferta: modelo (como en el stock), descuento en dólares, texto de la etiqueta y \"hasta\" (AAAA-MM-DD, vale todo ese día). Opcional \"lista\": \"nuevos\" u \"openbox\" para limitarla. Al pasar la fecha la oferta desaparece sola de la web y de la app.",
+  "campana": "Black Friday IHUB"
 }
