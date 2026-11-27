@@ -1148,8 +1148,8 @@ function promo() {
   const h = gs.find(g => g.hasta)?.hasta;
   return `<section class="ofz"><div class="wrap">
     <div class="ofz-txt"><div>
-      <span class="ofz-tag">Oferta por tiempo limitado</span>
-      <h2>${desc ? `$${desc} de descuento en ` : "Precio especial en "}${esc(lista)}.</h2>
+      <span class="ofz-tag">${esc(D.cfg.campana || "Oferta por tiempo limitado")}</span>
+      <h2>${modelos.length > 4 ? `Hasta $${desc} de descuento en todo el stock.` : `${desc ? `$${desc} de descuento en ` : "Precio especial en "}${esc(lista)}.`}</h2>
       <p>${h ? `Válido ${finTexto(h)} o hasta agotar stock.` : "Hasta agotar stock."}</p></div>
       <div class="ofz-cta"><a class="btn ofz-btn" href="#/ofertas">Ver ofertas</a>${reloj(h)}</div>
     </div>
@@ -1245,7 +1245,8 @@ async function cargar(primera) {
     $("upd").textContent = isFinite(mins) ? `Stock revisado hace ${mins < 60 ? mins + " min" : Math.round(mins / 60) + " h"}` : "";
     const msgs = cfg.mensajes || ["Precio de bodega", "Sellados con 12 meses de garantía", "Open Box con batería verificada", "Envíos a todo Ecuador", "Showrooms autorizados en Guaranda", "Stock en vivo: si está en la web, está en bodega", "Pedidos por WhatsApp", "Precios por mayor para negocios", "Contrato de compraventa con IMEI"];
     const ofs = ofertasActivas(cfg), dmax = Math.max(0, ...ofs.map(o => +o.descuento || 0));
-    if (ofs.length && !cfg.mensajes) msgs.unshift(`🔥 Oferta: ${dmax ? `-$${dmax} en ` : ""}${[...new Set(ofs.map(o => nombre(o.modelo)))].join(", ").replace(/, ([^,]*)$/, " y $1")} ${finTexto(ofs[0].hasta)}`.trim());
+    if (ofs.length > 4 && !cfg.mensajes) msgs.unshift(`🔥 ${cfg.campana || "Ofertas"}: hasta -$${dmax} en todo el stock ${finTexto(ofs[0].hasta)}`.trim());
+    else if (ofs.length && !cfg.mensajes) msgs.unshift(`🔥 Oferta: ${dmax ? `-$${dmax} en ` : ""}${[...new Set(ofs.map(o => nombre(o.modelo)))].join(", ").replace(/, ([^,]*)$/, " y $1")} ${finTexto(ofs[0].hasta)}`.trim());
     $("ticker").innerHTML = [...msgs, ...msgs].map(m => `<span>${esc(m)}</span>`).join("");
     ruta(); pintarCarrito();
   } catch {
