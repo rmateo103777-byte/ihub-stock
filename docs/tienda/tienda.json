@@ -803,6 +803,48 @@
       {
         "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-gray-camo-screenshot-01-en-13sep22"
       }
+    ],
+    "SAMSUNG GALAXY S26 ULTRA": [
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/sm5s948bzkdeub/gallery/uk-galaxy-s26-ultra-s948-606201-sm5s948bzkdeub-thumb-554577878?$650_519_PNG$",
+        "color": "BLACK"
+      }
+    ],
+    "SAMSUNG GALAXY S25 FE": [
+      {
+        "url": "https://images.samsung.com/is/image/samsung/p6pim/uk/sm-s731bdbieub/gallery/uk-galaxy-s25-fe-sm-s731-sm-s731bdbieub-thumb-548911133?$650_519_PNG$",
+        "color": "NAVY"
+      }
+    ],
+    "XIAOMI REDMI NOTE 17 PRO MAX": [
+      {
+        "url": "https://i02.appmifile.com/786_operatorx_operatorx_xm/25/08/2026/a4368fcd68decc4b03917afe09fa51cd.png",
+        "color": "BLACK"
+      }
+    ],
+    "XIAOMI REDMI NOTE 17 PRO": [
+      {
+        "url": "https://i02.appmifile.com/213_operatorx_operatorx_xm/25/08/2026/60f2d40dd431935a40de4da9cfc0fbf3.png",
+        "color": "BLACK"
+      },
+      {
+        "url": "https://i02.appmifile.com/803_operatorx_operatorx_xm/25/08/2026/6b06f67361454d7197c6ae5327c86df1.png",
+        "color": "PURPLE"
+      },
+      {
+        "url": "https://i02.appmifile.com/753_operatorx_operatorx_xm/25/08/2026/d7ad843aff63e72642ce94a8b7d6c8dd.png",
+        "color": "SKY BLUE"
+      }
+    ],
+    "DUALSENSE PS5 COSMIC RED": [
+      {
+        "url": "https://gmedia.playstation.com/is/image/SIEPDC/dualsense-cosmic-red-screenshot-04-en-08dec21"
+      }
+    ],
+    "AFTERGLOW WAVE WIRELESS": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0556/5795/5430/files/2_TB-Afterglow-Wave-Wireless-NSW-2-Purple_2400x1350_751bb367-f2ed-4079-8ac6-d5a7a53bdade.png?width=1200"
+      }
     ]
   },
   "_ofertas_ayuda": "Cada oferta: modelo (como en el stock), descuento en dólares, texto de la etiqueta y \"hasta\" (AAAA-MM-DD, vale todo ese día). Opcional \"lista\": \"nuevos\" u \"openbox\" para limitarla. Al pasar la fecha la oferta desaparece sola de la web y de la app.",
