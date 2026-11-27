@@ -741,7 +741,8 @@ function tarjetaAgotada(modelo) {
 /* ---------- Páginas ---------- */
 function inicio() {
   const cfg = D.cfg, todos = grupos();
-  const destacado = cfg.destacado || "IPHONE 18 PRO MAX";
+  const hc = cfg.hero_campana && Date.now() <= finDe(cfg.hero_campana.hasta) ? cfg.hero_campana : {};  // portada temporal (vuelve sola al pasar "hasta")
+  const destacado = hc.destacado || cfg.destacado || "IPHONE 18 PRO MAX";
   const heroImg = cfg.imagen_destacado || fotoReal(destacado, "") || IMG960(imagen(destacado));
   const sellados = ordenar(todos.filter(g => g.sec === "iphone" && g.lista === "nuevos"));
   const agotados = (cfg.siempre || []).filter(m => !sellados.some(g => g.modelo === m)).slice(0, Math.max(0, 8 - sellados.length));
@@ -758,14 +759,14 @@ function inicio() {
   return `
   <section class="hero"><div class="wrap">
     <div>
-      <h1>${esc(cfg.titular || "Tu próximo iPhone, a precio de bodega.")}</h1>
-      <p>${esc(cfg.subtitulo || "Directo de nuestra bodega a tu puerta. Sellados de fábrica con garantía de 12 meses y Open Box verificado.")}</p>
+      <h1>${esc(hc.titular || cfg.titular || "Tu próximo iPhone, a precio de bodega.")}</h1>
+      <p>${esc(hc.subtitulo || cfg.subtitulo || "Directo de nuestra bodega a tu puerta. Sellados de fábrica con garantía de 12 meses y Open Box verificado.")}</p>
       <div class="btns"><a class="btn btn-p" href="#/c/iphone/sellados">Ver Sellados</a><a class="btn btn-o" href="#/c/iphone/openbox">Ver Open Box</a></div>
     </div>
     <div class="art"><div class="glow"></div>
       <a href="#/p/nuevos/${slug(destacado)}" aria-label="${esc(nombre(destacado))}">${heroImg ? `<img ${/^https?:/.test(heroImg) && !/wikimedia/.test(heroImg) ? "data-nz" : "src"}="${heroImg}" alt="${esc(nombre(destacado))}">` : ""}</a>
       <span class="pill a"><i></i>Stock en vivo · ${enStock} equipos</span>
-      <span class="pill b">Nuevo: ${esc(nombre(destacado))}</span>
+      <span class="pill b">${esc(hc.etiqueta || "Nuevo: " + nombre(destacado))}</span>
     </div>
   </div></section>
   ${promo()}
