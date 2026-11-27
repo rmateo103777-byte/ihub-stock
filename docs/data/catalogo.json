@@ -286,16 +286,6 @@
   },
   {
    "lista": "nuevos",
-   "modelo": "IPHONE 17",
-   "categoria": "iphone",
-   "color": "MIST BLUE",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "Chip físico",
-   "precio": 1059.99
-  },
-  {
-   "lista": "nuevos",
    "modelo": "IPHONE DUO",
    "categoria": "iphone",
    "color": "STAR WHITE",
@@ -541,6 +531,16 @@
   },
   {
    "lista": "gadgets",
+   "modelo": "DUALSENSE PS5 COSMIC RED",
+   "categoria": "palancas",
+   "color": "",
+   "capacidad": "",
+   "bateria": null,
+   "sim": "",
+   "precio": 104.99
+  },
+  {
+   "lista": "gadgets",
    "modelo": "IPAD A16 11VA GEN 11\"",
    "categoria": "ipad",
    "color": "BLUE",
@@ -660,16 +660,12 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-27T16:45:48+00:00",
- "revisado": "2026-11-27T16:45:48+00:00",
+ "actualizado": "2026-11-27T17:51:39+00:00",
+ "revisado": "2026-11-27T17:51:39+00:00",
  "noticias": null,
  "ingresos": [
   {
    "clave": "nuevos|IPHONE 17|LAVENDER|256GB",
-   "desde": "2026-11-26T21:47:48+00:00"
-  },
-  {
-   "clave": "nuevos|IPHONE 17|MIST BLUE|256GB",
    "desde": "2026-11-26T21:47:48+00:00"
   },
   {
@@ -679,6 +675,10 @@
   {
    "clave": "gadgets|AIRPODS 5 GEN (WCC)|WHITE|",
    "desde": "2026-11-26T21:47:48+00:00"
+  },
+  {
+   "clave": "gadgets|DUALSENSE PS5 COSMIC RED||",
+   "desde": "2026-11-27T17:51:39+00:00"
   }
  ]
 }
