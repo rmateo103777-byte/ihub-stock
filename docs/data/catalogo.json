@@ -56,7 +56,7 @@
    "categoria": "iphone",
    "color": "GREEN",
    "capacidad": "128GB",
-   "bateria": 84,
+   "bateria": 85,
    "sim": "eSIM",
    "precio": 579.99
   },
@@ -273,16 +273,6 @@
    "bateria": 100,
    "sim": "Chip físico",
    "precio": 1059.99
-  },
-  {
-   "lista": "nuevos",
-   "modelo": "IPHONE DUO",
-   "categoria": "iphone",
-   "color": "STAR WHITE",
-   "capacidad": "256GB",
-   "bateria": 100,
-   "sim": "",
-   "precio": 2589.99
   },
   {
    "lista": "nuevos",
@@ -630,8 +620,8 @@
    "precio": 295.0
   }
  ],
- "actualizado": "2026-11-27T19:53:21+00:00",
- "revisado": "2026-11-27T20:49:27+00:00",
+ "actualizado": "2026-11-27T21:49:59+00:00",
+ "revisado": "2026-11-27T21:49:59+00:00",
  "noticias": null,
  "ingresos": [
   {
