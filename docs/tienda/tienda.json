@@ -592,12 +592,12 @@
     ],
     "IPHONE DUO": [
       {
-        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-duo-finish-select-night-sky-202609?wid=900&hei=900&fmt=png-alpha",
-        "color": "NIGHT SKY"
-      },
-      {
         "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-duo-finish-select-star-white-202609?wid=900&hei=900&fmt=png-alpha",
         "color": "STAR WHITE"
+      },
+      {
+        "url": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-duo-finish-select-night-sky-202609?wid=900&hei=900&fmt=png-alpha",
+        "color": "NIGHT SKY"
       }
     ],
     "IPAD A16": [
