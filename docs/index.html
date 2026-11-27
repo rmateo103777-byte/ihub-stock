@@ -354,9 +354,9 @@ footer a { color: #fff; font-weight: 600; }
 <section class="hero" id="hero" hidden>
   <div class="hero-card">
     <div class="hero-copy">
-      <span class="eyebrow">Producto estrella</span>
-      <h2>iPhone <em>18 Pro</em> y <em>18 Pro Max</em></h2>
-      <p class="hero-sub">Nuevos sellados · eSIM · garantía de 1 año con contrato de compraventa</p>
+      <span class="eyebrow" id="hero-eyebrow">Producto estrella</span>
+      <h2 id="hero-title">iPhone <em>18 Pro</em> y <em>18 Pro Max</em></h2>
+      <p class="hero-sub" id="hero-sub">Nuevos sellados · eSIM · garantía de 1 año con contrato de compraventa</p>
       <div class="hero-models" id="hero-models"></div>
       <div class="hero-cta">
         <button class="btn primary" type="button" id="hero-ver">Ver colores y capacidades</button>
@@ -516,6 +516,11 @@ function hace(iso) {
 
 /* ---------- Banner del producto estrella ---------- */
 function renderHero() {
+  if (HERO) return renderHeroCampana();
+  $("hero-eyebrow").textContent = "Producto estrella";
+  $("hero-title").innerHTML = "iPhone <em>18 Pro</em> y <em>18 Pro Max</em>";
+  $("hero-sub").textContent = "Nuevos sellados · eSIM · garantía de 1 año con contrato de compraventa";
+  $("hero-ver").textContent = "Ver colores y capacidades";
   const star = DATA.filter(p => DESTACADOS.includes(p.modelo));
   $("hero").hidden = false;
   const foto = new Image();
@@ -537,7 +542,35 @@ function renderHero() {
   $("hero-wa").innerHTML = waIcon + "Reservar el mío";
   $("hero-wa").href = waLink("Hola IHUB, quiero reservar un iPhone 18 Pro / 18 Pro Max. ¿Qué colores y capacidades tienen?");
 }
+function renderHeroCampana() {
+  const m = HERO.destacado, items = DATA.filter(p => p.modelo === m);
+  const nombre = m.replace("IPHONE", "iPhone").replace(/ (PRO MAX|PRO|DUO|AIR|PLUS)\b/g, x => " " + x.trim()[0] + x.trim().slice(1).toLowerCase());
+  $("hero").hidden = false;
+  $("hero-eyebrow").textContent = CAMPANA || "Producto estrella";
+  $("hero-title").innerHTML = esc(nombre).replace(/^(iPhone) (.+)$/, "$1 <em>$2</em>");
+  $("hero-sub").textContent = MAYOR ? "Sellado de fábrica · garantía de 1 año · precio por mayor (sin envío)" : (HERO.subtitulo || "");
+  $("hero-ver").textContent = "Ver en el stock";
+  const f = HERO.fotos.find(x => items.some(p => p.color === x.color)) || HERO.fotos[0];
+  $("hero-art").hidden = true; document.querySelector(".hero-card").classList.remove("has-photo");
+  if (f?.url) {
+    const foto = new Image(); foto.alt = nombre;
+    foto.onload = () => { $("hero-art").replaceChildren(foto); $("hero-art").hidden = false; document.querySelector(".hero-card").classList.add("has-photo"); };
+    foto.src = f.url;
+  }
+  if (!items.length) {
+    $("hero-models").innerHTML = `<div class="hm"><div class="hm-name">${esc(nombre)}<small style="color:#9DB3CF;font:500 12px var(--body)">Agotado: pregunta por disponibilidad</small></div></div>`;
+  } else {
+    const min = Math.min(...items.map(p => p.precio)), antes = items.find(p => p.precio === min)?._antes;
+    const caps = [...new Set(items.map(p => p.capacidad))].join(" · ");
+    const dots = [...new Set(items.map(p => p.color))].map(c => `<i style="background:${swatch(c)}" title="${esc(c)}"></i>`).join("");
+    $("hero-models").innerHTML = `<div class="hm"><div class="hm-name">${esc(nombre)} <span style="font:500 12px var(--mono);color:#9DB3CF">${esc(caps)}</span><small>${dots}</small></div>
+      <div class="hm-price">${antes ? `<s style="opacity:.6;font-size:12px">${money(antes)}</s>` : (MAYOR ? "Por mayor" : "Precio")}<b>${money(min)}</b></div></div>`;
+  }
+  $("hero-wa").innerHTML = waIcon + (items.length ? "Lo quiero" : "Consultar");
+  $("hero-wa").href = waLink(`Hola IHUB, quiero el ${nombre}${MAYOR ? " por mayor" : " en oferta " + (CAMPANA || "")}`.trim() + ".");
+}
 $("hero-ver").addEventListener("click", () => {
+  if (HERO) { const t = HERO.destacado; state.q = t; $("q").value = t; state.lista = "todo"; state.cat = "todo"; render(); $("catalogo").scrollIntoView({ behavior: "smooth" }); return; }
   state.q = "18 PRO"; $("q").value = "18 PRO"; state.lista = "todo"; state.cat = "todo"; render();
   $("catalogo").scrollIntoView({ behavior: "smooth" });
 });
@@ -838,6 +871,7 @@ function quedan(h) {
 async function leerOfertas() {
   try { const r = await fetch("tienda/tienda.json?t=" + Date.now(), { cache: "no-store" }); if (!r.ok) return [];
     const cfg = await r.json(); CAMPANA = cfg.campana || "";
+    const hc = cfg.hero_campana; HERO = hc && Date.now() <= finDe(hc.hasta) ? { ...hc, fotos: (cfg.imagenes || {})[hc.destacado] || [] } : null;
     const now = Date.now(); return (cfg.ofertas || []).filter(o => now <= finDe(o.hasta) && (!o.desde || now >= Date.parse(o.desde + "T00:00:00-05:00")));
   } catch { return []; }
 }
@@ -850,7 +884,7 @@ function aplicarOfertas(productos, ofertas) {
     return { ...p, _antes: p.precio, precio: conOferta, _oferta: o.texto || "Oferta", _hasta: o.hasta || "" };
   });
 }
-let OFERTAS = [], CAMPANA = "";
+let OFERTAS = [], CAMPANA = "", HERO = null;
 function renderPromo() {
   const el = $("promo"), con = DATA.filter(p => p._oferta);
   if (!con.length) { el.hidden = true; if (state.lista === "oferta") state.lista = "todo"; return; }
