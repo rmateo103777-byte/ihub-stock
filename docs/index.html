@@ -837,7 +837,8 @@ function quedan(h) {
 }
 async function leerOfertas() {
   try { const r = await fetch("tienda/tienda.json?t=" + Date.now(), { cache: "no-store" }); if (!r.ok) return [];
-    const now = Date.now(); return ((await r.json()).ofertas || []).filter(o => now <= finDe(o.hasta) && (!o.desde || now >= Date.parse(o.desde + "T00:00:00-05:00")));
+    const cfg = await r.json(); CAMPANA = cfg.campana || "";
+    const now = Date.now(); return (cfg.ofertas || []).filter(o => now <= finDe(o.hasta) && (!o.desde || now >= Date.parse(o.desde + "T00:00:00-05:00")));
   } catch { return []; }
 }
 function aplicarOfertas(productos, ofertas) {
@@ -849,14 +850,15 @@ function aplicarOfertas(productos, ofertas) {
     return { ...p, _antes: p.precio, precio: conOferta, _oferta: o.texto || "Oferta", _hasta: o.hasta || "" };
   });
 }
-let OFERTAS = [];
+let OFERTAS = [], CAMPANA = "";
 function renderPromo() {
   const el = $("promo"), con = DATA.filter(p => p._oferta);
   if (!con.length) { el.hidden = true; if (state.lista === "oferta") state.lista = "todo"; return; }
   const mods = [...new Set(con.map(p => p.modelo))].map(m => m.replace(/^IPHONE/, "iPhone").replace(/ PRO MAX$/, " Pro Max").replace(/ PRO$/, " Pro"));
   const lista = mods.length > 1 ? mods.slice(0, -1).join(", ") + " y " + mods.at(-1) : mods[0];
   const desc = Math.max(...OFERTAS.map(o => +o.descuento || 0)), h = con.find(p => p._hasta)?._hasta || "";
-  $("promo-title").textContent = (desc ? `$${desc} de descuento en ` : "Precio especial en ") + lista;
+  $("promo-title").textContent = mods.length > 4 ? `Hasta $${desc} de descuento en todo el stock` : (desc ? `$${desc} de descuento en ` : "Precio especial en ") + lista;
+  document.querySelector("#promo .promo-tag").textContent = CAMPANA || "Oferta por tiempo limitado";
   $("promo-sub").textContent = (h ? `Válido ${finTexto(h)}` : "Por tiempo limitado") + " o hasta agotar stock." + "";
   $("promo-clock").dataset.fin = h; $("promo-clock").textContent = quedan(h); $("promo-clock").hidden = !h;
   el.hidden = false;
