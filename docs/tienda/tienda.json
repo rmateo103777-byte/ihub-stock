@@ -24,21 +24,21 @@
     {
       "modelo": "IPHONE 15",
       "lista": "openbox",
-      "descuento": 80,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "IPHONE 15 PLUS",
       "lista": "openbox",
-      "descuento": 70,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "IPHONE 16",
       "lista": "openbox",
-      "descuento": 80,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
@@ -80,49 +80,49 @@
     {
       "modelo": "IPHONE 17E",
       "lista": "openbox",
-      "descuento": 50,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "SAMSUNG GALAXY S23 ULTRA",
       "lista": "openbox",
-      "descuento": 80,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "SAMSUNG GALAXY S24 PLUS",
       "lista": "openbox",
-      "descuento": 50,
+      "descuento": 40,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "SAMSUNG GALAXY S25 FE",
       "lista": "openbox",
-      "descuento": 50,
+      "descuento": 40,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "SAMSUNG GALAXY S25 ULTRA",
       "lista": "openbox",
-      "descuento": 70,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "IPHONE 17",
       "lista": "nuevos",
-      "descuento": 50,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "IPHONE 17 PRO MAX",
       "lista": "nuevos",
-      "descuento": 50,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
@@ -143,7 +143,7 @@
     {
       "modelo": "SAMSUNG GALAXY S26 ULTRA",
       "lista": "nuevos",
-      "descuento": 50,
+      "descuento": 60,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
@@ -171,14 +171,14 @@
     {
       "modelo": "XIAOMI REDMI NOTE 17 PRO 8GB RAM",
       "lista": "nuevos",
-      "descuento": 60,
+      "descuento": 40,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "XIAOMI REDMI NOTE 17 PRO MAX 8GB RAM",
       "lista": "nuevos",
-      "descuento": 50,
+      "descuento": 40,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
@@ -220,49 +220,49 @@
     {
       "modelo": "APPLE WATCH S12 46MM",
       "lista": "gadgets",
-      "descuento": 50,
+      "descuento": 40,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "APPLE WATCH SE 3 44MM",
       "lista": "gadgets",
-      "descuento": 50,
+      "descuento": 40,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "APPLE WATCH ULTRA 4 49MM",
       "lista": "gadgets",
-      "descuento": 50,
+      "descuento": 40,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "IPAD A16 11VA GEN 11\"",
       "lista": "gadgets",
-      "descuento": 40,
+      "descuento": 30,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "IPAD AIR M4 11\"",
       "lista": "gadgets",
-      "descuento": 40,
+      "descuento": 30,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "MACBOOK AIR M5 13\"",
       "lista": "gadgets",
-      "descuento": 70,
+      "descuento": 80,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
     {
       "modelo": "MACBOOK NEO",
       "lista": "gadgets",
-      "descuento": 40,
+      "descuento": 30,
       "texto": "Black Friday",
       "hasta": "2026-11-29"
     },
@@ -810,7 +810,7 @@
   "hero_campana": {
     "destacado": "IPHONE DUO",
     "titular": "Black Friday: iPhone Duo a $2,514.99.",
-    "subtitulo": "Sellado de fábrica con 12 meses de garantía. $75 menos, solo hasta el domingo 29 o hasta agotar stock.",
+    "subtitulo": "Sellado de fábrica con 12 meses de garantía. $75 menos, solo hasta el domingo 29 o hasta agotar stock. Envío no incluido.",
     "etiqueta": "Black Friday: −$75",
     "hasta": "2026-11-29"
   }
