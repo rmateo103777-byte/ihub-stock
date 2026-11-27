@@ -94,12 +94,6 @@ header.top .wrap { display: flex; align-items: center; gap: 20px; height: 64px; 
 .hero .pill.a { top: 12%; left: 2%; } .hero .pill.b { bottom: 14%; right: 0; }
 .hero .pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--good); box-shadow: 0 0 0 4px rgba(18,138,91,.15); }
 @keyframes up { from { opacity: 0; transform: translateY(24px); } }
-@media (prefers-reduced-motion: no-preference) {
-  .hero .art.flota img { animation: up .9s cubic-bezier(.2,.8,.2,1) both, flota 5s ease-in-out .9s infinite; }
-  .hero .art.flota .glow { animation: brillo 5s ease-in-out .9s infinite; }
-}
-@keyframes flota { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-18px) rotate(3deg); } }
-@keyframes brillo { 0%, 100% { transform: scale(.9); opacity: .6; } 50% { transform: scale(1.06); opacity: 1; } }
 @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; min-height: 0; text-align: left; } .hero .art { order: -1; } .hero .art img { width: 100%; aspect-ratio: 4 / 3.4; } .hero .pill.a { left: 8px; top: 8px; } .hero .pill.b { right: 8px; bottom: 8px; } }
 
 /* Franja de confianza */
@@ -769,7 +763,7 @@ function inicio() {
       <p>${esc(hc.subtitulo || cfg.subtitulo || "Directo de nuestra bodega a tu puerta. Sellados de fábrica con garantía de 12 meses y Open Box verificado.")}</p>
       <div class="btns"><a class="btn btn-p" href="#/c/iphone/sellados">Ver Sellados</a><a class="btn btn-o" href="#/c/iphone/openbox">Ver Open Box</a></div>
     </div>
-    <div class="art${hc.destacado ? " flota" : ""}"><div class="glow"></div>
+    <div class="art"><div class="glow"></div>
       <a href="#/p/nuevos/${slug(destacado)}" aria-label="${esc(nombre(destacado))}">${heroImg ? `<img ${/^https?:/.test(heroImg) && !/wikimedia/.test(heroImg) ? "data-nz" : "src"}="${heroImg}" alt="${esc(nombre(destacado))}">` : ""}</a>
       <span class="pill a"><i></i>Stock en vivo · ${enStock} equipos</span>
       <span class="pill b">${esc(hc.etiqueta || "Nuevo: " + nombre(destacado))}</span>
