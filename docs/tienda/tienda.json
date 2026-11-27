@@ -806,5 +806,12 @@
     ]
   },
   "_ofertas_ayuda": "Cada oferta: modelo (como en el stock), descuento en dólares, texto de la etiqueta y \"hasta\" (AAAA-MM-DD, vale todo ese día). Opcional \"lista\": \"nuevos\" u \"openbox\" para limitarla. Al pasar la fecha la oferta desaparece sola de la web y de la app.",
-  "campana": "Black Friday IHUB"
+  "campana": "Black Friday IHUB",
+  "hero_campana": {
+    "destacado": "IPHONE DUO",
+    "titular": "Black Friday: iPhone Duo a $2,514.99.",
+    "subtitulo": "Sellado de fábrica con 12 meses de garantía. $75 menos, solo hasta el domingo 29 o hasta agotar stock.",
+    "etiqueta": "Black Friday: −$75",
+    "hasta": "2026-11-29"
+  }
 }
